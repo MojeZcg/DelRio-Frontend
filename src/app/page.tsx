@@ -24,7 +24,13 @@ const features = [
   },
 ];
 
-function FeatureCard({ icon: Icon, title, description }: any) {
+interface FeatureCardProps {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+}
+
+function FeatureCard({ icon: Icon, title, description }: FeatureCardProps) {
   return (
     <div className="flex h-46 max-w-78 flex-col items-center gap-4 rounded-2xl border border-gray-300 p-6 shadow-sm shadow-gray-200">
       <Icon size={48} className="text-blue-600" />
