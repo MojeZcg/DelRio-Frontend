@@ -37,7 +37,7 @@ export default function Home() {
             </span>{" "}
             al mundo, más humana que nunca.
           </h1>
-          <p className="text-lg text-gray-200">
+          <p className="text-sm text-gray-200 md:text-lg">
             Conectamos tu hogar con la velocidad y estabilidad que merecés.
           </p>
 
@@ -165,12 +165,6 @@ export default function Home() {
 
       {/* === CIERRE VISUAL === */}
       <section className="relative bg-black/90 py-16 text-center text-white">
-        <Image
-          src="/team-bg.webp"
-          alt="Equipo técnico DelRio"
-          fill
-          className="absolute inset-0 -z-10 object-cover opacity-20"
-        />
         <h4 className="mb-4 text-2xl font-semibold">
           Más que internet, somos tu conexión al futuro.
         </h4>
