@@ -164,8 +164,8 @@ export default function Home() {
       </section>
 
       {/* === CIERRE VISUAL === */}
-      <section className="relative bg-black/90 py-16 text-center text-white">
-        <h4 className="mb-4 text-2xl font-semibold">
+      <section className="flex flex-col items-center bg-black/90 py-16 text-center text-white">
+        <h4 className="mb-4 max-w-72 text-lg font-semibold md:text-2xl">
           Donde la tecnología se convierte en futuro.
         </h4>
         <Link
