@@ -24,7 +24,7 @@ export default function Home() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Texto + Imagen lateral */}
@@ -104,7 +104,7 @@ export default function Home() {
 
         <PricingCards />
 
-        <p className="max-w-sm py-10 text-center text-xs text-gray-800 md:max-w-2xl md:text-sm">
+        <p className="max-w-sm py-10 text-center text-xs text-gray-800 md:max-w-2xl md:text-sm xl:max-w-full">
           Hasta{" "}
           <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
             300 Mbps
@@ -116,7 +116,7 @@ export default function Home() {
       </section>
 
       {/* === DIFERENCIADORES === */}
-      <section className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) py-20 text-center text-white">
+      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-20 text-center text-white">
         <h4 className="mb-10 text-3xl font-semibold">
           ¿Por qué elegir DelRio?
         </h4>

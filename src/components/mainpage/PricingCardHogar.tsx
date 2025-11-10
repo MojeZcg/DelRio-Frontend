@@ -30,47 +30,50 @@ interface PricingCardProps {
   features: PlanFeatures;
   color: string;
   recomended?: boolean;
+  vrelativa?: string;
 }
 
 const pricingCards: PricingCardProps[] = [
   {
-    title: "Plan Estándar",
-    description: "Ideal para hogares pequeños",
+    title: "Plan Standard",
+    description:
+      "Velocidad mínima para navegación, redes sociales y uso básico.",
     features: {
-      speed: "50 Mbps",
+      speed: "Velocidad basica",
       price: 15000,
       installation: true,
-      support24: true,
+      support24: false,
       wifi: true,
     },
+    vrelativa: "50 Mbps",
     color: "#1661ec",
   },
   {
     title: "Plan Esencial",
-    description: "Perfecto para familias",
+    description: "Equilibrio perfecto para hogares con múltiples dispositivos.",
     features: {
-      speed: "100 Mbps",
+      speed: "Velocidad intermedia",
       price: 20000,
       installation: true,
-      support24: true,
-      staticIP: true,
+      support24: false,
       wifi: true,
     },
+    vrelativa: "100 Mbps",
     color: "#323dd8",
     recomended: true,
   },
   {
     title: "Plan Élite",
-    description: "Máximo rendimiento",
+    description: "Velocidad máxima para streaming, gaming y trabajo remoto.",
     features: {
-      speed: "300 Mbps",
+      speed: "Velocidad máxima",
       price: 30000,
       installation: true,
-      support24: true,
+      support24: false,
       wifi: true,
-      staticIP: true,
       benefits: true,
     },
+    vrelativa: "300 Mbps",
     color: "#24228f",
   },
 ];
@@ -81,10 +84,11 @@ function PricingCard({
   features,
   color,
   recomended,
+  vrelativa,
 }: PricingCardProps) {
   return (
     <div className="relative overflow-visible pt-4 md:pt-0">
-      <div className="flex w-full flex-col items-center rounded-2xl border border-gray-300 shadow-sm shadow-gray-300 lg:w-72 xl:w-82">
+      <div className="flex h-full w-full flex-col items-center rounded-2xl border border-gray-300 shadow-sm shadow-gray-300 lg:w-72 xl:w-82">
         {recomended && (
           <div className="absolute top-1 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-lg bg-green-500 px-10 py-1 text-sm font-medium text-white shadow-md md:-top-4">
             Recomendado <BadgeCheck className="h-4 w-4" />
@@ -99,7 +103,7 @@ function PricingCard({
         </div>
 
         <div className="flex w-full flex-col items-center justify-center px-6">
-          <p className="pt-3 text-center text-sm">{description}</p>
+          <p className="pt-3 pb-1 text-center text-xs">{description}</p>
 
           <div className="flex w-full flex-col pt-3 pb-6 font-semibold">
             <span className="my-1 ml-1 flex items-center justify-between">
@@ -158,7 +162,8 @@ function PricingCard({
             </span>
           </Link>
           <p className="my-4 text-center text-xs text-gray-500">
-            * Sujeto a cobertura técnica y disponibilidad del servicio.
+            * Velocidad relativa ({vrelativa}) máxima teórica. Mínimo
+            garantizado del 60 %, sujeto a disponibilidad de red.
           </p>
         </div>
       </div>
