@@ -110,6 +110,15 @@ export default function Footer() {
                   <ArrowUpRightIcon className="h-3.5 w-3.5" />
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/baja"
+                  className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
+                >
+                  Dar de baja
+                  <ArrowUpRightIcon className="h-3.5 w-3.5" />
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
