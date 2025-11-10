@@ -28,7 +28,7 @@ export default function Home() {
       </div>
 
       {/* Texto + Imagen lateral */}
-      <div className="flex h-160 w-full flex-col items-center justify-center md:flex-row md:gap-32">
+      <div className="flex h-160 w-full flex-col items-center justify-center md:flex-row xl:gap-20 2xl:gap-32">
         <div className="flex max-w-xl flex-col items-center gap-6 text-center text-white md:items-start md:text-left">
           <h1 className="text-5xl leading-tight font-bold">
             Tu{" "}
@@ -88,7 +88,7 @@ export default function Home() {
             alt="Familia conectada en casa"
             width={1920}
             height={1080}
-            className="hidden h-110 w-auto rounded-xl opacity-95 shadow-lg 2xl:block"
+            className="hidden h-100 w-auto rounded-xl opacity-95 shadow-lg xl:block 2xl:h-110"
           />
         </div>
       </div>
