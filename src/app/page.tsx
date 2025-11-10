@@ -83,7 +83,7 @@ export default function Home() {
         {/* Imagen ilustrativa lateral */}
         <div className="bg-black">
           <Image
-            src="/heroimage.jpg"
+            src="/heroimage.webp"
             alt="Familia conectada en casa"
             width={1920}
             height={1080}
