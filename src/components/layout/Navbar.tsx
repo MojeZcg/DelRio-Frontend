@@ -77,8 +77,8 @@ export default function Navbar() {
                 const active = pathname === href;
                 return (
                   name !== "Clientes" && (
-                    <>
-                      <DropdownMenuItem key={href} className="p-0">
+                    <div key={href}>
+                      <DropdownMenuItem className="p-0">
                         <Link
                           href={href}
                           className={`flex h-full w-full items-center gap-1 rounded-md p-3 text-lg underline-offset-4 transition-all hover:underline ${
@@ -89,7 +89,7 @@ export default function Navbar() {
                         </Link>
                       </DropdownMenuItem>
                       {name !== "Contacto" && <DropdownMenuSeparator />}
-                    </>
+                    </div>
                   )
                 );
               })}
