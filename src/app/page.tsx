@@ -104,7 +104,7 @@ export default function Home() {
 
         <PricingCards />
 
-        <p className="max-w-2xl py-10 text-center text-sm">
+        <p className="max-w-sm py-10 text-center text-xs text-gray-800 md:max-w-2xl md:text-sm">
           Hasta{" "}
           <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
             300 Mbps
@@ -163,8 +163,8 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="flex flex-col items-center bg-linear-to-b from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) py-20 text-center text-white backdrop-blur-md">
-        <h4 className="mb-4 max-w-2xl text-lg font-medium md:text-2xl lg:max-w-full">
+      <section className="flex flex-col items-center bg-linear-to-t from-(--delrio-medium) to-(--delrio-dark) py-20 text-center text-white backdrop-blur-md">
+        <h4 className="mb-4 max-w-sm text-lg font-semibold md:text-2xl lg:max-w-full">
           Más que una conexión, impulsamos tu manera de vivir el mundo digital.
         </h4>
       </section>
@@ -226,17 +226,17 @@ export default function Home() {
         </div>
 
         {/* === NUEVO CIERRE VISUAL === */}
-        <div className="flex flex-col items-center justify-center bg-linear-to-t from-(--delrio-medium) to-(--delrio-dark) py-16 text-center text-white">
+        <div className="flex flex-col items-center justify-center bg-linear-to-b from-(--delrio-medium) to-(--delrio-dark) py-16 text-center text-white">
           <h3 className="mb-4 text-2xl font-semibold md:text-3xl">
             Conectamos personas, lugares y oportunidades.
           </h3>
-          <p className="mb-6 max-w-xl text-white/90">
+          <p className="mb-6 text-white/90">
             En cada rincón de Mendoza, llevamos más que internet: llevamos
-            conexión, confianza y progreso.
+            conexión, confianza.
           </p>
           <Link
             href="/contacto"
-            className="inline-block rounded-lg bg-white px-8 py-3 font-medium text-blue-700 transition hover:bg-blue-100"
+            className="inline-block rounded-lg bg-white px-8 py-3 font-medium text-(--delrio-medium) transition hover:bg-blue-100"
           >
             Hablemos de tu conexión
           </Link>
