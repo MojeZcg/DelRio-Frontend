@@ -84,7 +84,7 @@ function PricingCard({
 }: PricingCardProps) {
   return (
     <div className="relative overflow-visible pt-4 md:pt-0">
-      <div className="flex flex-col items-center rounded-2xl border border-gray-300 shadow-sm shadow-gray-300 lg:w-82">
+      <div className="flex w-full flex-col items-center rounded-2xl border border-gray-300 shadow-sm shadow-gray-300 md:w-72 xl:w-82">
         {recomended && (
           <div className="absolute top-1 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-lg bg-green-500 px-10 py-1 text-sm font-medium text-white shadow-md md:-top-4">
             Recomendado <BadgeCheck className="h-4 w-4" />
@@ -170,7 +170,7 @@ export default function PricingCards() {
   return (
     <div className="w-full">
       {/* 🖥️ Desktop layout */}
-      <div className="hidden justify-center gap-16 md:flex">
+      <div className="hidden justify-center gap-4 md:flex xl:gap-16">
         {pricingCards.map((card, index) => (
           <PricingCard key={index} {...card} />
         ))}

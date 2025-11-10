@@ -37,7 +37,7 @@ export default function Home() {
             </span>{" "}
             al mundo, más humana que nunca.
           </h1>
-          <p className="text-sm text-gray-200 md:text-lg">
+          <p className="max-w-sm text-sm text-gray-200 md:text-lg">
             Conectamos tu hogar con la velocidad y estabilidad que merecés.
           </p>
 
@@ -88,7 +88,7 @@ export default function Home() {
             alt="Familia conectada en casa"
             width={1920}
             height={1080}
-            className="hidden h-110 w-auto rounded-xl opacity-95 shadow-lg md:block"
+            className="hidden h-110 w-auto rounded-xl opacity-95 shadow-lg 2xl:block"
           />
         </div>
       </div>
