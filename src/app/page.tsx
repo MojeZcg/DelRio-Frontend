@@ -29,7 +29,7 @@ export default function Home() {
 
       {/* Texto + Imagen lateral */}
       <div className="flex h-160 w-full flex-col items-center justify-center md:flex-row md:gap-32">
-        <div className="flex max-w-xl flex-col items-start gap-6 text-center text-white md:text-left">
+        <div className="flex max-w-xl flex-col items-center gap-6 text-center text-white md:items-start md:text-left">
           <h1 className="text-5xl leading-tight font-bold">
             Tu{" "}
             <span className="bg-linear-to-r from-[#1661ec] via-[#5422dd] to-[#6d2fd1] bg-clip-text text-transparent">
@@ -42,8 +42,9 @@ export default function Home() {
           </p>
 
           <Dialog>
-            <DialogTrigger className="mt-4 rounded-lg bg-linear-to-r from-[#1661ec] via-[#5422dd] to-[#6d2fd1] px-32 py-3 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30">
-              Comprueba la disponibilidad en tu zona
+            <DialogTrigger className="mt-4 rounded-lg bg-linear-to-r from-[#1661ec] via-[#5422dd] to-[#6d2fd1] px-6 py-3 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32">
+              Comprueba la disponibilidad{" "}
+              <span className="hidden md:inline"> en tu zona</span>
             </DialogTrigger>
             <DialogContent className="bg-blue-950 text-white">
               <DialogHeader>
