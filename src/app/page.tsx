@@ -166,7 +166,7 @@ export default function Home() {
       {/* === CIERRE VISUAL === */}
       <section className="relative bg-black/90 py-16 text-center text-white">
         <h4 className="mb-4 text-2xl font-semibold">
-          Más que internet, somos tu conexión al futuro.
+          Donde la tecnología se convierte en futuro.
         </h4>
         <Link
           href="/contacto"
