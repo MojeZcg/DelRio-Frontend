@@ -72,7 +72,7 @@ export default function Navbar() {
             <DropdownMenuTrigger>
               <Menu size={42} />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="mt-2 mr-2 h-auto w-48 bg-[#000129]/70 text-white">
+            <DropdownMenuContent className="mt-2 mr-2 h-auto w-48 bg-[#050f1e]/70 text-white">
               {links.map(({ name, href }) => {
                 const active = pathname === href;
                 return (
