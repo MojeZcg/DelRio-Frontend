@@ -29,17 +29,19 @@ export default function Home() {
 
       {/* Texto + Imagen lateral */}
       <div className="flex h-160 w-full flex-col items-center justify-center md:flex-row xl:gap-20 2xl:gap-32">
-        <div className="flex max-w-xl flex-col items-center gap-6 text-center text-white md:items-start md:text-left">
-          <h1 className="text-5xl leading-tight font-bold">
-            Tu{" "}
-            <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
-              conexión
-            </span>{" "}
-            al mundo, más humana que nunca.
-          </h1>
-          <p className="max-w-sm text-sm text-gray-200 md:text-lg">
-            Conectamos tu hogar con la velocidad y estabilidad que merecés.
-          </p>
+        <div className="flex max-w-xl flex-col items-center gap-12 text-center text-white md:items-start">
+          <div className="flex flex-col items-center gap-3 md:items-start md:text-left">
+            <h1 className="text-5xl leading-tight font-bold">
+              Tu{" "}
+              <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
+                conexión
+              </span>{" "}
+              al mundo, más humana que nunca.
+            </h1>
+            <p className="max-w-sm text-sm text-gray-200 md:text-lg lg:max-w-full">
+              Conectamos tu hogar con la velocidad y estabilidad que merecés.
+            </p>
+          </div>
 
           <Dialog>
             <DialogTrigger className="mt-4 rounded-lg bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) px-6 py-3 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32">

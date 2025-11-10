@@ -7,11 +7,11 @@ export default function ContactPage() {
       <div className="flex items-center justify-center gap-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(45,99,255,0.2),transparent_60%)]"></div>
 
-        <div className="relative z-10 w-full max-w-4xl text-center">
-          <h1 className="mb-4 bg-clip-text text-5xl font-bold text-white">
+        <div className="relative z-10 w-full max-w-5xl text-center">
+          <h1 className="mb-3 bg-clip-text text-5xl font-bold text-white">
             Contactanos
           </h1>
-          <p className="mb-6 text-sm text-gray-300">
+          <p className="mb-7 text-sm text-gray-300">
             Estamos para ayudarte. Completá el formulario o escribinos a
             nuestros canales directos.
           </p>
@@ -20,7 +20,7 @@ export default function ContactPage() {
             action="mailto:contacto@delriointernet.com"
             method="post"
             encType="text/plain"
-            className="mx-auto flex w-full max-w-2xl flex-col gap-4 text-left"
+            className="mx-auto flex w-full max-w-3xl flex-col gap-4 text-left"
           >
             <div>
               <label
@@ -82,7 +82,7 @@ export default function ContactPage() {
           </form>
         </div>
         <Image
-          src="/contact.webp"
+          src="/contacto.webp"
           alt="Contacto"
           width={1920}
           height={1080}
