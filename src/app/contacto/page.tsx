@@ -1,5 +1,6 @@
 import { Separator } from "@radix-ui/react-dropdown-menu";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ContactPage() {
   return (
@@ -85,7 +86,7 @@ export default function ContactPage() {
             alt="Contacto"
             width={1280}
             height={720}
-            className="pointer-events-none h-126 w-auto rounded-2xl select-none"
+            className="pointer-events-none hidden h-126 w-auto rounded-2xl select-none lg:flex"
           />
         </div>
         <Separator className="my-14 h-px bg-gray-700" />
@@ -103,12 +104,12 @@ export default function ContactPage() {
           </p>
           <p>
             ✉️ <strong>Correo:</strong>{" "}
-            <a
+            <Link
               href="mailto:contacto@delriointernet.com"
               className="text-[#6d8cff] hover:underline"
             >
               contacto@delriointernet.com
-            </a>
+            </Link>
           </p>
           <p className="mt-2 text-sm text-gray-400">
             Horario de atención: Lunes a Viernes de 8:30 a 18:00 y Sábados de

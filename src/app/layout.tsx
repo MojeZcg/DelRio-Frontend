@@ -12,6 +12,12 @@ const getMonserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Del Rio Internet",
   description: "DelRio Internet website",
+  formatDetection: {
+    telephone: false,
+    date: false,
+    email: false,
+    address: false,
+  },
 };
 
 export default function RootLayout({
