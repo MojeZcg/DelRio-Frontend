@@ -90,7 +90,7 @@ export default function Home() {
             alt="Familia conectada en casa"
             width={1920}
             height={1080}
-            className="hidden h-100 w-auto rounded-xl opacity-95 shadow-lg xl:block 2xl:h-110"
+            className="hidden h-100 w-auto rounded-xl opacity-90 shadow-lg xl:block 2xl:h-100"
           />
         </div>
       </div>
