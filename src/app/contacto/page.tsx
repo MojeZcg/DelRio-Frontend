@@ -1,13 +1,13 @@
+import ContactImage from "@/components/contactpage/Image";
 import { Separator } from "@radix-ui/react-dropdown-menu";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function ContactPage() {
   return (
-    <main className="flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-linear-to-tl from-slate-950 via-slate-900 to-(--delrio-dark) px-6 pt-24 text-white">
-      <div className="py-14">
+    <main className="flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-linear-to-tl from-slate-950 via-slate-900 to-(--delrio-dark) pt-24 text-white">
+      <div className="py-16">
         <div className="flex items-center justify-center gap-24">
-          <div className="relative z-10 w-full max-w-5xl text-center">
+          <div className="relative z-10 w-full max-w-lg text-center">
             <h1 className="mb-3 bg-clip-text text-5xl font-bold text-white">
               Contactanos
             </h1>
@@ -81,13 +81,7 @@ export default function ContactPage() {
               </button>
             </form>
           </div>
-          <Image
-            src="/contacto.webp"
-            alt="Contacto"
-            width={1280}
-            height={720}
-            className="pointer-events-none hidden h-126 w-auto rounded-2xl select-none lg:flex"
-          />
+          <ContactImage />
         </div>
         <Separator className="my-14 h-px bg-gray-700" />
 
