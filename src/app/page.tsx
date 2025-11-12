@@ -1,3 +1,4 @@
+import HeroImage from "@/components/mainpage/HeroImage";
 import PricingCardsEmpresas from "@/components/mainpage/PricingCardEmpresas";
 import PricingCards from "@/components/mainpage/PricingCardHogar";
 import {
@@ -13,7 +14,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="pt-24">
+    <main className="overflow-x-hidden pt-24">
       {/* === HERO === */}
       <div className="fixed inset-0 -z-10">
         {/* Fondo principal */}
@@ -21,14 +22,14 @@ export default function Home() {
           src="/bg.webp"
           alt="Fondo principal DelRio"
           fill
-          className="object-cover"
+          className="object-cover will-change-transform"
           priority
         />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Texto + Imagen lateral */}
-      <div className="flex h-160 w-full flex-col items-center justify-center md:flex-row xl:gap-20 2xl:gap-32">
+      <div className="min-h-xl flex h-156 w-full flex-col items-center justify-center md:flex-row xl:gap-20 2xl:gap-32">
         <div className="flex max-w-xl flex-col items-center gap-12 text-center text-white md:items-start">
           <div className="flex flex-col items-center gap-3 md:items-start md:text-left">
             <h1 className="text-5xl leading-tight font-bold">
@@ -84,15 +85,7 @@ export default function Home() {
         </div>
 
         {/* Imagen ilustrativa lateral */}
-        <div className="bg-black">
-          <Image
-            src="/heroimage.webp"
-            alt="Familia conectada en casa"
-            width={1920}
-            height={1080}
-            className="hidden h-100 w-auto rounded-xl opacity-90 shadow-lg xl:block 2xl:h-100"
-          />
-        </div>
+        <HeroImage />
       </div>
 
       {/* === PLANES HOGAR === */}

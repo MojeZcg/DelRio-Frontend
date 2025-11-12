@@ -3,25 +3,25 @@ import { useState } from "react";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function ContactImage() {
+export default function HeroImage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <div className="relative flex justify-center">
       {/* Skeleton mientras la imagen carga */}
       {!isLoaded && (
-        <Skeleton className="pointer-events-none hidden h-126 w-auto rounded-2xl select-none lg:block" />
+        <Skeleton className="pointer-events-none hidden h-100 w-auto rounded-xl select-none xl:block 2xl:h-100" />
       )}
 
-      {/* Imagen */}
+      {/* Imagen principal */}
       <Image
-        src="/contacto.webp"
-        alt="Contacto"
-        width={1280}
-        height={720}
+        src="/heroimage.webp"
+        alt="Familia conectada en casa"
+        width={1920}
+        height={1080}
         priority
         onLoad={() => setIsLoaded(true)}
-        className={`pointer-events-none hidden h-126 w-auto rounded-2xl transition-opacity duration-500 select-none lg:flex ${
+        className={`pointer-events-none hidden h-100 w-auto rounded-xl opacity-90 shadow-lg transition-opacity duration-500 select-none xl:flex 2xl:h-100 ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
       />

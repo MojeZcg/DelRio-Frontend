@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 export default function EmpresasPage() {
   return (
@@ -45,7 +46,7 @@ export default function EmpresasPage() {
         <div className="relative mb-20 flex flex-col items-center text-center">
           <div className="flex w-full justify-center gap-10">
             <div className="max-w-3xl rounded-2xl bg-white/10 p-10 shadow-lg backdrop-blur-md transition hover:bg-white/15">
-              <h4 className="mb-6 text-3xl font-bold text-blue-500">
+              <h4 className="mb-6 text-3xl font-bold text-blue-400">
                 Business — Conectividad Simétrica
               </h4>
               <p className="mb-8 text-base leading-relaxed text-gray-300">
@@ -217,7 +218,7 @@ export default function EmpresasPage() {
         </div>
 
         {/* Divider */}
-        <div className="mx-auto my-10 h-px w-1/2 bg-white/10"></div>
+        <Separator className="mx-auto my-20 max-w-7xl bg-white/20" />
 
         <p className="mx-auto mt-16 max-w-2xl text-center text-sm text-gray-400">
           Todos nuestros servicios están diseñados para acompañar el crecimiento
