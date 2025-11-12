@@ -19,8 +19,8 @@ export default function EmpresasPage() {
       </div>
 
       {/* 🧭 Contenido principal */}
-      <section className="z-10 flex flex-col items-center justify-center px-6 pt-42 text-center">
-        <h1 className="mb-3 text-4xl font-bold md:text-6xl">
+      <section className="z-10 flex flex-col items-center justify-center px-6 pt-52 text-center">
+        <h1 className="mb-4 text-4xl font-bold md:text-6xl">
           Internet para Empresas
         </h1>
         <h2 className="mb-6 text-lg font-light text-gray-200 md:text-xl">
@@ -37,7 +37,7 @@ export default function EmpresasPage() {
         </Link>
       </section>
 
-      <section className="z-10 mx-auto mt-24 w-full px-6 py-20 text-gray-100">
+      <section className="z-10 mx-auto mt-16 w-full px-6 py-20 text-gray-100">
         <h3 className="mb-16 text-center text-4xl font-semibold text-white">
           Soluciones de Conectividad para Empresas
         </h3>
@@ -126,6 +126,12 @@ export default function EmpresasPage() {
                   </div>
                 </div>
               </div>
+              <Link
+                href="/contacto"
+                className="mt-10 inline-block min-w-md rounded-xl bg-blue-500 py-3 font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-dark) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none"
+              >
+                Consultar planes
+              </Link>
             </div>
 
             {/* Business Full - Conectividad Dedicada */}
@@ -212,6 +218,12 @@ export default function EmpresasPage() {
                     </div>
                   </div>
                 </div>
+                <Link
+                  href="/contacto"
+                  className="mt-10 inline-block min-w-md rounded-xl bg-blue-700 py-3 font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-dark) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none"
+                >
+                  Consultar planes
+                </Link>
               </div>
             </div>
           </div>
