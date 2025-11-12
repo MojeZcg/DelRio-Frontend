@@ -30,7 +30,7 @@ interface PricingCardProps {
   features: PlanFeatures;
   color: string;
   recomended?: boolean;
-  vrelativa?: string;
+  planslug: string;
 }
 
 const pricingCards: PricingCardProps[] = [
@@ -39,42 +39,42 @@ const pricingCards: PricingCardProps[] = [
     description:
       "Velocidad mínima para navegación, redes sociales y uso básico.",
     features: {
-      speed: "Velocidad basica",
+      speed: "50 Mbps",
       price: 15000,
       installation: true,
       support24: false,
       wifi: true,
     },
-    vrelativa: "50 Mbps",
     color: "#1661ec",
+    planslug: "standard",
   },
   {
     title: "Plan Esencial",
     description: "Equilibrio perfecto para hogares con múltiples dispositivos.",
     features: {
-      speed: "Velocidad intermedia",
+      speed: "100 Mbps",
       price: 20000,
       installation: true,
       support24: false,
       wifi: true,
     },
-    vrelativa: "100 Mbps",
     color: "#323dd8",
     recomended: true,
+    planslug: "esencial",
   },
   {
     title: "Plan Élite",
     description: "Velocidad máxima para streaming, gaming y trabajo remoto.",
     features: {
-      speed: "Velocidad máxima",
+      speed: "300 Mbps",
       price: 30000,
       installation: true,
       support24: false,
       wifi: true,
       benefits: true,
     },
-    vrelativa: "300 Mbps",
     color: "#24228f",
+    planslug: "elite",
   },
 ];
 
@@ -84,7 +84,7 @@ function PricingCard({
   features,
   color,
   recomended,
-  vrelativa,
+  planslug,
 }: PricingCardProps) {
   return (
     <div className="relative overflow-visible pt-4 md:pt-0">
@@ -153,7 +153,7 @@ function PricingCard({
           </div>
 
           <Link
-            href="/"
+            href={`/contratar/${planslug}`}
             className="group rounded-lg px-12 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
             style={{ backgroundColor: color }}
           >
@@ -162,7 +162,7 @@ function PricingCard({
             </span>
           </Link>
           <p className="my-4 text-center text-xs text-gray-500">
-            * Velocidad relativa ({vrelativa}) máxima teórica. Mínimo
+            * Velocidad relativa ({features.speed}) máxima teórica. Mínimo
             garantizado del 60 %, sujeto a disponibilidad de red.
           </p>
         </div>
