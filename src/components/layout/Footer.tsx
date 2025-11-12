@@ -19,8 +19,7 @@ export default function Footer() {
             />
             <p className="text-sm leading-relaxed text-gray-400">
               Conectamos hogares y empresas con internet de alta velocidad,
-              atención humana y un compromiso real con la estabilidad del
-              servicio.
+              atención humana y un compromiso real con el servicio.
             </p>
           </div>
 

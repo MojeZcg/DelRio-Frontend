@@ -44,14 +44,14 @@ export default function Home() {
           </div>
 
           <Dialog>
-            <DialogTrigger className="mt-4 rounded-lg bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) px-6 py-3 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32">
+            <DialogTrigger className="mt-4 rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 py-3 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32">
               Comprueba la disponibilidad{" "}
               <span className="hidden md:inline"> en tu zona</span>
             </DialogTrigger>
             <DialogContent className="bg-blue-950 text-white">
               <DialogHeader>
                 <DialogTitle>Comprueba la disponibilidad</DialogTitle>
-                <DialogDescription className="mt-4 text-sm leading-snug text-white/80">
+                <DialogDescription className="mt-3 text-sm leading-snug text-white">
                   Para verificar si nuestro servicio está disponible en tu zona,
                   por favor comunicate con nosotros a través de nuestro número
                   de teléfono o dirección de correo electrónico. Nuestro equipo
@@ -100,20 +100,22 @@ export default function Home() {
         id="planes"
         className="-z-10 flex scroll-mt-24 flex-col items-center justify-center bg-white text-black"
       >
-        <h3 className="py-12 text-center text-3xl font-semibold">
+        <h3 className="pt-10 pb-14 text-center text-3xl font-semibold">
           Conocé nuestros planes diseñados para ti
         </h3>
 
         <PricingCards />
 
-        <p className="max-w-sm py-10 text-center text-xs text-gray-800 md:max-w-2xl md:text-sm xl:max-w-full">
+        <p className="max-w-sm pt-10 pb-12 text-center text-xs text-gray-800 md:max-w-2xl md:text-sm xl:max-w-7xl">
           Hasta{" "}
           <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
             300 Mbps
           </span>{" "}
           con WiFi 6, conexión estable y soporte prioritario. Accedé a series,
           películas y descuentos exclusivos, con cámaras de seguridad en
-          comodato e IP fija para mayor control.
+          comodato e IP fija para mayor control. Las velocidades indicadas son
+          máximas teóricas. Se garantiza un mínimo del 60 % del ancho de banda
+          contratado, sujeto a disponibilidad técnica y condiciones de red.
         </p>
       </section>
 
