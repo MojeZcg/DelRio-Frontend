@@ -130,7 +130,7 @@ export default function Footer() {
             derechos reservados.
           </p>
           <p className="text-xs text-gray-400">
-            Diseñado por{" "}
+            Desarrollado por{" "}
             <Link
               href="https://www.linkedin.com/in/montenegrowalter/"
               className="text-white"
