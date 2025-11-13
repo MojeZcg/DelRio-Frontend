@@ -79,7 +79,7 @@ export default function ContactPage() {
 
               <Button
                 type="submit"
-                className="mt-2 w-full bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) py-3 font-semibold text-white shadow-md ring shadow-white/20 transition-all duration-300 hover:opacity-90"
+                className="mt-2 h-12 w-full bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) text-base font-semibold text-white shadow-md ring shadow-white/20 transition-all duration-300 hover:opacity-70"
               >
                 Enviar mensaje
               </Button>

@@ -168,9 +168,9 @@ export default function Home() {
         id="planes"
         className="-z-10 flex scroll-mt-24 flex-col items-center justify-center bg-white text-black"
       >
-        <h3 className="pt-10 pb-14 text-center text-3xl font-semibold">
+        <h2 className="pt-10 pb-14 text-center text-3xl font-semibold">
           Conocé nuestros planes diseñados para ti
-        </h3>
+        </h2>
 
         <PricingCards />
 
@@ -189,9 +189,9 @@ export default function Home() {
 
       {/* === DIFERENCIADORES === */}
       <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-20 text-center text-white">
-        <h4 className="mb-10 text-3xl font-semibold">
+        <h3 className="mb-10 text-3xl font-semibold">
           ¿Por qué elegir DelRio?
-        </h4>
+        </h3>
         <div className="flex flex-wrap justify-center gap-10 text-lg">
           <div className="max-w-xs">
             <p className="font-bold">Atención Personalizada</p>
@@ -302,7 +302,7 @@ export default function Home() {
           <h3 className="mb-4 text-2xl font-semibold md:text-3xl">
             Conectamos personas, lugares y oportunidades.
           </h3>
-          <p className="mb-6 text-white/90">
+          <p className="mb-6 text-white">
             En cada rincón de Mendoza, llevamos más que internet: llevamos
             conexión, confianza.
           </p>

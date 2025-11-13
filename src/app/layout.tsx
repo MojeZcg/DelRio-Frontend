@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const getMonserrat = Montserrat({
   variable: "--font-monserrat",
@@ -11,8 +12,31 @@ const getMonserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Del Rio Internet",
-  description: "DelRio Internet website",
+  title: {
+    default: "Del Río Internet",
+    template: "%s | Del Río Internet",
+  },
+  description:
+    "Del Río Internet es un proveedor de servicios de Internet en Mendoza, Argentina. Ofrecemos soluciones de conectividad de alta calidad para hogares y empresas, con Internet rápido, confiable y asequible, respaldado por soporte técnico local y un fuerte compromiso con la satisfacción del cliente.",
+  keywords: [
+    "Del Río Internet",
+    "ISP Mendoza",
+    "internet Mendoza",
+    "fibra óptica Mendoza",
+    "internet hogar",
+    "internet empresas",
+    "proveedor de internet",
+    "internet rural Mendoza",
+    "internet alta velocidad",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    title: "Del Río Internet",
+    description:
+      "Proveedor de Internet por fibra óptica e inalámbrico en Mendoza. Conexión rápida, estable y con soporte local.",
+    url: "https://delriointernet.com.ar",
+  },
   formatDetection: {
     telephone: false,
     date: false,
@@ -34,6 +58,7 @@ export default function RootLayout({
         <Footer />
 
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
