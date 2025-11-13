@@ -115,7 +115,7 @@ function PricingCard({
   return (
     <div className="relative overflow-visible rounded-2xl pt-4 lg:p-0">
       <div
-        className={`flex h-full w-full flex-col items-center overflow-hidden rounded-2xl shadow-lg shadow-gray-300 lg:w-72 lg:border-3 xl:w-82 ${recomended ? "lg:border-green-500" : "lg:border-gray-100/20"}`}
+        className={`flex h-full w-full flex-col items-center overflow-hidden border-x border-b shadow-lg shadow-gray-300 lg:w-72 lg:rounded-2xl lg:border-3 xl:w-82 ${recomended ? "lg:border-green-500" : "lg:border-gray-100/20"}`}
       >
         {recomended && (
           <div className="absolute top-1 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1 rounded-xl bg-green-500 px-10 py-1 text-sm font-medium text-white shadow-md lg:-top-4">
@@ -174,7 +174,7 @@ export default function PricingCards() {
 
       {/* 📱 Mobile carousel */}
       <div className="lg:hidden">
-        <Carousel className="mx-auto w-full max-w-68">
+        <Carousel className="mx-auto w-full max-w-68 bg-transparent">
           <CarouselContent>
             {pricingCards.map((card, index) => (
               <CarouselItem key={index}>

@@ -7,7 +7,7 @@ export default function ContactImage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className="relative flex max-w-2xl justify-center">
+    <div className="relative hidden max-w-2xl justify-center md:flex">
       {/* Skeleton mientras la imagen carga */}
       {!isLoaded && (
         <Skeleton className="pointer-events-none hidden h-126 w-auto rounded-2xl select-none lg:block" />

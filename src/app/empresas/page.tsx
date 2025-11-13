@@ -3,6 +3,52 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
+const planesBusiness = [
+  {
+    title: "Velocidades simétricas garantizadas",
+    desc: "Mantené el mismo rendimiento tanto en carga como en descarga, sin reservas ocultas ni limitaciones de ancho de banda.",
+  },
+  {
+    title: "Soporte técnico permanente",
+    desc: "Atención directa y resolución de incidencias en menos de 24 horas hábiles, con seguimiento personalizado de cada caso.",
+  },
+  {
+    title: "Instalación profesional",
+    desc: "Incluye equipos ONU Wi-Fi 6 y cableado preconectorizado para una conexión más limpia y estable.",
+  },
+  {
+    title: "Facturación flexible",
+    desc: "Adaptá tus condiciones comerciales con facturación electrónica y opciones ajustadas a tu negocio.",
+  },
+  {
+    title: "Atención prioritaria",
+    desc: "Canales exclusivos de contacto comercial y técnico para respuestas inmediatas ante cualquier necesidad.",
+  },
+];
+
+const planesFull = [
+  {
+    title: "Ancho de banda exclusivo",
+    desc: "Cada empresa dispone de una conexión totalmente dedicada, garantizando disponibilidad continua 24/7 y rendimiento constante.",
+  },
+  {
+    title: "Instalación con equipamiento profesional",
+    desc: "Se provee una ONU Bridge y fibra fusionada directamente, asegurando mínima pérdida de señal y escalabilidad.",
+  },
+  {
+    title: "Monitoreo y soporte proactivo",
+    desc: "Supervisamos tu conexión en tiempo real para detectar y resolver incidencias antes de que afecten tu servicio.",
+  },
+  {
+    title: "Contratos personalizados",
+    desc: "Ofrecemos acuerdos adaptados a cada cliente corporativo según sus objetivos y tamaño.",
+  },
+  {
+    title: "Atención ejecutiva exclusiva",
+    desc: "Cada cuenta tiene un ejecutivo asignado para atención prioritaria y coordinación técnica.",
+  },
+];
+
 export default function EmpresasPage() {
   return (
     <main className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden pt-24 text-white">
@@ -37,202 +83,91 @@ export default function EmpresasPage() {
         </Link>
       </section>
 
-      <section className="z-10 mx-auto mt-16 w-full px-6 py-20 text-gray-100">
-        <h3 className="mb-16 text-center text-4xl font-semibold text-white">
+      <section className="z-10 mx-auto mt-16 w-full px-4 py-16 text-gray-100 sm:px-6">
+        <h3 className="mb-12 text-center text-3xl font-semibold text-white lg:text-4xl">
           Soluciones de Conectividad para Empresas
         </h3>
 
-        {/* Business - Conectividad Simétrica */}
-        <div className="relative mb-20 flex flex-col items-center text-center">
-          <div className="flex w-full justify-center gap-10">
-            <div className="max-w-3xl rounded-2xl bg-white/10 p-10 shadow-lg backdrop-blur-md transition hover:bg-white/15">
-              <h4 className="mb-6 text-3xl font-bold text-blue-400">
-                Business — Conectividad Simétrica
-              </h4>
-              <p className="mb-8 text-base leading-relaxed text-gray-300">
-                Ideal para empresas que necesitan un servicio estable, rápido y
-                balanceado entre subida y bajada, con soporte ágil y una gestión
-                comercial flexible. Diseñado para garantizar continuidad
-                operativa sin interrupciones.
-              </p>
+        {/* === Contenedor principal responsive === */}
+        <div className="flex flex-col items-center justify-center gap-12 lg:flex-row lg:items-stretch lg:gap-10">
+          {/* === PLAN BUSINESS === */}
+          <div className="flex w-full max-w-2xl flex-col rounded-2xl bg-white/10 p-6 shadow-lg backdrop-blur-md transition hover:bg-white/15 sm:p-10">
+            <h4 className="mb-4 text-center text-2xl font-bold text-blue-400 sm:text-3xl lg:text-left">
+              Business — Conectividad Simétrica
+            </h4>
+            <p className="mb-8 text-center text-sm leading-relaxed text-gray-300 sm:text-base lg:text-left">
+              Ideal para empresas que necesitan un servicio estable, rápido y
+              balanceado entre subida y bajada, con soporte ágil y una gestión
+              comercial flexible.
+            </p>
 
-              <div className="space-y-6 text-left">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-6 w-6 text-green-400" />
+            {/* Contenido que crece */}
+            <div className="flex-1 space-y-6 text-left">
+              {planesBusiness.map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle className="mt-0.5 h-6 w-6 shrink-0 text-green-400" />
                   <div>
-                    <h5 className="text-lg font-semibold text-white">
-                      Velocidades simétricas garantizadas
+                    <h5 className="text-base font-semibold text-white sm:text-lg">
+                      {item.title}
                     </h5>
-                    <p className="text-sm text-gray-400">
-                      Mantené el mismo rendimiento tanto en carga como en
-                      descarga, sin reservas ocultas ni limitaciones de ancho de
-                      banda.
-                    </p>
+                    <p className="text-sm text-gray-400">{item.desc}</p>
                   </div>
                 </div>
+              ))}
+            </div>
 
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-6 w-6 text-green-400" />
-                  <div>
-                    <h5 className="text-lg font-semibold text-white">
-                      Soporte técnico permanente
-                    </h5>
-                    <p className="text-sm text-gray-400">
-                      Atención directa y resolución de incidencias en menos de
-                      24 horas hábiles, con seguimiento personalizado de cada
-                      caso.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-6 w-6 text-green-400" />
-                  <div>
-                    <h5 className="text-lg font-semibold text-white">
-                      Instalación profesional
-                    </h5>
-                    <p className="text-sm text-gray-400">
-                      Incluye equipos ONU Wi-Fi 6 y cableado preconectorizado
-                      para una conexión más limpia, estable y lista para alto
-                      rendimiento.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-6 w-6 text-green-400" />
-                  <div>
-                    <h5 className="text-lg font-semibold text-white">
-                      Facturación flexible
-                    </h5>
-                    <p className="text-sm text-gray-400">
-                      Adaptá tus condiciones comerciales con facturación
-                      electrónica y opciones ajustadas a las necesidades del
-                      negocio.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-6 w-6 text-green-400" />
-                  <div>
-                    <h5 className="text-lg font-semibold text-white">
-                      Atención prioritaria
-                    </h5>
-                    <p className="text-sm text-gray-400">
-                      Canales exclusivos de contacto comercial y técnico para
-                      asegurar respuestas inmediatas ante cualquier necesidad.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            {/* Botón pegado abajo */}
+            <div className="mt-auto flex justify-center">
               <Link
                 href="/contacto"
-                className="mt-10 inline-block min-w-md rounded-xl bg-blue-500 py-3 font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-dark) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none"
+                className="mt-10 inline-block w-full rounded-xl bg-blue-500 px-6 py-3 text-center font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-dark) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto xl:min-w-lg"
               >
                 Consultar planes
               </Link>
             </div>
+          </div>
 
-            {/* Business Full - Conectividad Dedicada */}
-            <div className="relative flex flex-col items-center text-center">
-              <div className="max-w-3xl rounded-2xl bg-white/10 p-10 shadow-lg backdrop-blur-md transition hover:bg-white/15">
-                <h4 className="mb-6 text-3xl font-bold text-blue-700 text-shadow-sm">
-                  Business Full — Conectividad Dedicada
-                </h4>
-                <p className="mb-8 text-base leading-relaxed text-gray-300">
-                  Diseñado para empresas que requieren disponibilidad total y
-                  máxima velocidad. Ideal para oficinas con alto tráfico de
-                  datos, servicios en la nube o sistemas críticos que no pueden
-                  detenerse.
-                </p>
+          {/* === PLAN BUSINESS FULL === */}
+          <div className="flex w-full max-w-2xl flex-col rounded-2xl bg-white/10 p-6 shadow-lg backdrop-blur-md transition hover:bg-white/15 sm:p-10">
+            <h4 className="mb-4 text-center text-2xl font-bold text-blue-700 sm:text-3xl lg:text-left">
+              Business Full — Conectividad Dedicada
+            </h4>
+            <p className="mb-8 text-center text-sm leading-relaxed text-gray-300 sm:text-base lg:text-left">
+              Diseñado para empresas que requieren disponibilidad total y máxima
+              velocidad. Ideal para oficinas con alto tráfico de datos o
+              servicios críticos.
+            </p>
 
-                <div className="space-y-6 text-left">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-6 w-6 text-green-400" />
-                    <div>
-                      <h5 className="text-lg font-semibold text-white">
-                        Ancho de banda exclusivo
-                      </h5>
-                      <p className="text-sm text-gray-400">
-                        Cada empresa dispone de una conexión totalmente
-                        dedicada, garantizando disponibilidad continua 24/7 y
-                        rendimiento constante.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-6 w-6 text-green-400" />
-                    <div>
-                      <h5 className="text-lg font-semibold text-white">
-                        Instalación con equipamiento profesional
-                      </h5>
-                      <p className="text-sm text-gray-400">
-                        Se provee una ONU Bridge y fibra fusionada directamente,
-                        asegurando la mínima pérdida de señal y una
-                        infraestructura preparada para escalar.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-6 w-6 text-green-400" />
-                    <div>
-                      <h5 className="text-lg font-semibold text-white">
-                        Monitoreo y soporte proactivo
-                      </h5>
-                      <p className="text-sm text-gray-400">
-                        Nuestro equipo técnico supervisa tu conexión en tiempo
-                        real para detectar y resolver posibles incidencias antes
-                        de que afecten tu servicio.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-6 w-6 text-green-400" />
-                    <div>
-                      <h5 className="text-lg font-semibold text-white">
-                        Contratos personalizados
-                      </h5>
-                      <p className="text-sm text-gray-400">
-                        Ofrecemos acuerdos adaptados a cada cliente corporativo,
-                        con términos técnicos y comerciales según sus objetivos
-                        y tamaño.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-6 w-6 text-green-400" />
-                    <div>
-                      <h5 className="text-lg font-semibold text-white">
-                        Atención ejecutiva exclusiva
-                      </h5>
-                      <p className="text-sm text-gray-400">
-                        Cada cuenta cuenta con un ejecutivo asignado, disponible
-                        para atención prioritaria, coordinación técnica y
-                        seguimiento de proyectos.
-                      </p>
-                    </div>
+            <div className="flex-1 space-y-8 text-left">
+              {planesFull.map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle className="mt-0.5 h-6 w-6 shrink-0 text-green-400" />
+                  <div>
+                    <h5 className="text-base font-semibold text-white sm:text-lg">
+                      {item.title}
+                    </h5>
+                    <p className="text-sm text-gray-400">{item.desc}</p>
                   </div>
                 </div>
-                <Link
-                  href="/contacto"
-                  className="mt-10 inline-block min-w-md rounded-xl bg-blue-700 py-3 font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-dark) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none"
-                >
-                  Consultar planes
-                </Link>
-              </div>
+              ))}
+            </div>
+
+            {/* Botón pegado abajo */}
+            <div className="mt-auto flex justify-center">
+              <Link
+                href="/contacto"
+                className="mt-10 inline-block w-full rounded-xl bg-blue-700 px-6 py-3 text-center font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-dark) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto lg:min-w-lg"
+              >
+                Consultar planes
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Divider */}
-        <Separator className="mx-auto my-20 max-w-7xl bg-white/20" />
+        {/* === Divider === */}
+        <Separator className="mx-auto my-16 max-w-6xl bg-white/20" />
 
-        <p className="mx-auto mt-16 max-w-2xl text-center text-sm text-gray-400">
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-gray-400 sm:text-base">
           Todos nuestros servicios están diseñados para acompañar el crecimiento
           de tu empresa, garantizando conectividad estable, atención prioritaria
           y un compromiso real con tu operación diaria.

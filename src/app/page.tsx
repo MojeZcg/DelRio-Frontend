@@ -35,7 +35,7 @@ export default function Home() {
             <h1 className="text-5xl leading-tight font-bold">
               Tu{" "}
               <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
-                conexión
+                conexiónes
               </span>{" "}
               al mundo, más humana que nunca.
             </h1>
@@ -184,7 +184,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-16 md:grid-cols-3">
+            <div className="mt-10 grid gap-12 md:grid-cols-3 lg:gap-16">
               <div className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md">
                 <h3 className="mb-3 text-2xl font-semibold text-(--delrio-light)">
                   Visión
