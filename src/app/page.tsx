@@ -5,13 +5,19 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -50,18 +56,20 @@ export default function Home() {
           <Dialog>
             <DialogTrigger asChild>
               <Button className="mt-4 h-12 rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32">
-                Comprueba la disponibilidad{" "}
-                <span className="hidden md:inline"> en tu zona</span>
+                Comprueba la disponibilidad
+                <span className="hidden md:inline">en tu zona</span>
               </Button>
             </DialogTrigger>
 
-            <DialogContent className="bg-blue-950 text-white">
+            <DialogContent className="bg-linear-to-br from-blue-950 to-(--delrio-dark) text-white">
               <DialogHeader>
-                <DialogTitle>Comprueba la disponibilidad</DialogTitle>
+                <DialogTitle className="">
+                  Comprueba la disponibilidad
+                </DialogTitle>
               </DialogHeader>
 
-              <form className="mt-4 flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
+              <form className="mt-4 flex flex-col gap-6">
+                <div className="flex flex-col gap-1.5">
                   <Label htmlFor="direccion">Dirección</Label>
                   <Input
                     id="direccion"
@@ -70,8 +78,67 @@ export default function Home() {
                     required
                   />
                 </div>
+                <div className="flex justify-between">
+                  <div className="flex flex-col gap-1.5">
+                    <Label htmlFor="provincia">Provincia</Label>
 
-                <div className="flex flex-col gap-2">
+                    <Select required>
+                      <SelectTrigger
+                        id="provincia"
+                        className="w-50 rounded-md bg-white text-black"
+                      >
+                        <SelectValue placeholder="Selecciona una provincia" />
+                      </SelectTrigger>
+
+                      <SelectContent className="bg-white text-black">
+                        <SelectItem value="buenos-aires">
+                          Buenos Aires
+                        </SelectItem>
+                        <SelectItem value="caba">
+                          Ciudad Autónoma de Buenos Aires
+                        </SelectItem>
+                        <SelectItem value="catamarca">Catamarca</SelectItem>
+                        <SelectItem value="chaco">Chaco</SelectItem>
+                        <SelectItem value="chubut">Chubut</SelectItem>
+                        <SelectItem value="cordoba">Córdoba</SelectItem>
+                        <SelectItem value="corrientes">Corrientes</SelectItem>
+                        <SelectItem value="entre-rios">Entre Ríos</SelectItem>
+                        <SelectItem value="formosa">Formosa</SelectItem>
+                        <SelectItem value="jujuy">Jujuy</SelectItem>
+                        <SelectItem value="la-pampa">La Pampa</SelectItem>
+                        <SelectItem value="la-rioja">La Rioja</SelectItem>
+                        <SelectItem value="mendoza">Mendoza</SelectItem>
+                        <SelectItem value="misiones">Misiones</SelectItem>
+                        <SelectItem value="neuquen">Neuquén</SelectItem>
+                        <SelectItem value="rio-negro">Río Negro</SelectItem>
+                        <SelectItem value="salta">Salta</SelectItem>
+                        <SelectItem value="san-juan">San Juan</SelectItem>
+                        <SelectItem value="san-luis">San Luis</SelectItem>
+                        <SelectItem value="santa-cruz">Santa Cruz</SelectItem>
+                        <SelectItem value="santa-fe">Santa Fe</SelectItem>
+                        <SelectItem value="santiago-del-estero">
+                          Santiago del Estero
+                        </SelectItem>
+                        <SelectItem value="tierra-del-fuego">
+                          Tierra del Fuego
+                        </SelectItem>
+                        <SelectItem value="tucuman">Tucumán</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="flex min-w-62 flex-col gap-1.5">
+                    <Label htmlFor="localidad">Localidad</Label>
+                    <Input
+                      id="localidad"
+                      placeholder="Ej: Guaymallén, Lanús, Yerba Buena"
+                      className="bg-white text-black"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-1.5">
                   <Label htmlFor="cp">Código Postal</Label>
                   <Input
                     id="cp"
@@ -83,9 +150,9 @@ export default function Home() {
 
                 <Button
                   type="submit"
-                  className="mt-2 bg-blue-600 text-white hover:bg-blue-700"
+                  className="mt-2 bg-blue-600 text-white ring hover:bg-blue-700"
                 >
-                  Verificar disponibilidad
+                  Verificar
                 </Button>
               </form>
             </DialogContent>
