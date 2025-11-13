@@ -113,17 +113,17 @@ function PricingCard({
   planslug,
 }: PricingCardProps) {
   return (
-    <div className="relative overflow-visible pt-4 md:pt-0">
+    <div className="relative overflow-visible rounded-2xl pt-4 lg:p-0">
       <div
-        className={`flex h-full w-full flex-col items-center rounded-2xl border-3 ${recomended ? "border-green-500" : "border-gray-100/20"} shadow-lg shadow-gray-300 lg:w-72 xl:w-82`}
+        className={`flex h-full w-full flex-col items-center overflow-hidden rounded-2xl shadow-lg shadow-gray-300 lg:w-72 lg:border-3 xl:w-82 ${recomended ? "lg:border-green-500" : "lg:border-gray-100/20"}`}
       >
         {recomended && (
-          <div className="absolute top-1 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-xl bg-green-500 px-10 py-1 text-sm font-medium text-white shadow-md md:-top-4">
+          <div className="absolute top-1 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1 rounded-xl bg-green-500 px-10 py-1 text-sm font-medium text-white shadow-md lg:-top-4">
             Recomendado <BadgeCheck className="h-4 w-4" />
           </div>
         )}
         <div
-          className="flex h-32 w-full flex-col items-center justify-center rounded-t-xl text-center text-white"
+          className="flex h-32 w-full flex-col items-center justify-center rounded-t-lg text-center text-white"
           style={{ backgroundColor: color }}
         >
           <h4 className="text-2xl font-bold">{title}</h4>
@@ -166,7 +166,7 @@ export default function PricingCards() {
   return (
     <div className="w-full">
       {/* 🖥️ Desktop layout */}
-      <div className="hidden justify-center gap-4 lg:flex xl:gap-16">
+      <div className="hidden justify-center gap-4 bg-transparent lg:flex xl:gap-16">
         {pricingCards.map((card, index) => (
           <PricingCard key={index} {...card} />
         ))}
