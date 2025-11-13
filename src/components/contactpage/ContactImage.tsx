@@ -17,8 +17,8 @@ export default function ContactImage() {
       <Image
         src="/contacto.webp"
         alt="Contacto"
-        width={1280}
-        height={720}
+        width={1920}
+        height={1558}
         priority
         onLoad={() => setIsLoaded(true)}
         className={`pointer-events-none hidden h-auto w-full rounded-2xl transition-opacity duration-300 select-none lg:flex ${
