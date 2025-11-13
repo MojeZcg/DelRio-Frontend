@@ -6,8 +6,8 @@ import PricingCards from "@/components/mainpage/PricingCardHogar";
 
 function PricingCardsHogar() {
   return (
-    <section id="planes" className="w-full scroll-mt-24 bg-gray-50 py-12">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="planes" className="w-full scroll-mt-24 bg-gray-50 pt-10 pb-12">
+      <div className="mx-auto">
         <h2 className="mb-14 text-center text-3xl font-bold text-gray-800">
           Planes Hogar
         </h2>

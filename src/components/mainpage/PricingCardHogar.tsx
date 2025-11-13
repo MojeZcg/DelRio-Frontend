@@ -18,7 +18,7 @@ interface PlanFeatures {
   speed: string;
   price: number;
   installation?: boolean;
-  support24?: boolean;
+  support?: boolean;
   wifi?: boolean;
   staticIP?: boolean;
   benefits?: boolean;
@@ -42,8 +42,10 @@ const pricingCards: PricingCardProps[] = [
       speed: "50 Mbps",
       price: 15000,
       installation: true,
-      support24: false,
+      support: true,
+      staticIP: true,
       wifi: true,
+      benefits: true,
     },
     color: "#1661ec",
     planslug: "standard",
@@ -55,8 +57,10 @@ const pricingCards: PricingCardProps[] = [
       speed: "100 Mbps",
       price: 20000,
       installation: true,
-      support24: false,
+      support: true,
+      staticIP: true,
       wifi: true,
+      benefits: true,
     },
     color: "#323dd8",
     recomended: true,
@@ -69,7 +73,8 @@ const pricingCards: PricingCardProps[] = [
       speed: "300 Mbps",
       price: 30000,
       installation: true,
-      support24: false,
+      support: true,
+      staticIP: true,
       wifi: true,
       benefits: true,
     },
@@ -85,7 +90,7 @@ interface FeatureItem {
 
 const featureList: FeatureItem[] = [
   { label: "Instalación sin costo", key: "installation" },
-  { label: "Soporte técnico especializado", key: "support24" },
+  { label: "Soporte técnico especializado", key: "support" },
   { label: "WiFi 6", key: "wifi" },
   { label: "IP pública fija", key: "staticIP" },
   {

@@ -18,7 +18,7 @@ export default function HeroImage() {
         src="/heroimage.webp"
         alt="Familia conectada en casa"
         width={1920}
-        height={1080}
+        height={1282}
         priority
         onLoad={() => setIsLoaded(true)}
         className={`pointer-events-none hidden h-100 w-auto rounded-xl opacity-90 shadow-lg transition-opacity duration-500 select-none xl:flex 2xl:h-100 ${
