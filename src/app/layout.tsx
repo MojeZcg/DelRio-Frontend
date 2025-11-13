@@ -30,10 +30,9 @@ export default function RootLayout({
     <html lang="es-AR">
       <body className={`${getMonserrat.variable} antialiased`}>
         <Navbar />
-
         {children}
-
         <Footer />
+
         <Analytics />
       </body>
     </html>
