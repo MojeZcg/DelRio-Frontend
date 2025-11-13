@@ -1,6 +1,10 @@
 import ContactImage from "@/components/contactpage/ContactImage";
-import { Separator } from "@radix-ui/react-dropdown-menu";
+import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
   return (
@@ -23,67 +27,67 @@ export default function ContactPage() {
               className="mx-auto flex w-full max-w-3xl flex-col gap-4 text-left"
             >
               <div>
-                <label
+                <Label
                   htmlFor="nombre"
                   className="mb-1 block text-sm font-medium text-gray-200"
                 >
                   Nombre
-                </label>
-                <input
+                </Label>
+                <Input
                   id="nombre"
                   name="nombre"
                   type="text"
                   required
                   placeholder="Tu nombre completo"
-                  className="w-full rounded-lg border border-gray-600 bg-white/10 px-4 py-2 text-sm text-gray-100 placeholder-gray-400 focus:border-[#1661ec] focus:ring focus:ring-[#1661ec]/30"
+                  className="bg-white/10 text-gray-100 placeholder-gray-400"
                 />
               </div>
 
               <div>
-                <label
+                <Label
                   htmlFor="email"
                   className="mb-1 block text-sm font-medium text-gray-200"
                 >
                   Correo electrónico
-                </label>
-                <input
+                </Label>
+                <Input
                   id="email"
                   name="email"
                   type="email"
                   required
                   placeholder="nombre@correo.com"
-                  className="w-full rounded-lg border border-gray-600 bg-white/10 px-4 py-2 text-sm text-gray-100 placeholder-gray-400 focus:border-[#1661ec] focus:ring focus:ring-[#1661ec]/30"
+                  className="bg-white/10 text-gray-100 placeholder-gray-400"
                 />
               </div>
 
               <div>
-                <label
+                <Label
                   htmlFor="mensaje"
                   className="mb-1 block text-sm font-medium text-gray-200"
                 >
                   Mensaje
-                </label>
-                <textarea
+                </Label>
+                <Textarea
                   id="mensaje"
                   name="mensaje"
                   required
                   placeholder="Contanos cómo podemos ayudarte..."
-                  className="w-full rounded-lg border border-gray-600 bg-white/10 px-4 py-2 text-sm text-gray-100 placeholder-gray-400 focus:border-[#1661ec] focus:ring focus:ring-[#1661ec]/30"
-                  rows={6}
-                ></textarea>
+                  className="min-h-42 bg-white/10 text-gray-100 placeholder-gray-400"
+                  rows={12}
+                />
               </div>
 
-              <button
+              <Button
                 type="submit"
-                className="mt-2 w-full rounded-lg bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) py-3 font-semibold text-white shadow-md ring shadow-white/20 transition-all duration-300 hover:opacity-90"
+                className="mt-2 w-full bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) py-3 font-semibold text-white shadow-md ring shadow-white/20 transition-all duration-300 hover:opacity-90"
               >
                 Enviar mensaje
-              </button>
+              </Button>
             </form>
           </div>
           <ContactImage />
         </div>
-        <Separator className="my-14 h-px bg-gray-700" />
+        <Separator className="my-14" />
 
         {/* Contacto directo */}
         <div className="text-center text-gray-300">

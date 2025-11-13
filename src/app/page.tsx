@@ -1,6 +1,7 @@
 import HeroImage from "@/components/mainpage/HeroImage";
 import PricingCardsEmpresas from "@/components/mainpage/PricingCardEmpresas";
 import PricingCards from "@/components/mainpage/PricingCardHogar";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -9,6 +10,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -45,41 +48,46 @@ export default function Home() {
           </div>
 
           <Dialog>
-            <DialogTrigger className="mt-4 rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 py-3 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32">
-              Comprueba la disponibilidad{" "}
-              <span className="hidden md:inline"> en tu zona</span>
+            <DialogTrigger asChild>
+              <Button className="mt-4 h-12 rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32">
+                Comprueba la disponibilidad{" "}
+                <span className="hidden md:inline"> en tu zona</span>
+              </Button>
             </DialogTrigger>
+
             <DialogContent className="bg-blue-950 text-white">
               <DialogHeader>
                 <DialogTitle>Comprueba la disponibilidad</DialogTitle>
-                <DialogDescription className="mt-3 text-sm leading-snug text-white">
-                  Para verificar si nuestro servicio está disponible en tu zona,
-                  por favor comunicate con nosotros a través de nuestro número
-                  de teléfono o dirección de correo electrónico. Nuestro equipo
-                  estará encantado de asistirte y proporcionarte la información
-                  que necesitás.
-                </DialogDescription>
-                <div className="mt-4 flex flex-col items-center gap-2 text-sm">
-                  <p>
-                    📞 <strong>Teléfono:</strong>{" "}
-                    <a
-                      href="tel:+5492604001234"
-                      className="text-blue-600 hover:underline"
-                    >
-                      +54 9 260 400 1234
-                    </a>
-                  </p>
-                  <p>
-                    ✉️ <strong>Correo:</strong>{" "}
-                    <a
-                      href="mailto:contacto@delriointernet.com"
-                      className="text-blue-600 hover:underline"
-                    >
-                      contacto@delriointernet.com
-                    </a>
-                  </p>
-                </div>
               </DialogHeader>
+
+              <form className="mt-4 flex flex-col gap-4">
+                <div className="flex flex-col gap-2">
+                  <Label htmlFor="direccion">Dirección</Label>
+                  <Input
+                    id="direccion"
+                    placeholder="Calle y número"
+                    className="bg-white text-black"
+                    required
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <Label htmlFor="cp">Código Postal</Label>
+                  <Input
+                    id="cp"
+                    placeholder="Ej: 5500"
+                    className="bg-white text-black"
+                    required
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  className="mt-2 bg-blue-600 text-white hover:bg-blue-700"
+                >
+                  Verificar disponibilidad
+                </Button>
+              </form>
             </DialogContent>
           </Dialog>
         </div>
