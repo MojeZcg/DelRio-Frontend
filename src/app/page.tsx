@@ -35,7 +35,7 @@ export default function Home() {
             <h1 className="text-5xl leading-tight font-bold">
               Tu{" "}
               <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
-                conexiónes
+                conexión
               </span>{" "}
               al mundo, más humana que nunca.
             </h1>
