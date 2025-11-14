@@ -69,7 +69,7 @@ export default function EmpresasPage() {
         <h1 className="mb-4 text-4xl font-bold md:text-6xl">
           Internet para Empresas
         </h1>
-        <h2 className="mb-6 text-lg font-light text-gray-200 md:text-xl">
+        <h2 className="mb-6 text-lg font-light text-gray-100 md:text-xl">
           Conectividad dedicada, soporte prioritario y máxima estabilidad para
           tu negocio.
         </h2>
@@ -102,15 +102,15 @@ export default function EmpresasPage() {
             </p>
 
             {/* Contenido que crece */}
-            <div className="flex-1 space-y-6 text-left">
+            <div className="flex-1 space-y-8.5 text-left">
               {planesBusiness.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-6 w-6 shrink-0 text-green-400" />
+                  <CheckCircle className="mt-2 h-6 w-6 shrink-0 text-green-400" />
                   <div>
                     <h5 className="text-base font-semibold text-white sm:text-lg">
                       {item.title}
                     </h5>
-                    <p className="text-sm text-gray-400">{item.desc}</p>
+                    <p className="text-xs text-gray-300">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -141,12 +141,12 @@ export default function EmpresasPage() {
             <div className="flex-1 space-y-8 text-left">
               {planesFull.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-6 w-6 shrink-0 text-green-400" />
+                  <CheckCircle className="mt-2 h-6 w-6 shrink-0 text-green-400" />
                   <div>
                     <h5 className="text-base font-semibold text-white sm:text-lg">
                       {item.title}
                     </h5>
-                    <p className="text-sm text-gray-400">{item.desc}</p>
+                    <p className="text-xs text-gray-300">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -167,7 +167,7 @@ export default function EmpresasPage() {
         {/* === Divider === */}
         <Separator className="mx-auto my-16 max-w-6xl bg-white/20" />
 
-        <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-gray-400 sm:text-base">
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-gray-300 sm:text-base">
           Todos nuestros servicios están diseñados para acompañar el crecimiento
           de tu empresa, garantizando conectividad estable, atención prioritaria
           y un compromiso real con tu operación diaria.
