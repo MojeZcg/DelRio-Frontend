@@ -167,7 +167,7 @@ export default function EmpresasPage() {
         {/* === Divider === */}
         <Separator className="mx-auto my-16 max-w-6xl bg-white/20" />
 
-        <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-gray-300 sm:text-base">
+        <p className="mx-auto mt-10 max-w-5xl text-center text-sm text-gray-100 sm:text-base">
           Todos nuestros servicios están diseñados para acompañar el crecimiento
           de tu empresa, garantizando conectividad estable, atención prioritaria
           y un compromiso real con tu operación diaria.
