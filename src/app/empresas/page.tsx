@@ -69,7 +69,7 @@ export default function EmpresasPage() {
         <h1 className="mb-4 text-4xl font-bold md:text-6xl">
           Internet para Empresas
         </h1>
-        <h2 className="mb-6 text-lg font-light text-gray-100 md:text-xl">
+        <h2 className="mb-6 text-lg font-light text-white md:text-xl">
           Conectividad dedicada, soporte prioritario y máxima estabilidad para
           tu negocio.
         </h2>
@@ -120,7 +120,7 @@ export default function EmpresasPage() {
             <div className="mt-auto flex justify-center">
               <Link
                 href="/contacto"
-                className="mt-10 inline-block w-full rounded-xl bg-blue-500 px-6 py-3 text-center font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-dark) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto xl:min-w-lg"
+                className="mt-10 inline-block w-full rounded-xl bg-blue-600 px-6 py-3 text-center font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-medium) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto xl:min-w-lg"
               >
                 Consultar planes
               </Link>
@@ -156,7 +156,7 @@ export default function EmpresasPage() {
             <div className="mt-auto flex justify-center">
               <Link
                 href="/contacto"
-                className="mt-10 inline-block w-full rounded-xl bg-blue-700 px-6 py-3 text-center font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-dark) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto lg:min-w-lg"
+                className="mt-10 inline-block w-full rounded-xl bg-blue-600 px-6 py-3 text-center font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-medium) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto lg:min-w-lg"
               >
                 Consultar planes
               </Link>
