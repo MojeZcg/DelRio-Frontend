@@ -25,9 +25,9 @@ export default function Footer() {
 
           {/* Navegación principal */}
           <div>
-            <h4 className="mb-3 text-lg font-semibold text-white">
+            <h5 className="mb-3 text-lg font-semibold text-white">
               Navegación
-            </h4>
+            </h5>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Contacto */}
           <div>
-            <h4 className="mb-3 text-lg font-semibold text-white">Contacto</h4>
+            <h5 className="mb-3 text-lg font-semibold text-white">Contacto</h5>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-blue-400" />
@@ -87,9 +87,9 @@ export default function Footer() {
 
           {/* Acceso rápido / términos */}
           <div>
-            <h4 className="mb-3 text-lg font-semibold text-white">
+            <h5 className="mb-3 text-lg font-semibold text-white">
               Información legal
-            </h4>
+            </h5>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -123,7 +123,7 @@ export default function Footer() {
         </div>
 
         {/* === BOTTOM SECTION === */}
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-gray-700 pt-4 text-xs text-gray-500 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-gray-700 pt-4 text-xs text-gray-400 sm:flex-row">
           <p>
             &copy; {new Date().getFullYear()} DelRio Internet. Todos los
             derechos reservados.

@@ -25,7 +25,7 @@ export default function Navbar() {
     },
   ];
 
-  const clientLink = links.find((_, i) => i === 3);
+  const clientLink = links.find((_, i) => i === 4);
 
   return (
     <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/30 px-6 py-4 shadow-md shadow-white/10 select-none lg:px-12">
@@ -41,7 +41,7 @@ export default function Navbar() {
       <nav className="flex items-center gap-8 text-lg text-white">
         {clientLink && (
           <Link
-            href="/"
+            href={clientLink.href}
             className="flex items-center gap-1 underline-offset-4 transition-all hover:underline lg:hidden"
           >
             <User size={14} />
