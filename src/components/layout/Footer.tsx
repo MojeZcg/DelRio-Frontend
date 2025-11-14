@@ -25,9 +25,9 @@ export default function Footer() {
 
           {/* Navegación principal */}
           <div>
-            <h5 className="mb-3 text-lg font-semibold text-white">
+            <h2 className="mb-3 text-lg font-semibold text-white">
               Navegación
-            </h5>
+            </h2>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Contacto */}
           <div>
-            <h5 className="mb-3 text-lg font-semibold text-white">Contacto</h5>
+            <h2 className="mb-3 text-lg font-semibold text-white">Contacto</h2>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-blue-400" />
@@ -87,9 +87,9 @@ export default function Footer() {
 
           {/* Acceso rápido / términos */}
           <div>
-            <h5 className="mb-3 text-lg font-semibold text-white">
+            <h2 className="mb-3 text-lg font-semibold text-white">
               Información legal
-            </h5>
+            </h2>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
