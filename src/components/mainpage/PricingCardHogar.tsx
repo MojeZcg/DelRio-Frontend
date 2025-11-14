@@ -131,7 +131,7 @@ function PricingCard({
           className="flex h-32 w-full flex-col items-center justify-center rounded-t-lg text-center text-white"
           style={{ backgroundColor: color }}
         >
-          <h4 className="text-2xl font-bold">{title}</h4>
+          <h3 className="text-2xl font-bold">{title}</h3>
           <p className="text-2xl">{features.speed}</p>
         </div>
 
