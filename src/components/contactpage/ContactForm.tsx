@@ -13,10 +13,21 @@ export default function ContactForm() {
   const [estado, setEstado] = useState("");
   const [loading, setLoading] = useState(false);
 
+  function emailValido(email: string): boolean {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    return regex.test(email);
+  }
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     setEstado("Enviando...");
+
+    if (!emailValido(email)) {
+      setEstado("Ingresá un correo válido (ejemplo: nombre@dominio.com)");
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch("/api/contactar", {
@@ -24,7 +35,8 @@ export default function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email,
-          mensaje: `Nombre: ${nombre}\n\nMensaje:\n${mensaje}`,
+          nombre,
+          mensaje,
         }),
       });
 
@@ -83,6 +95,7 @@ export default function ContactForm() {
             name="email"
             type="email"
             required
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             placeholder="nombre@correo.com"
             className="bg-white/10 text-gray-100 placeholder-gray-400"
             value={email}
@@ -118,7 +131,11 @@ export default function ContactForm() {
         </Button>
 
         {estado && (
-          <p className="mt-2 text-center text-sm text-gray-300">{estado}</p>
+          <p
+            className={`mt-2 text-center text-xs ${estado.includes("Error") ? "text-red-500" : "text-gray-300"}`}
+          >
+            {estado}
+          </p>
         )}
       </form>
     </>

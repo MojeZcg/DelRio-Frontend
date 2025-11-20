@@ -68,7 +68,7 @@ export default function Home() {
                 </DialogTitle>
               </DialogHeader>
 
-              <form className="mt-4 flex flex-col gap-6">
+              <form className="mt-2 flex flex-col gap-6">
                 <div className="flex flex-col gap-1.5">
                   <Label htmlFor="direccion">Dirección</Label>
                   <Input
@@ -150,7 +150,7 @@ export default function Home() {
 
                 <Button
                   type="submit"
-                  className="mt-2 bg-blue-600 text-white ring hover:bg-blue-700"
+                  className="mt-2 bg-blue-600 text-base text-white ring hover:bg-blue-700"
                 >
                   Verificar
                 </Button>
