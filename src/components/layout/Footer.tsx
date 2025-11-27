@@ -59,7 +59,6 @@ export default function Footer() {
               <li>
                 <Link
                   href="https://delriointernet.portaldeinternet.me/users/login"
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
@@ -75,6 +74,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  target="_blank"
                   href={`https://wa.me/${administracion}`}
                   className="flex items-center gap-2"
                 >
@@ -83,13 +83,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="" className="flex items-center gap-2">
+                <Link
+                  target="_blank"
+                  href="mailto:info@delriointernet.com"
+                  className="flex items-center gap-2"
+                >
                   <Mail className="h-4 w-4 text-blue-400" />
                   <span>info@delriointernet.com</span>
                 </Link>
               </li>
               <li>
                 <Link
+                  target="_blank"
                   href="https://maps.app.goo.gl/zyJBfKs266V1ZdqZ9"
                   className="flex items-start gap-2"
                 >
@@ -108,6 +113,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  target="_blank"
                   href="/terminos-condiciones.pdf"
                   className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
@@ -137,6 +143,7 @@ export default function Footer() {
           <p className="text-xs text-gray-400">
             Desarrollado por{" "}
             <Link
+              target="_blank"
               href="https://www.linkedin.com/in/montenegrowalter/"
               className="text-white"
             >

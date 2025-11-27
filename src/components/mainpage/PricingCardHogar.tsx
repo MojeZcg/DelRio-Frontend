@@ -153,6 +153,7 @@ function PricingCard({
           </div>
 
           <Link
+            target="_blank"
             href={`https://wa.me/542615861188?text=${planmsg}`}
             className="group mb-6 rounded-lg px-12 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
             style={{ backgroundColor: color }}

@@ -39,6 +39,7 @@ export default function Home() {
           </div>
 
           <Link
+            target="_blank"
             href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20comprobar%20la%20disponibilidad%20de%20internet%20en%20mi%20zona.`}
             className="flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
           >
@@ -301,6 +302,7 @@ export default function Home() {
             conexión, confianza.
           </p>
           <Link
+            target="_blank"
             href={`https://wa.me/${comercial ?? "542615861188"}?text=Hola%21%20Quiero%20hablar%20con%20ustedes%20sobre%20sus%20planes%20de%20internet`}
             className="inline-block rounded-lg bg-white px-8 py-3 font-medium text-(--delrio-medium) transition hover:bg-blue-100"
           >

@@ -156,7 +156,8 @@ function PricingCardEmpresas({
           </div>
 
           <Link
-            href={`https://wa.me/${comercial ?? ""}?text=Hola%21%20Quiero%20solicitar%20el%20${encodeURIComponent(title)}%20con%20velocidad%20de%20${encodeURIComponent(
+            target="_blank"
+            href={`https://wa.me/${comercial ?? "542615861188"}?text=Hola%21%20Quiero%20solicitar%20el%20${encodeURIComponent(title)}%20con%20velocidad%20de%20${encodeURIComponent(
               features.speed,
             )}`}
             className="group rounded-lg px-10 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"

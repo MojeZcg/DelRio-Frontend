@@ -35,6 +35,7 @@ export default function ContactPage() {
             <div>
               <strong>Administración:</strong>{" "}
               <Link
+                target="_blank"
                 href={`https://wa.me/${administracion}?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
                 className="text-[#6d8cff] hover:underline"
               >
@@ -48,6 +49,7 @@ export default function ContactPage() {
             <div>
               <strong>Comercial:</strong>{" "}
               <Link
+                target="_blank"
                 href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
                 className="text-[#6d8cff] hover:underline"
               >
@@ -61,6 +63,7 @@ export default function ContactPage() {
             <div>
               <strong>Soporte Técnico:</strong>{" "}
               <Link
+                target="_blank"
                 href={`https://wa.me/${soporte}?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
                 className="text-[#6d8cff] hover:underline"
               >
@@ -71,6 +74,7 @@ export default function ContactPage() {
           <p className="mt-4">
             ✉️ <strong>Correo:</strong>{" "}
             <Link
+              target="_blank"
               href="mailto:contacto@delriointernet.com"
               className="text-[#6d8cff] hover:underline"
             >
