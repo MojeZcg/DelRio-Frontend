@@ -15,11 +15,11 @@ export default function ContactForm() {
   const [estado, setEstado] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const telefono = process.env.COMERCIAL;
+  const comercial = process.env.COMERCIAL;
 
   function generarMensajeWhatsApp() {
     const texto = `Hola! Soy ${nombre}.%0A%0AEmail: ${email}%0A%0AMensaje:%0A${mensaje}`;
-    return `https://wa.me/${telefono}?text=${texto}`;
+    return `https://wa.me/${comercial}?text=${texto}`;
   }
 
   function handleSubmit(e: React.FormEvent) {
