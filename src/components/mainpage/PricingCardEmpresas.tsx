@@ -157,9 +157,7 @@ function PricingCardEmpresas({
 
           <Link
             target="_blank"
-            href={`https://wa.me/${comercial ?? "542615861188"}?text=Hola%21%20Quiero%20solicitar%20el%20${encodeURIComponent(title)}%20con%20velocidad%20de%20${encodeURIComponent(
-              features.speed,
-            )}`}
+            href={`https://wa.me/${comercial ?? "542615861188"}?text=Hola%21%20Quiero%20solicitar%20el%20plan%20${encodeURIComponent(title)}`}
             className="group rounded-lg px-10 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
             style={{ backgroundColor: color }}
           >
