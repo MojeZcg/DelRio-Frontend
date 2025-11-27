@@ -3,6 +3,11 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 
 import PricingCards from "@/components/mainpage/PricingCardHogar";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 function PricingCardsHogar() {
   return (
@@ -35,8 +40,17 @@ export default function InternetHogarPage() {
             Internet Hogar DelRio
           </h1>
           <p className="mt-4 text-lg text-blue-100">
-            Conectá tu hogar con velocidades simétricas, WiFi 6 y soporte
-            confiable. Elegí el plan que mejor se adapte a vos.
+            Conectá tu hogar con velocidades simétricas,{" "}
+            <HoverCard>
+              <HoverCardTrigger className="inline text-yellow-200">
+                WiFi 6
+              </HoverCardTrigger>
+              <HoverCardContent className="max-w-[260px] text-sm leading-snug">
+                Sujeto a{" "}
+                <strong>disponibilidad técnica y condiciones de red.</strong>
+              </HoverCardContent>
+            </HoverCard>{" "}
+            y soporte confiable. Elegí el plan que mejor se adapte a vos.
           </p>
           <Link
             href="#planes"
