@@ -23,7 +23,6 @@ interface PlanFeatures {
   staticIP?: boolean;
   sla?: boolean;
   monitoring?: boolean;
-  vpn?: boolean;
   installation?: boolean;
 }
 
@@ -40,8 +39,8 @@ const pricingCardsEmpresas: PricingCardProps[] = [
     title: "Plan PyME",
     description: "Conectividad confiable para tu negocio en crecimiento.",
     features: {
-      speed: "100 Mbps Simétricos",
-      price: 40000,
+      speed: "50 Mbps",
+      price: 0,
       installation: true,
       staticIP: true,
       supportPriority: true,
@@ -52,12 +51,13 @@ const pricingCardsEmpresas: PricingCardProps[] = [
     title: "Plan Corporativo",
     description: "Rendimiento garantizado para oficinas y equipos exigentes.",
     features: {
-      speed: "300 Mbps Simétricos",
-      price: 65000,
+      speed: "100 Mbps",
+      price: 0,
       installation: true,
       staticIP: true,
       supportPriority: true,
       sla: true,
+      monitoring: true,
     },
     color: "#004aad",
     recomended: true,
@@ -67,14 +67,13 @@ const pricingCardsEmpresas: PricingCardProps[] = [
     description:
       "Máxima disponibilidad y soporte 24/7 para operaciones críticas.",
     features: {
-      speed: "1 Gbps Dedicado",
-      price: 120000,
+      speed: "300 Mbps",
+      price: 0,
       installation: true,
       staticIP: true,
       supportPriority: true,
       sla: true,
       monitoring: true,
-      vpn: true,
     },
     color: "#002b7a",
   },
@@ -87,16 +86,19 @@ function PricingCardEmpresas({
   color,
   recomended,
 }: PricingCardProps) {
+  const comercial = process.env.COMERCIAL;
   return (
     <div className="relative overflow-visible pt-4 md:pt-0">
-      <div className="shadow-gray-302 flex flex-col items-center rounded-2xl border border-gray-300 shadow-sm lg:w-82">
+      <div
+        className={`shadow-gray-302 flex flex-col items-center border-x border-b lg:rounded-2xl lg:border-3 ${recomended ? "lg:border-green-500" : "lg:border-gray-100/20"} rounded-2xl border border-gray-300 shadow-sm lg:w-86`}
+      >
         {recomended && (
           <div className="absolute top-1 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-lg bg-green-600 px-10 py-1 text-sm font-medium text-white shadow-md md:-top-4">
             Recomendado <BadgeCheck className="h-4 w-4" />
           </div>
         )}
         <div
-          className="flex h-32 w-full flex-col items-center justify-center gap-0.5 rounded-t-2xl text-center text-white"
+          className="flex h-32 w-full flex-col items-center justify-center gap-0.5 rounded-t-xl text-center text-white"
           style={{ backgroundColor: color }}
         >
           <h4 className="text-2xl font-bold">{title}</h4>
@@ -145,26 +147,12 @@ function PricingCardEmpresas({
                 <Check size={22} className="mr-3 text-green-600" />
               )}
             </span>
-
-            <Separator className="my-2" />
-            <span className="my-1 ml-1 flex items-center justify-between gap-2">
-              <HoverCard>
-                <HoverCardTrigger className="flex items-center gap-1.5">
-                  VPN corporativa <Info size={14} />
-                </HoverCardTrigger>
-                <HoverCardContent className="text-sm leading-snug">
-                  Conexión segura entre tus sedes y empleados, ideal para
-                  trabajo remoto.
-                </HoverCardContent>
-              </HoverCard>
-              {features.vpn && (
-                <Check size={22} className="mr-3 text-green-600" />
-              )}
-            </span>
           </div>
 
           <Link
-            href="/contacto"
+            href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20solicitar%20el%20${encodeURIComponent(title)}%20con%20velocidad%20de%20${encodeURIComponent(
+              features.speed,
+            )}`}
             className="group rounded-lg px-10 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
             style={{ backgroundColor: color }}
           >

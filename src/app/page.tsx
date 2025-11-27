@@ -1,27 +1,12 @@
 import HeroImage from "@/components/mainpage/HeroImage";
 import PricingCardsEmpresas from "@/components/mainpage/PricingCardEmpresas";
 import PricingCards from "@/components/mainpage/PricingCardHogar";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const comercial = process.env.COMERCIAL;
+
   return (
     <main className="overflow-x-hidden pt-24">
       {/* === HERO === */}
@@ -53,7 +38,15 @@ export default function Home() {
             </p>
           </div>
 
-          <Dialog>
+          <Link
+            href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20comprobar%20la%20disponibilidad%20de%20internet%20en%20mi%20zona.`}
+            className="flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
+          >
+            Comprueba la disponibilidad
+            <span className="hidden md:inline">en tu zona</span>
+          </Link>
+
+          {/* <Dialog>
             <DialogTrigger asChild>
               <Button className="mt-4 h-12 rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32">
                 Comprueba la disponibilidad
@@ -156,7 +149,7 @@ export default function Home() {
                 </Button>
               </form>
             </DialogContent>
-          </Dialog>
+          </Dialog> */}
         </div>
 
         {/* Imagen ilustrativa lateral */}

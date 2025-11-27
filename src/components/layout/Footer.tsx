@@ -1,8 +1,11 @@
 import { ArrowUpRightIcon, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import formatearNumero from "@/components/utils/NumberFormater";
 
 export default function Footer() {
+  const administracion = process.env.ADMINISTRACION;
+
   return (
     <footer className="border-t border-gray-700 bg-black text-gray-300">
       <div className="mx-auto w-full px-12 pt-10 pb-6">
@@ -70,17 +73,29 @@ export default function Footer() {
           <div>
             <h2 className="mb-3 text-lg font-semibold text-white">Contacto</h2>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-blue-400" />
-                <span>+54 261 5555-5555</span>
+              <li>
+                <Link
+                  href={`https://wa.me/${administracion}`}
+                  className="flex items-center gap-2"
+                >
+                  <Phone className="h-4 w-4 text-blue-400" />
+                  <span>{formatearNumero(administracion ?? "")}</span>
+                </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-blue-400" />
-                <span>info@delriointernet.com</span>
+              <li>
+                <Link href="" className="flex items-center gap-2">
+                  <Mail className="h-4 w-4 text-blue-400" />
+                  <span>info@delriointernet.com</span>
+                </Link>
               </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 text-blue-400" />
-                <span>Quintana 1180, M5507 Perdriel, Mendoza</span>
+              <li>
+                <Link
+                  href="https://maps.app.goo.gl/zyJBfKs266V1ZdqZ9"
+                  className="flex items-start gap-2"
+                >
+                  <MapPin className="mt-0.5 h-4 w-4 text-blue-400" />
+                  <span>Quintana 1180, M5507 Perdriel, Mendoza</span>
+                </Link>
               </li>
             </ul>
           </div>
@@ -102,16 +117,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/politica-privacidad.pdf"
-                  className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
-                >
-                  Política de Privacidad
-                  <ArrowUpRightIcon className="h-3.5 w-3.5" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/baja"
+                  href={`https://wa.me/${administracion}?text=Hola%21%20Quiero%20dar%20de%20baja%20mi%20servicio`}
                   className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
                   Dar de baja
@@ -123,8 +129,8 @@ export default function Footer() {
         </div>
 
         {/* === BOTTOM SECTION === */}
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-gray-700 pt-4 text-xs text-gray-400 sm:flex-row">
-          <p>
+        <div className="mt-10 flex flex-col items-center justify-between gap-5 border-t border-gray-700 pt-4 text-start text-xs text-gray-400 sm:flex-row md:gap-0">
+          <p className="text-center">
             &copy; {new Date().getFullYear()} DelRio Internet. Todos los
             derechos reservados.
           </p>

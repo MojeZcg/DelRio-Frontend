@@ -20,8 +20,7 @@ interface PlanFeatures {
   installation?: boolean;
   support?: boolean;
   wifi?: boolean;
-  staticIP?: boolean;
-  benefits?: boolean;
+  full?: boolean;
 }
 
 interface PricingCardProps {
@@ -30,7 +29,7 @@ interface PricingCardProps {
   features: PlanFeatures;
   color: string;
   recomended?: boolean;
-  planslug: string;
+  planmsg: string;
 }
 
 const pricingCards: PricingCardProps[] = [
@@ -43,12 +42,11 @@ const pricingCards: PricingCardProps[] = [
       price: 15000,
       installation: true,
       support: true,
-      staticIP: true,
       wifi: true,
-      benefits: true,
+      full: true,
     },
     color: "#1661ec",
-    planslug: "standard",
+    planmsg: "Hola%21%20Quiero%20el%20Plan%20Standard",
   },
   {
     title: "Plan Esencial",
@@ -58,13 +56,12 @@ const pricingCards: PricingCardProps[] = [
       price: 20000,
       installation: true,
       support: true,
-      staticIP: true,
       wifi: true,
-      benefits: true,
+      full: true,
     },
     color: "#323dd8",
     recomended: true,
-    planslug: "esencial",
+    planmsg: "Hola%21%20Quiero%20el%20Plan%20Escencial",
   },
   {
     title: "Plan Élite",
@@ -74,12 +71,11 @@ const pricingCards: PricingCardProps[] = [
       price: 30000,
       installation: true,
       support: true,
-      staticIP: true,
       wifi: true,
-      benefits: true,
+      full: true,
     },
     color: "#24228f",
-    planslug: "elite",
+    planmsg: "Hola%21%20Quiero%20el%20Plan%20Elite",
   },
 ];
 
@@ -89,23 +85,27 @@ interface FeatureItem {
 }
 
 const featureList: FeatureItem[] = [
-  { label: "Instalación sin costo", key: "installation" },
+  { label: "Instalación Profesional", key: "installation" },
   { label: "Soporte técnico especializado", key: "support" },
   { label: "WiFi 6", key: "wifi" },
-  { label: "IP pública fija", key: "staticIP" },
   {
     label: (
-      <HoverCard>
-        <HoverCardTrigger className="flex items-center gap-1.5">
-          Beneficios Exclusivos <Info size={14} />
-        </HoverCardTrigger>
-        <HoverCardContent className="max-w-[260px] text-sm leading-snug">
-          Acceso al <strong>Club de Beneficios</strong> con descuentos
-          exclusivos y <strong>plataforma de entretenimiento</strong> incluida.
-        </HoverCardContent>
-      </HoverCard>
+      <div className="flex items-center gap-2">
+        Beneficios Full
+        <HoverCard>
+          <HoverCardTrigger className="flex items-center">
+            <Info size={16} />
+          </HoverCardTrigger>
+          <HoverCardContent className="max-w-[260px] text-sm leading-snug">
+            Posiblididad de contratar los beneficios full, con{" "}
+            <strong>IP fija</strong> con
+            <strong> soporte especializado 24/7</strong>, monitoreo de la red y
+            más beneficios exclusivos.
+          </HoverCardContent>
+        </HoverCard>
+      </div>
     ),
-    key: "benefits",
+    key: "full",
   },
 ];
 
@@ -115,7 +115,7 @@ function PricingCard({
   features,
   color,
   recomended,
-  planslug,
+  planmsg,
 }: PricingCardProps) {
   return (
     <div className="relative overflow-visible rounded-2xl pt-4 lg:p-0">
@@ -131,12 +131,12 @@ function PricingCard({
           className="flex h-32 w-full flex-col items-center justify-center rounded-t-lg text-center text-white"
           style={{ backgroundColor: color }}
         >
-          <h3 className="text-2xl font-bold">{title}</h3>
+          <h3 className="pb-1 text-3xl font-bold">{title}</h3>
           <p className="text-2xl">{features.speed}</p>
         </div>
 
-        <div className="flex w-full flex-col items-center justify-center px-6">
-          <p className="pt-3 pb-6 text-center text-xs">{description}</p>
+        <div className="flex w-full flex-col items-center justify-center px-6 pb-2">
+          <p className="pt-4 pb-6 text-center text-xs">{description}</p>
 
           <div className="flex w-full flex-col gap-3 pb-8 font-semibold">
             {featureList.map((item, i) => (
@@ -153,7 +153,7 @@ function PricingCard({
           </div>
 
           <Link
-            href={`/contratar/${planslug}`}
+            href={`https://wa.me/542615861188?text=${planmsg}`}
             className="group mb-6 rounded-lg px-12 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
             style={{ backgroundColor: color }}
           >
