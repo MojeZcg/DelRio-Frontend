@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 const planesBusiness = [
   {
     title: "Velocidades simétricas garantizadas",
-    desc: "Mantené el mismo rendimiento tanto en carga como en descarga, sin reservas ocultas ni limitaciones de ancho de banda.",
+    desc: "Mantené el mismo rendimiento tanto en carga como en descarga, sin reservas ocultas.",
   },
   {
     title: "Soporte técnico permanente",
@@ -93,7 +93,7 @@ export default function EmpresasPage() {
           {/* === PLAN BUSINESS === */}
           <div className="flex w-full max-w-2xl flex-col rounded-2xl bg-white/10 p-6 shadow-lg backdrop-blur-md transition hover:bg-white/15 sm:p-10">
             <h4 className="mb-4 text-center text-2xl font-bold text-blue-400 sm:text-3xl lg:text-left">
-              Business — Conectividad Simétrica
+              Business — Conectividad para empresas
             </h4>
             <p className="mb-8 text-center text-sm leading-relaxed text-gray-300 sm:text-base lg:text-left">
               Ideal para empresas que necesitan un servicio estable, rápido y

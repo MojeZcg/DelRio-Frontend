@@ -36,7 +36,7 @@ interface PricingCardProps {
 
 const pricingCardsEmpresas: PricingCardProps[] = [
   {
-    title: "Plan PyME",
+    title: "Empresa Estandard",
     description: "Conectividad confiable para tu negocio en crecimiento.",
     features: {
       speed: "50 Mbps",
@@ -48,7 +48,7 @@ const pricingCardsEmpresas: PricingCardProps[] = [
     color: "#0a69b7",
   },
   {
-    title: "Plan Corporativo",
+    title: "Empresa Escencial",
     description: "Rendimiento garantizado para oficinas y equipos exigentes.",
     features: {
       speed: "100 Mbps",
@@ -63,7 +63,7 @@ const pricingCardsEmpresas: PricingCardProps[] = [
     recomended: true,
   },
   {
-    title: "Plan Enterprise",
+    title: "Empresa Elite",
     description:
       "Máxima disponibilidad y soporte 24/7 para operaciones críticas.",
     features: {
@@ -90,10 +90,10 @@ function PricingCardEmpresas({
   return (
     <div className="relative overflow-visible pt-4 md:pt-0">
       <div
-        className={`shadow-gray-302 flex flex-col items-center border-x border-b lg:rounded-2xl lg:border-3 ${recomended ? "lg:border-green-500" : "lg:border-gray-100/20"} rounded-2xl border border-gray-300 shadow-sm lg:w-86`}
+        className={`shadow-gray-302 flex flex-col items-center border-x border-b shadow-lg shadow-gray-300 lg:rounded-2xl lg:border-3 ${recomended ? "lg:border-green-500" : "lg:border-gray-100/50"} rounded-2xl border border-gray-300 shadow-sm lg:w-86`}
       >
         {recomended && (
-          <div className="absolute top-1 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-lg bg-green-600 px-10 py-1 text-sm font-medium text-white shadow-md md:-top-4">
+          <div className="absolute top-1 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-lg bg-green-500 px-10 py-1 text-sm font-medium text-white shadow-md md:-top-4">
             Recomendado <BadgeCheck className="h-4 w-4" />
           </div>
         )}
@@ -108,7 +108,7 @@ function PricingCardEmpresas({
         <div className="flex w-full flex-col items-center justify-center px-6">
           <p className="pt-3 text-center text-sm">{description}</p>
 
-          <div className="flex w-full flex-col pt-3 pb-6 font-semibold">
+          <div className="flex w-full flex-col pt-4 pb-6 font-semibold">
             <span className="my-1 ml-1 flex items-center justify-between">
               Instalación profesional{" "}
               {features.installation && (
@@ -133,24 +133,30 @@ function PricingCardEmpresas({
             </span>
 
             <Separator className="my-2" />
-            <span className="my-1 ml-1 flex items-center justify-between">
-              SLA personalizado{" "}
-              {features.sla && (
+            <div className="flex items-center justify-between">
+              <div className="my-1 ml-1 flex items-center gap-2">
+                Beneficios Full
+                <HoverCard>
+                  <HoverCardTrigger className="flex items-center">
+                    <Info size={16} />
+                  </HoverCardTrigger>
+                  <HoverCardContent className="max-w-[260px] text-sm leading-snug">
+                    Posiblididad de contratar los{" "}
+                    <strong>Beneficios full</strong>, con{" "}
+                    <strong>SLA personalizado</strong> con{" "}
+                    <strong>Soporte 24/7 y monitoreo de la red</strong>, ademas
+                    de más beneficios exclusivos.
+                  </HoverCardContent>
+                </HoverCard>
+              </div>
+              {features.staticIP && (
                 <Check size={22} className="mr-3 text-green-600" />
               )}
-            </span>
-
-            <Separator className="my-2" />
-            <span className="my-1 ml-1 flex items-center justify-between">
-              Monitoreo y diagnóstico remoto{" "}
-              {features.monitoring && (
-                <Check size={22} className="mr-3 text-green-600" />
-              )}
-            </span>
+            </div>
           </div>
 
           <Link
-            href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20solicitar%20el%20${encodeURIComponent(title)}%20con%20velocidad%20de%20${encodeURIComponent(
+            href={`https://wa.me/${comercial ?? ""}?text=Hola%21%20Quiero%20solicitar%20el%20${encodeURIComponent(title)}%20con%20velocidad%20de%20${encodeURIComponent(
               features.speed,
             )}`}
             className="group rounded-lg px-10 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"

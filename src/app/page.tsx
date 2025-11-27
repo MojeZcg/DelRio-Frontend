@@ -218,13 +218,14 @@ export default function Home() {
 
         <PricingCardsEmpresas />
 
-        <p className="max-w-2xl py-10 text-center text-sm">
+        <p className="max-w-2xl py-10 text-center text-sm lg:max-w-4xl">
           Soluciones de internet empresarial desde{" "}
           <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
-            500 Mbps
+            300 Mbps
           </span>{" "}
-          con instalación profesional, soporte técnico prioritario y IP fija.
-          Ideal para mantener tu negocio siempre conectado y eficiente.
+          con instalación profesional, ademas con beneficios full podes optar a
+          soporte técnico prioritario y IP fija. Ideal para mantener tu negocio
+          siempre conectado y eficiente.
         </p>
       </section>
 
@@ -300,7 +301,7 @@ export default function Home() {
             conexión, confianza.
           </p>
           <Link
-            href="/contacto"
+            href={`https://wa.me/${comercial ?? "542615861188"}?text=Hola%21%20Quiero%20hablar%20con%20ustedes%20sobre%20sus%planes%20de%20internet`}
             className="inline-block rounded-lg bg-white px-8 py-3 font-medium text-(--delrio-medium) transition hover:bg-blue-100"
           >
             Hablemos de tu conexión
