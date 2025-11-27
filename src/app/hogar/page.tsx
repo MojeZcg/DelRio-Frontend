@@ -72,9 +72,9 @@ export default function InternetHogarPage() {
             {benefits.map((b, i) => (
               <div
                 key={i}
-                className="flex items-center justify-between gap-8 rounded-lg bg-gray-50 p-4 shadow-sm"
+                className="flex items-center gap-8 rounded-lg bg-gray-50 p-4 shadow-sm xl:justify-between"
               >
-                <Check size={36} className="text-green-600" />
+                <Check size={36} className="text-green-500" />
                 <span className="text-sm font-medium text-gray-700">
                   {b.text}
                 </span>
