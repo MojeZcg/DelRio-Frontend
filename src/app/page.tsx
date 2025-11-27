@@ -301,7 +301,7 @@ export default function Home() {
             conexión, confianza.
           </p>
           <Link
-            href={`https://wa.me/${comercial ?? "542615861188"}?text=Hola%21%20Quiero%20hablar%20con%20ustedes%20sobre%20sus%planes%20de%20internet`}
+            href={`https://wa.me/${comercial ?? "542615861188"}?text=Hola%21%20Quiero%20hablar%20con%20ustedes%20sobre%20sus%20planes%20de%20internet`}
             className="inline-block rounded-lg bg-white px-8 py-3 font-medium text-(--delrio-medium) transition hover:bg-blue-100"
           >
             Hablemos de tu conexión
