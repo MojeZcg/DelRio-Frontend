@@ -50,6 +50,7 @@ const planesFull = [
 ];
 
 export default function EmpresasPage() {
+  const comercial = process.env.COMERCIAL;
   return (
     <main className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden pt-24 text-white">
       {/* 🌆 Fondo fijo con overlay */}
@@ -75,7 +76,7 @@ export default function EmpresasPage() {
         </h2>
 
         <Link
-          href="/contacto"
+          href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20consultar%20sobre%20los%20planes%20de%20internet%20para%20empresas.`}
           className="group mt-4 inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) px-8 py-3 font-semibold text-white shadow-md transition-all hover:from-blue-700 hover:to-blue-900 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none"
         >
           Contactar asesor comercial

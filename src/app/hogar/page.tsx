@@ -50,7 +50,7 @@ export default function InternetHogarPage() {
       <PricingCardsHogar />
 
       <section className="py-12">
-        <div className="mx-auto max-w-5xl px-6">
+        <div className="mx-auto max-w-6xl px-6">
           <h3 className="mb-8 text-center text-2xl font-bold text-gray-50">
             Beneficios del servicio DelRio Hogar
           </h3>
@@ -58,9 +58,9 @@ export default function InternetHogarPage() {
             {benefits.map((b, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 rounded-lg bg-gray-50 p-4 shadow-sm"
+                className="flex items-center justify-between gap-8 rounded-lg bg-gray-50 p-4 shadow-sm"
               >
-                <Check className="text-green-600" />
+                <Check size={36} className="text-green-600" />
                 <span className="text-sm font-medium text-gray-700">
                   {b.text}
                 </span>
@@ -70,7 +70,7 @@ export default function InternetHogarPage() {
         </div>
       </section>
 
-      <footer className="py-6 text-center text-xs text-gray-200">
+      <footer className="pb-8 text-center text-xs text-gray-200">
         * Las velocidades indicadas son máximas teóricas. Se garantiza un mínimo
         del 60 % del ancho de banda contratado, sujeto a disponibilidad técnica
         y condiciones de red.
