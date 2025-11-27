@@ -42,7 +42,7 @@ export default function Home() {
             href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20comprobar%20la%20disponibilidad%20de%20internet%20en%20mi%20zona.`}
             className="flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
           >
-            Comprueba la disponibilidad
+            Comprueba la disponibilidad{" "}
             <span className="hidden md:inline">en tu zona</span>
           </Link>
 
