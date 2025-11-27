@@ -120,7 +120,7 @@ export default function EmpresasPage() {
             {/* Botón pegado abajo */}
             <div className="mt-auto flex justify-center">
               <Link
-                href="/contacto"
+                href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20consultar%20sobre%20los%20planes%20de%20internet%20para%20empresas`}
                 className="mt-10 inline-block w-full rounded-xl bg-blue-600 px-6 py-3 text-center font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-medium) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto xl:min-w-lg"
               >
                 Consultar planes
@@ -156,7 +156,7 @@ export default function EmpresasPage() {
             {/* Botón pegado abajo */}
             <div className="mt-auto flex justify-center">
               <Link
-                href="/contacto"
+                href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20consultar%20sobre%20los%20planes%20de%20internet%20para%20empresas`}
                 className="mt-10 inline-block w-full rounded-xl bg-blue-600 px-6 py-3 text-center font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-medium) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto lg:min-w-lg"
               >
                 Consultar planes
