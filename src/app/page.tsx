@@ -44,7 +44,7 @@ export default function Home() {
             className="flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
           >
             Comprueba la disponibilidad{" "}
-            <span className="hidden md:inline">en tu zona</span>
+            <span className="hidden pl-1 md:inline"> en tu zona</span>
           </Link>
 
           {/* <Dialog>
