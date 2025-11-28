@@ -18,8 +18,8 @@ export default function ContactPage() {
               Contactanos
             </h1>
             <p className="mb-10 text-sm text-gray-300">
-              Estamos para ayudarte. Completá el formulario o escribinos a
-              nuestros canales directos.
+              Estamos para ayudarte. Completá el formulario para un contacto mas
+              personalizado.
             </p>
 
             <ContactForm />
