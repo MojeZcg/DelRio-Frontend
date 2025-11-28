@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://delriointernet.com.ar
+
+# Sitemaps
+Sitemap: https://delriointernet.com.ar/sitemap.xml
