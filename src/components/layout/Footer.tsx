@@ -85,7 +85,7 @@ export default function Footer() {
               <li>
                 <Link
                   target="_blank"
-                  href="administracion@delriointernet.com.ar"
+                  href="mailto:administracion@delriointernet.com.ar"
                   className="flex items-center gap-2"
                 >
                   <Mail className="h-4 w-4 text-blue-400" />
