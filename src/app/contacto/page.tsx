@@ -36,7 +36,7 @@ export default function ContactPage() {
               <strong>Administración:</strong>{" "}
               <Link
                 target="_blank"
-                href={`https://wa.me/${administracion}?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
+                href={`https://wa.me/542615703852?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
                 className="text-[#6d8cff] hover:underline"
               >
                 {formatearNumero(administracion ?? "")}
@@ -50,7 +50,7 @@ export default function ContactPage() {
               <strong>Comercial:</strong>{" "}
               <Link
                 target="_blank"
-                href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
+                href={`https://wa.me/542615861188?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
                 className="text-[#6d8cff] hover:underline"
               >
                 {formatearNumero(comercial ?? "")}
@@ -64,7 +64,7 @@ export default function ContactPage() {
               <strong>Soporte Técnico:</strong>{" "}
               <Link
                 target="_blank"
-                href={`https://wa.me/${soporte}?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
+                href={`https://wa.me/542615788553?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
                 className="text-[#6d8cff] hover:underline"
               >
                 {formatearNumero(soporte ?? "")}
