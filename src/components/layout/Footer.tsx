@@ -89,7 +89,7 @@ export default function Footer() {
                   className="flex items-center gap-2"
                 >
                   <Mail className="h-4 w-4 text-blue-400" />
-                  <span>info@delriointernet.com</span>
+                  <span>administracion@delriointernet.com.ar</span>
                 </Link>
               </li>
               <li>

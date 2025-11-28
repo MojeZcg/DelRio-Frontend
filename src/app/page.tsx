@@ -200,9 +200,9 @@ export default function Home() {
             </p>
           </div>
           <div className="max-w-xs">
-            <p className="font-bold">Soporte 24/7</p>
+            <p className="font-bold">Soporte Humano</p>
             <p className="text-white/80">
-              Siempre disponibles, cuando más lo necesitás.
+              Soporte técnico rápido y eficiente con personal capacitado.
             </p>
           </div>
         </div>
