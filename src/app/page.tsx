@@ -24,7 +24,7 @@ export default function Home() {
 
       {/* Texto + Imagen lateral */}
       <div className="min-h-xl flex h-156 w-full flex-col items-center justify-center md:flex-row xl:gap-20 2xl:gap-32">
-        <div className="flex max-w-xl flex-col items-center gap-12 text-center text-white md:items-start">
+        <div className="flex max-w-xl flex-col items-center gap-14 text-center text-white md:items-start">
           <div className="flex flex-col items-center gap-3 md:items-start md:text-left">
             <h1 className="text-5xl leading-tight font-bold">
               Tu{" "}
