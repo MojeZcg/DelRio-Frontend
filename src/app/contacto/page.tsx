@@ -75,10 +75,10 @@ export default function ContactPage() {
             ✉️ <strong>Correo:</strong>{" "}
             <Link
               target="_blank"
-              href="mailto:contacto@delriointernet.com"
+              href="mailto:administracion@delriointernet.com.ar"
               className="text-[#6d8cff] hover:underline"
             >
-              contacto@delriointernet.com
+              administracion@delriointernet.com.ar
             </Link>
           </p>
           <p className="mt-2 text-sm text-gray-400">
