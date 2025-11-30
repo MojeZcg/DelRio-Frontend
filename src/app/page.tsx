@@ -297,7 +297,7 @@ export default function Home() {
           <h3 className="mb-4 text-2xl font-semibold md:text-3xl">
             Conectamos personas, lugares y oportunidades.
           </h3>
-          <p className="mb-6 text-white">
+          <p className="mb-6 px-10 text-white md:p-0">
             En cada rincón de Mendoza, llevamos más que internet: llevamos
             conexión, confianza.
           </p>

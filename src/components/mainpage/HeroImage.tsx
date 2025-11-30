@@ -21,7 +21,7 @@ export default function HeroImage() {
         height={1282}
         priority
         onLoad={() => setIsLoaded(true)}
-        className={`pointer-events-none hidden h-80 w-auto rounded-xl opacity-90 shadow-lg transition-opacity duration-500 select-none xl:flex 2xl:h-100 ${
+        className={`pointer-events-none hidden h-80 w-auto rounded-xl opacity-90 shadow-lg transition-opacity duration-500 select-none xl:flex 2xl:h-110 ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
       />

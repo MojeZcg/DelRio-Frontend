@@ -50,9 +50,8 @@ const planesFull = [
 ];
 
 export default function EmpresasPage() {
-  const comercial = process.env.COMERCIAL;
   return (
-    <main className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden pt-24 text-white">
+    <main className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-black/50 pt-24 text-white md:bg-transparent">
       {/* 🌆 Fondo fijo con overlay */}
       <div className="fixed inset-0 -z-10">
         <Image
