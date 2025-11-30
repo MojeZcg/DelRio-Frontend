@@ -24,7 +24,7 @@ export default function Home() {
 
       {/* Texto + Imagen lateral */}
       <div className="min-h-xl flex h-156 w-full flex-col items-center justify-center md:flex-row xl:gap-20 2xl:gap-32">
-        <div className="flex max-w-xl flex-col items-center gap-12 text-center text-white md:items-start">
+        <div className="flex max-w-xl flex-col items-center gap-14 text-center text-white md:items-start">
           <div className="flex flex-col items-center gap-3 md:items-start md:text-left">
             <h1 className="text-5xl leading-tight font-bold">
               Tu{" "}
@@ -40,7 +40,7 @@ export default function Home() {
 
           <Link
             target="_blank"
-            href={`https://wa.me/${comercial}?text=Hola%21%20Quiero%20comprobar%20la%20disponibilidad%20de%20internet%20en%20mi%20zona.`}
+            href={`https://wa.me/542615861188?text=Hola%21%20Quisiera%20comprobar%20la%20disponibilidad%20de%20internet%20en%20mi%20zona.`}
             className="flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
           >
             Comprueba la disponibilidad{" "}
@@ -200,9 +200,9 @@ export default function Home() {
             </p>
           </div>
           <div className="max-w-xs">
-            <p className="font-bold">Soporte 24/7</p>
+            <p className="font-bold">Soporte Humano</p>
             <p className="text-white/80">
-              Siempre disponibles, cuando más lo necesitás.
+              Soporte técnico rápido y eficiente con personal capacitado.
             </p>
           </div>
         </div>

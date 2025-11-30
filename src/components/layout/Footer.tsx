@@ -75,7 +75,7 @@ export default function Footer() {
               <li>
                 <Link
                   target="_blank"
-                  href={`https://wa.me/${administracion}`}
+                  href={`https://wa.me/542615703852`}
                   className="flex items-center gap-2"
                 >
                   <Phone className="h-4 w-4 text-blue-400" />
@@ -85,11 +85,11 @@ export default function Footer() {
               <li>
                 <Link
                   target="_blank"
-                  href="mailto:info@delriointernet.com"
+                  href="mailto:administracion@delriointernet.com.ar"
                   className="flex items-center gap-2"
                 >
                   <Mail className="h-4 w-4 text-blue-400" />
-                  <span>info@delriointernet.com</span>
+                  <span>administracion@delriointernet.com.ar</span>
                 </Link>
               </li>
               <li>
@@ -123,7 +123,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={`https://wa.me/${administracion}?text=Hola%21%20Quiero%20dar%20de%20baja%20mi%20servicio`}
+                  href={`https://wa.me/542615703852?text=Hola%21%20Quiero%20dar%20de%20baja%20mi%20servicio`}
                   className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
                   Dar de baja

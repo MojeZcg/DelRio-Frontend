@@ -12,13 +12,12 @@ const getMonserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Del Río Internet",
-    template: "%s | Del Río Internet",
-  },
+  title: "Del Río Internet",
   description:
     "Del Río Internet es un proveedor de servicios de Internet en Mendoza, Argentina. Ofrecemos soluciones de conectividad de alta calidad para hogares y empresas, con Internet rápido, confiable y asequible, respaldado por soporte técnico local y un fuerte compromiso con la satisfacción del cliente.",
   keywords: [
+    "Internet",
+    "Internet Mendoza",
     "Del Río Internet",
     "ISP Mendoza",
     "internet Mendoza",

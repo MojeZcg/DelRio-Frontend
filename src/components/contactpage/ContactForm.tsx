@@ -19,7 +19,7 @@ export default function ContactForm() {
 
   function generarMensajeWhatsApp() {
     const texto = `Hola! Soy ${nombre}.%0A%0AEmail: ${email}%0A%0AMensaje:%0A${mensaje}`;
-    return `https://wa.me/${comercial}?text=${texto}`;
+    return `https://wa.me/542615861188?text=${texto}`;
   }
 
   function handleSubmit(e: React.FormEvent) {
