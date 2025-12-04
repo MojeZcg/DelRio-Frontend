@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Metadata } from "next";
 
 import { Check } from "lucide-react";
 
@@ -8,6 +9,36 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+
+export const metadata: Metadata = {
+  title: "Internet Hogar DelRio | Planes Simétricos y WiFi 6",
+  description:
+    "Conectá tu hogar con Internet DelRio: planes simétricos, WiFi 6, soporte confiable e instalación profesional incluida. Elegí el plan ideal para vos.",
+  keywords: [
+    "internet hogar",
+    "wifi 6",
+    "delrio",
+    "planes de internet",
+    "fibra óptica",
+    "internet simétrico",
+  ],
+  openGraph: {
+    title: "Internet Hogar DelRio",
+    description:
+      "Planes de Internet Hogar con velocidades simétricas, WiFi 6 y soporte profesional.",
+    url: "https://delriointernet.com.ar/hogar",
+    siteName: "DelRio",
+    images: [
+      {
+        url: "https:///delriointernet.com.ar/og-internet-hogar.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Internet Hogar DelRio",
+      },
+    ],
+    type: "website",
+  },
+};
 
 function PricingCardsHogar() {
   return (
