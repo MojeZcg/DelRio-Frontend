@@ -36,12 +36,6 @@ export const metadata: Metadata = {
       "Proveedor de Internet por fibra óptica e inalámbrico en Mendoza. Conexión rápida, estable y con soporte local.",
     url: "https://delriointernet.com.ar",
   },
-  formatDetection: {
-    telephone: false,
-    date: false,
-    email: false,
-    address: false,
-  },
 };
 
 export default function RootLayout({
