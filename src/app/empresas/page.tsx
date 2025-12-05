@@ -111,9 +111,9 @@ export default function EmpresasPage() {
         </h3>
 
         {/* === Contenedor principal responsive === */}
-        <div className="flex flex-col items-center justify-center gap-12 lg:flex-row lg:items-stretch lg:gap-10">
+        <div className="flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch xl:gap-10">
           {/* === PLAN BUSINESS === */}
-          <div className="flex w-full max-w-2xl flex-col rounded-2xl bg-white/10 p-6 shadow-lg backdrop-blur-md transition hover:bg-white/15 sm:p-10">
+          <div className="flex max-w-2xl flex-col rounded-2xl bg-white/10 p-6 shadow-lg backdrop-blur-md transition hover:bg-white/15 sm:p-10">
             <h4 className="mb-4 text-center text-2xl font-bold text-blue-400 sm:text-3xl lg:text-left">
               Business — Conectividad para empresas
             </h4>
@@ -150,7 +150,7 @@ export default function EmpresasPage() {
           </div>
 
           {/* === PLAN BUSINESS FULL === */}
-          <div className="flex w-full max-w-2xl flex-col rounded-2xl bg-white/10 p-6 shadow-lg backdrop-blur-md transition hover:bg-white/15 sm:p-10">
+          <div className="flex max-w-2xl flex-col rounded-2xl bg-white/10 p-6 shadow-lg backdrop-blur-md transition hover:bg-white/15 sm:p-10">
             <h4 className="mb-4 text-center text-2xl font-bold text-blue-700 sm:text-3xl lg:text-left">
               Business Full — Conectividad Dedicada
             </h4>
@@ -178,7 +178,7 @@ export default function EmpresasPage() {
             <div className="mt-auto flex justify-center">
               <Link
                 href={`https://wa.me/542615861188?text=Hola%21%20Quiero%20consultar%20sobre%20los%20planes%20de%20internet%20para%20empresas`}
-                className="mt-10 inline-block w-full rounded-xl bg-blue-600 px-6 py-3 text-center font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-medium) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto lg:min-w-lg"
+                className="mt-10 inline-block w-full rounded-xl bg-blue-600 px-6 py-3 text-center font-semibold text-white shadow-md transition-all duration-200 hover:bg-(--delrio-medium) focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto xl:min-w-lg"
               >
                 Consultar planes
               </Link>

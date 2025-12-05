@@ -89,7 +89,7 @@ export default function InternetHogarPage() {
           <h3 className="mb-8 text-center text-2xl font-bold text-gray-50">
             Beneficios del servicio DelRio Hogar
           </h3>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {benefits.map((b, i) => (
               <div
                 key={i}
