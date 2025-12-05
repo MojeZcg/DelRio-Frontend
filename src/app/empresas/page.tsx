@@ -2,6 +2,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { generateMetadata } from "@/lib/seo";
+
+export const metadata = generateMetadata({
+  title: "Internet Hogar DelRio | Tu mejor opción en Internet para Empresas",
+  description:
+    "Conectá tu Empresa con Internet DelRio: SLA garantizado, soporte confiable e instalación profesional.",
+  url: "https://delriointernet.com.ar/empresas",
+  keywords: [
+    "delrio",
+    "delrio internet",
+    "internet",
+    "fibra óptica",
+    "50 Mbps",
+    "100 Mbps",
+    "300 Mbps",
+    "internet dedicado",
+    "planes de internet",
+    "internet empresas",
+    "planes de internet empresas",
+    "proveedores de internet",
+  ],
+});
 
 const planesBusiness = [
   {

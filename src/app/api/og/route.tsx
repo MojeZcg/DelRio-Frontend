@@ -1,9 +1,16 @@
-
+/** @jsxImportSource react */
 
 import { ImageResponse } from "next/og";
-
+import React from "react";
 
 export const runtime = "edge";
+
+export const size = {
+  width: 1200,
+  height: 630,
+};
+
+export const contentType = "image/png";
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
@@ -28,6 +35,7 @@ export async function GET(req: Request) {
         }}
       >
         <div>Internet Hogar | DelRio</div>
+
         <div
           style={{
             marginTop: 20,
@@ -39,10 +47,6 @@ export async function GET(req: Request) {
           {title}
         </div>
       </div>
-    ),
-    {
-      width: 1200,
-      height: 630,
-    }
+    )
   );
 }

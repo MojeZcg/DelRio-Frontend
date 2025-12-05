@@ -11,8 +11,8 @@ interface SEOProps {
 export function generateMetadata({
   title,
   description,
-  url = "https://tusitio.com",
-  image = "https://tusitio.com/og-default.jpg",
+  url = "https://delriointernet.com.ar",
+  image = "https://delriointernet.com.ar/og-default.png",
   keywords = [],
 }: SEOProps): Metadata {
   return {

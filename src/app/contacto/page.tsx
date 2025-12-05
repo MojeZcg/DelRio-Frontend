@@ -5,6 +5,31 @@ import ContactForm from "@/components/contactpage/ContactForm";
 import { FileCog, BadgeDollarSign, Wrench } from "lucide-react";
 import formatearNumero from "@/components/utils/NumberFormater";
 
+import { generateMetadata } from "@/lib/seo";
+
+export const metadata = generateMetadata({
+  title: "Internet Hogar DelRio | Conectate con nosotros",
+  description:
+    "Conectá tu hogar con Internet DelRio: planes simétricos, WiFi 6, soporte confiable e instalación profesional.",
+  url: "https://delriointernet.com.ar/contacto",
+  keywords: [
+    "delrio",
+    "delrio internet",
+    "internet",
+    "fibra óptica",
+    "internet dedicado",
+    "planes de internet",
+    "internet empresas",
+    "planes de internet empresas",
+    "proveedores de internet",
+    "internet hogar",
+    "planes de internet hogar",
+    "50 Mbps",
+    "100 Mbps",
+    "300 Mbps",
+  ],
+});
+
 export default function ContactPage() {
   const administracion = process.env.ADMINISTRACION;
   const comercial = process.env.COMERCIAL;
