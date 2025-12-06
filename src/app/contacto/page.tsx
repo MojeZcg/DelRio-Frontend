@@ -8,7 +8,7 @@ import formatearNumero from "@/components/utils/NumberFormater";
 import { generateMetadata } from "@/lib/seo";
 
 export const metadata = generateMetadata({
-  title: "Internet Hogar DelRio | Conectate con nosotros",
+  title: "DelRio Internet | Conectate con nosotros",
   description:
     "Conectá tu hogar con Internet DelRio: planes simétricos, WiFi 6, soporte confiable e instalación profesional.",
   url: "https://delriointernet.com.ar/contacto",

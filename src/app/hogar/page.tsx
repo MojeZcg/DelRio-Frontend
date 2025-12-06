@@ -11,7 +11,7 @@ import {
 import { generateMetadata } from "@/lib/seo";
 
 export const metadata = generateMetadata({
-  title: "Internet Hogar DelRio | Internet para tu hogar",
+  title: "DelRio Internet | Internet para tu hogar",
   description:
     "Conectá tu hogar con Internet DelRio: planes simétricos, WiFi 6, soporte confiable e instalación profesional.",
   url: "https://delriointernet.com.ar/hogar",
