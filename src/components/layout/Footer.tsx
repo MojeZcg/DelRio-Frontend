@@ -1,11 +1,9 @@
 import { ArrowUpRightIcon, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import formatearNumero from "@/components/utils/NumberFormater";
+import { contactos } from "@/lib/contacto";
 
 export default function Footer() {
-  const administracion = process.env.ADMINISTRACION;
-
   return (
     <footer className="border-t border-gray-700 bg-black text-gray-300">
       <div className="mx-auto w-full px-12 pt-10 pb-6">
@@ -75,31 +73,31 @@ export default function Footer() {
               <li>
                 <Link
                   target="_blank"
-                  href={`https://wa.me/542615703852`}
+                  href={`${contactos.administracion.whatsapp}?text=${encodeURIComponent("Hola! Quiero contratar el servicio de internet.")}`}
                   className="flex items-center gap-2"
                 >
                   <Phone className="h-4 w-4 text-blue-400" />
-                  <span>{formatearNumero(administracion ?? "")}</span>
+                  <span>{contactos.administracion.numero}</span>
                 </Link>
               </li>
               <li>
                 <Link
                   target="_blank"
-                  href="mailto:administracion@delriointernet.com.ar"
+                  href={`mailto:${contactos.emails.administracion}`}
                   className="flex items-center gap-2"
                 >
                   <Mail className="h-4 w-4 text-blue-400" />
-                  <span>administracion@delriointernet.com.ar</span>
+                  <span>{contactos.emails.administracion}</span>
                 </Link>
               </li>
               <li>
                 <Link
                   target="_blank"
-                  href="https://maps.app.goo.gl/zyJBfKs266V1ZdqZ9"
+                  href={contactos.fisico.maps}
                   className="flex items-start gap-2"
                 >
                   <MapPin className="mt-0.5 h-4 w-4 text-blue-400" />
-                  <span>Quintana 1180, M5507 Perdriel, Mendoza</span>
+                  <span>{contactos.fisico.direccion}</span>
                 </Link>
               </li>
             </ul>
@@ -123,7 +121,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={`https://wa.me/542615703852?text=Hola%21%20Quiero%20dar%20de%20baja%20mi%20servicio`}
+                  href={`${contactos.administracion.whatsapp}?text=${encodeURIComponent("Hola! Quiero dar de baja mi servicio")}`}
                   className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
                   Dar de baja

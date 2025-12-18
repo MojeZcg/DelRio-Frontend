@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/hover-card";
 import { Separator } from "@/components/ui/separator";
 import { BadgeCheck, Check, Info } from "lucide-react";
+import { contactos } from "@/lib/contacto";
 
 interface PlanFeatures {
   speed: string;
@@ -46,7 +47,7 @@ const pricingCards: PricingCardProps[] = [
       full: true,
     },
     color: "#1661ec",
-    planmsg: "Hola%21%20Quiero%20el%20Plan%20Standard",
+    planmsg: "Hola! Quiero saber mas sobre el Plan Standard",
   },
   {
     title: "Plan Esencial",
@@ -61,7 +62,7 @@ const pricingCards: PricingCardProps[] = [
     },
     color: "#323dd8",
     recomended: true,
-    planmsg: "Hola%21%20Quiero%20el%20Plan%20Escencial",
+    planmsg: "Hola! Quiero saber mas sobre el Plan Esencial",
   },
   {
     title: "Plan Élite",
@@ -75,7 +76,7 @@ const pricingCards: PricingCardProps[] = [
       full: true,
     },
     color: "#24228f",
-    planmsg: "Hola%21%20Quiero%20el%20Plan%20Elite",
+    planmsg: "Hola! Quiero saber mas sobre el Plan Élite",
   },
 ];
 
@@ -154,7 +155,7 @@ function PricingCard({
 
           <Link
             target="_blank"
-            href={`https://wa.me/542615861188?text=${planmsg}`}
+            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent(planmsg)}`}
             className="group mb-6 rounded-lg px-12 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
             style={{ backgroundColor: color }}
           >

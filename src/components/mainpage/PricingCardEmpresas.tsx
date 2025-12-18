@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/hover-card";
 import { Separator } from "@/components/ui/separator";
 import { BadgeCheck, Check, Info } from "lucide-react";
+import { contactos } from "@/lib/contacto";
 
 interface PlanFeatures {
   speed: string;
@@ -86,7 +87,6 @@ function PricingCardEmpresas({
   color,
   recomended,
 }: PricingCardProps) {
-  const comercial = process.env.COMERCIAL;
   return (
     <div className="relative overflow-visible pt-4 md:pt-0">
       <div
@@ -157,7 +157,7 @@ function PricingCardEmpresas({
 
           <Link
             target="_blank"
-            href={`https://wa.me/${comercial ?? "542615861188"}?text=Hola%21%20Quiero%20solicitar%20el%20plan%20${encodeURIComponent(title)}`}
+            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero solicitar el plan " + title)}`}
             className="group rounded-lg px-10 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
             style={{ backgroundColor: color }}
           >

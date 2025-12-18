@@ -3,9 +3,9 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import ContactForm from "@/components/contactpage/ContactForm";
 import { FileCog, BadgeDollarSign, Wrench } from "lucide-react";
-import formatearNumero from "@/components/utils/NumberFormater";
 
 import { generateMetadata } from "@/lib/seo";
+import { contactos } from "@/lib/contacto";
 
 export const metadata = generateMetadata({
   title: "DelRio Internet | Conectate con nosotros",
@@ -31,9 +31,6 @@ export const metadata = generateMetadata({
 });
 
 export default function ContactPage() {
-  const administracion = process.env.ADMINISTRACION;
-  const comercial = process.env.COMERCIAL;
-  const soporte = process.env.SOPORTE;
   return (
     <main className="flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-linear-to-tl from-slate-950 via-slate-900 to-(--delrio-dark) pt-24 text-white">
       <div className="px-6 py-10 2xl:pt-10 2xl:pb-14">
@@ -61,10 +58,10 @@ export default function ContactPage() {
               <strong>Administración:</strong>{" "}
               <Link
                 target="_blank"
-                href={`https://wa.me/542615703852?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
+                href={`${contactos.administracion.whatsapp}?text=${encodeURIComponent("Hola! Quiero contratar el servicio de internet.")}`}
                 className="text-[#6d8cff] hover:underline"
               >
-                {formatearNumero(administracion ?? "")}
+                {contactos.administracion.numero}
               </Link>
             </div>
           </div>
@@ -75,10 +72,10 @@ export default function ContactPage() {
               <strong>Comercial:</strong>{" "}
               <Link
                 target="_blank"
-                href={`https://wa.me/542615861188?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
+                href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero recibir información sobre los planes de internet para mi hogar o empresa.")}`}
                 className="text-[#6d8cff] hover:underline"
               >
-                {formatearNumero(comercial ?? "")}
+                {contactos.comercial.numero}
               </Link>
             </div>
           </div>
@@ -89,10 +86,12 @@ export default function ContactPage() {
               <strong>Soporte Técnico:</strong>{" "}
               <Link
                 target="_blank"
-                href={`https://wa.me/542615788553?text=Hola%21%20Quiero%20contratar%20el%20servicio%20de%20internet`}
+                href={`${contactos.soporte.whatsapp}?text=${encodeURIComponent(
+                  "Hola! Necesito asistencia técnica con mi servicio de internet.",
+                )}`}
                 className="text-[#6d8cff] hover:underline"
               >
-                {formatearNumero(soporte ?? "")}
+                {contactos.soporte.numero}
               </Link>
             </div>
           </div>
@@ -103,12 +102,11 @@ export default function ContactPage() {
               href="mailto:administracion@delriointernet.com.ar"
               className="text-[#6d8cff] hover:underline"
             >
-              administracion@delriointernet.com.ar
+              {contactos.emails.administracion}
             </Link>
           </p>
           <p className="mt-2 text-sm text-gray-400">
-            Horario de atención: Lunes a Viernes de 8:30 a 18:00 y Sábados de
-            9:00 a 13:00
+            Horario de atención: {contactos.fisico.horario}
           </p>
         </div>
       </div>

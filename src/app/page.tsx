@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { generateMetadata } from "@/lib/seo";
+import { contactos } from "@/lib/contacto";
 
 export const metadata = generateMetadata({
   title: "DelRio Internet | Conectate con el mundo",
@@ -44,7 +45,7 @@ export default function Home() {
       </div>
 
       {/* Texto + Imagen lateral */}
-      <div className="min-h-xl flex h-156 w-full flex-col items-center justify-center md:flex-row xl:gap-20 2xl:gap-32">
+      <div className="min-h-xl flex h-150 w-full flex-col items-center justify-center md:flex-row xl:gap-20 2xl:gap-32">
         <div className="flex max-w-xl flex-col items-center gap-14 text-center text-white md:items-start">
           <div className="flex flex-col items-center gap-3 md:items-start md:text-left">
             <h1 className="text-5xl leading-tight font-bold">
@@ -61,7 +62,7 @@ export default function Home() {
 
           <Link
             target="_blank"
-            href={`https://wa.me/542615861188?text=Hola%21%20Quisiera%20comprobar%20la%20disponibilidad%20de%20internet%20en%20mi%20zona.`}
+            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de sus servicios en mi zona.")}`}
             className="flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
           >
             Comprueba la disponibilidad{" "}
@@ -219,7 +220,7 @@ export default function Home() {
           </p>
           <Link
             target="_blank"
-            href={`https://wa.me/${comercial ?? "542615861188"}?text=Hola%21%20Quiero%20hablar%20con%20ustedes%20sobre%20sus%20planes%20de%20internet`}
+            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero hablar con ustedes sobre sus planes de internet")}`}
             className="inline-block rounded-lg bg-white px-8 py-3 font-medium text-(--delrio-medium) transition hover:bg-blue-100"
           >
             Hablemos de tu conexión
