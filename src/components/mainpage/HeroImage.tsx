@@ -21,7 +21,7 @@ export default function HeroCarousel() {
   const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
 
   return (
-    <div className="hidden w-160 justify-center py-10 md:flex">
+    <div className="hidden w-160 justify-center md:flex">
       <Carousel
         className="w-full"
         opts={{ loop: true }}
