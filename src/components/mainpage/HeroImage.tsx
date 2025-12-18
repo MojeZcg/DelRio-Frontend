@@ -1,30 +1,70 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
-export default function HeroImage() {
-  const [isLoaded, setIsLoaded] = useState(false);
+const images = [
+  "/carrousel/1.webp",
+  "/carrousel/2.webp",
+  "/carrousel/3.webp",
+  "/carrousel/4.webp",
+];
+
+export default function HeroCarousel() {
+  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
 
   return (
-    <div className="relative flex justify-center">
-      {/* Skeleton mientras la imagen carga */}
-      {!isLoaded && (
-        <Skeleton className="pointer-events-none hidden h-100 w-auto rounded-xl select-none xl:block 2xl:h-100" />
-      )}
+    <div className="hidden w-160 justify-center py-10 md:flex">
+      <Carousel
+        className="w-full"
+        opts={{ loop: true }}
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}
+      >
+        <CarouselContent>
+          {images.map((src, index) => {
+            const isLoaded = loadedImages[index];
 
-      {/* Imagen principal */}
-      <Image
-        src="/heroimage.webp"
-        alt="Familia conectada en casa"
-        width={1920}
-        height={1282}
-        priority
-        onLoad={() => setIsLoaded(true)}
-        className={`pointer-events-none hidden h-80 w-auto rounded-xl opacity-90 shadow-lg transition-opacity duration-500 select-none xl:flex 2xl:h-110 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        }`}
-      />
+            return (
+              <CarouselItem key={src}>
+                <div className="relative aspect-3/2 w-full overflow-hidden rounded-xl">
+                  {/* Skeleton */}
+                  {!isLoaded && (
+                    <Skeleton className="absolute inset-0 rounded-xl" />
+                  )}
+
+                  {/* Image */}
+                  <Image
+                    src={src}
+                    alt={`Hero image ${index + 1}`}
+                    fill
+                    priority={index === 0}
+                    onLoad={() =>
+                      setLoadedImages((prev) => ({
+                        ...prev,
+                        [index]: true,
+                      }))
+                    }
+                    className={`object-cover transition-opacity duration-500 ${
+                      isLoaded ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                </div>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+      </Carousel>
     </div>
   );
 }
