@@ -120,7 +120,93 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  /* Scrollbar minimalista para Firefox */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(200, 210, 220, 0.6) rgba(8, 12, 24, 0.95);
+  }
+
+  /* Scrollbar minimalista para Chrome, Safari y Edge */
+  html::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: rgba(8, 12, 24, 0.95);
+    border-radius: 10px;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background-color: rgba(200, 210, 220, 0.6);
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(220, 230, 240, 0.8);
+  }
+
   body {
     @apply bg-background text-foreground;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(200, 210, 220, 0.6) rgba(8, 12, 24, 0.95);
   }
+
+  body::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: rgba(8, 12, 24, 0.95);
+    border-radius: 10px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(200, 210, 220, 0.6);
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(220, 230, 240, 0.8);
+  }
+}
+
+/* Scrollbar personalizado para elementos con scroll interno */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(200, 210, 220, 0.6) rgba(8, 12, 24, 0.95);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(8, 12, 24, 0.95);
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(200, 210, 220, 0.6);
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(220, 230, 240, 0.8);
+}
+
+/* Scrollbar oculto pero scrolleable */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
 }
