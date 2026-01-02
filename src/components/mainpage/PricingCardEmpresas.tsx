@@ -37,7 +37,7 @@ interface PricingCardProps {
 
 const pricingCardsEmpresas: PricingCardProps[] = [
   {
-    title: "Empresa Estandard",
+    title: "Empresa Standard",
     description: "Conectividad confiable para tu negocio en crecimiento.",
     features: {
       speed: "50 Mbps",
