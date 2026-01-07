@@ -29,15 +29,15 @@ export const metadata = generateMetadata({
 const planesBusiness = [
   {
     title: "Velocidades simétricas garantizadas",
-    desc: "Mantené el mismo rendimiento tanto en carga como en descarga, sin reservas ocultas.",
+    desc: "Mantené el mismo rendimiento tanto en carga como en descargas.",
   },
   {
     title: "Soporte técnico permanente",
-    desc: "Atención directa y resolución de incidencias en menos de 24 horas hábiles, con seguimiento personalizado de cada caso.",
+    desc: "Atención directa y resolución de incidencias en un máximo de 24 horas hábiles, con seguimiento personalizado de cada caso.",
   },
   {
     title: "Instalación profesional",
-    desc: "Incluye equipos ONU Wi-Fi 6 y cableado preconectorizado para una conexión más limpia y estable.",
+    desc: "Incluye equipos ONU Wi-Fi 5, fusion de fibra, roseta y patchcord para una conexión más limpia y estable.",
   },
   {
     title: "Facturación flexible",
@@ -51,7 +51,7 @@ const planesBusiness = [
 
 const planesFull = [
   {
-    title: "Ancho de banda exclusivo",
+    title: "Ancho de banda Dedicado",
     desc: "Cada empresa dispone de una conexión totalmente dedicada, garantizando disponibilidad continua 24/7 y rendimiento constante.",
   },
   {
@@ -63,8 +63,8 @@ const planesFull = [
     desc: "Supervisamos tu conexión en tiempo real para detectar y resolver incidencias antes de que afecten tu servicio.",
   },
   {
-    title: "Contratos personalizados",
-    desc: "Ofrecemos acuerdos adaptados a cada cliente corporativo según sus objetivos y tamaño.",
+    title: "Contratos de Servicio personalizados",
+    desc: "Ofrecemos SLA adaptados a cada cliente corporativo según sus objetivos y necesidades.",
   },
   {
     title: "Atención ejecutiva exclusiva",
@@ -88,7 +88,7 @@ export default function EmpresasPage() {
       </div>
 
       {/* 🧭 Contenido principal */}
-      <section className="z-10 flex flex-col items-center justify-center px-6 pt-52 text-center">
+      <section className="z-10 flex flex-col items-center justify-center px-6 pt-38 text-center">
         <h1 className="mb-4 text-4xl font-bold md:text-6xl">
           Internet para Empresas
         </h1>
@@ -106,10 +106,16 @@ export default function EmpresasPage() {
         </Link>
       </section>
 
-      <section className="z-10 mx-auto mt-16 w-full px-4 py-16 text-gray-100 sm:px-6">
-        <h3 className="mb-12 text-center text-3xl font-semibold text-white lg:text-4xl">
+      <section className="z-10 mx-auto mt-12 w-full px-4 pt-16 pb-4 text-gray-100 sm:px-6">
+        <h3 className="text-center text-3xl font-semibold text-white lg:text-4xl">
           Soluciones de Conectividad para Empresas
         </h3>
+
+        <p className="mx-auto mt-4 mb-10 max-w-6xl text-center text-xs text-gray-300 sm:text-base">
+          Todos nuestros servicios están diseñados para acompañar el crecimiento
+          de tu empresa, garantizando conectividad estable, atención prioritaria
+          y un compromiso real con tu operación diaria.
+        </p>
 
         {/* === Contenedor principal responsive === */}
         <div className="flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch xl:gap-10">
@@ -189,12 +195,6 @@ export default function EmpresasPage() {
 
         {/* === Divider === */}
         <Separator className="mx-auto my-16 max-w-6xl bg-white/20" />
-
-        <p className="mx-auto mt-10 max-w-5xl text-center text-sm text-gray-100 sm:text-base">
-          Todos nuestros servicios están diseñados para acompañar el crecimiento
-          de tu empresa, garantizando conectividad estable, atención prioritaria
-          y un compromiso real con tu operación diaria.
-        </p>
       </section>
     </main>
   );

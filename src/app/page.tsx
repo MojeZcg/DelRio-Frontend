@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import { generateMetadata } from "@/lib/seo";
 import { contactos } from "@/lib/contacto";
+import { ArrowRight, LifeBuoy, ShieldCheck, Zap } from "lucide-react";
 
 export const metadata = generateMetadata({
   title: "DelRio Internet | Conectate con el mundo",
@@ -27,8 +28,6 @@ export const metadata = generateMetadata({
 });
 
 export default function Home() {
-  const comercial = process.env.COMERCIAL;
-
   return (
     <main className="overflow-x-hidden pt-24">
       {/* === HERO === */}
@@ -77,33 +76,19 @@ export default function Home() {
       {/* === PLANES HOGAR === */}
       <section
         id="planes"
-        className="-z-10 flex scroll-mt-24 flex-col items-center justify-center bg-white text-black"
+        className="-z-10 flex scroll-mt-24 flex-col items-center justify-center bg-white pb-12 text-black"
       >
         <h2 className="pt-10 pb-14 text-center text-3xl font-semibold">
           Conocé nuestros planes diseñados para ti
         </h2>
 
         <PricingCards />
-
-        <p className="max-w-sm pt-10 pb-12 text-center text-xs text-gray-800 md:max-w-2xl md:text-sm xl:max-w-7xl">
-          Hasta{" "}
-          <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
-            300 Mbps
-          </span>{" "}
-          con WiFi 6, conexión estable y soporte prioritario. Accedé a series,
-          películas y descuentos exclusivos, con cámaras de seguridad en
-          comodato e IP fija para mayor control. Las velocidades indicadas son
-          máximas teóricas. Se garantiza un mínimo del 60 % del ancho de banda
-          contratado, sujeto a disponibilidad técnica y condiciones de red.
-        </p>
       </section>
 
       {/* === DIFERENCIADORES === */}
-      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-20 text-center text-white">
-        <h3 className="mb-10 text-3xl font-semibold">
-          ¿Por qué elegir DelRio?
-        </h3>
-        <div className="flex flex-wrap justify-center gap-10 text-lg">
+      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-14 text-center text-white">
+        <h3 className="mb-6 text-3xl font-semibold">¿Por qué elegir DelRio?</h3>
+        <div className="flex flex-wrap justify-center gap-10 text-base">
           <div className="max-w-xs">
             <p className="font-bold">Atención Personalizada</p>
             <p className="text-white/80">
@@ -125,30 +110,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* === PLANES EMPRESAS === */}
-      <section
-        id="planesempresas"
-        className="flex scroll-mt-24 flex-col items-center justify-center bg-white text-black"
-      >
-        <h3 className="py-12 text-center text-3xl font-semibold">
-          Planes para empresas que impulsan tu negocio
-        </h3>
+      <section className="relative overflow-hidden border-y bg-linear-to-br from-slate-800 to-black py-24 text-white">
+        <div className="opacity-10"></div>
 
-        <PricingCardsEmpresas />
+        <div className="relative mx-auto max-w-6xl px-6">
+          <div className="text-center">
+            <h4 className="mb-4 text-4xl font-bold md:text-5xl">
+              Internet para Empresas
+            </h4>
+            <p className="mx-auto mb-12 max-w-3xl text-lg text-blue-100">
+              Potenciá tu negocio con conexiones dedicadas, velocidades
+              simétricas garantizadas y soporte técnico prioritario diseñado
+              para empresas que no pueden esperar.
+            </p>
+          </div>
 
-        <p className="max-w-2xl py-10 text-center text-sm lg:max-w-4xl">
-          Soluciones de internet empresarial desde{" "}
-          <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
-            300 Mbps
-          </span>{" "}
-          con instalación profesional, ademas con beneficios full podes optar a
-          soporte técnico prioritario y IP fija. Ideal para mantener tu negocio
-          siempre conectado y eficiente.
-        </p>
+          <div className="mb-16 grid gap-6 md:grid-cols-3">
+            <div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm transition hover:bg-white/15">
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-700">
+                <Zap size={32} />
+              </div>
+              <h5 className="mb-2 text-xl font-semibold">
+                Velocidad Simétrica
+              </h5>
+              <p className="text-sm text-blue-100">
+                Misma velocidad de subida y bajada para videoconferencias y
+                transferencias sin interrupciones
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm transition hover:bg-white/15">
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-700">
+                <LifeBuoy size={26} />
+              </div>
+              <h5 className="mb-2 text-xl font-semibold">Soporte 24/7</h5>
+              <p className="text-sm text-blue-100">
+                Atención técnica prioritaria con resolución garantizada en menos
+                de 24 horas
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm transition hover:bg-white/15">
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-700">
+                <ShieldCheck size={26} />
+              </div>
+              <h5 className="mb-2 text-xl font-semibold">SLA Garantizado</h5>
+              <p className="text-sm text-blue-100">
+                Acuerdos de nivel de servicio con tiempo de actividad
+                garantizado
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/empresas"
+              className="group inline-flex items-center gap-2.5 rounded-lg bg-white px-8 py-4 text-base font-semibold text-blue-950 shadow-sm transition hover:bg-blue-50 hover:shadow-xl hover:shadow-white/20"
+            >
+              Conocé más sobre nuestros planes empresariales
+              <ArrowRight className="transition group-hover:translate-x-2" />
+            </Link>
+          </div>
+        </div>
       </section>
 
-      <section className="flex flex-col items-center bg-linear-to-t from-(--delrio-medium) to-(--delrio-dark) py-20 text-center text-white backdrop-blur-md">
-        <h4 className="mb-4 max-w-sm text-lg font-semibold md:text-2xl lg:max-w-full">
+      <section className="flex flex-col items-center bg-linear-to-t from-(--delrio-medium) to-(--delrio-dark) py-16 text-center text-white backdrop-blur-md">
+        <h4 className="max-w-sm text-lg font-semibold md:text-2xl lg:max-w-full">
           Más que una conexión, impulsamos tu manera de vivir el mundo digital.
         </h4>
       </section>

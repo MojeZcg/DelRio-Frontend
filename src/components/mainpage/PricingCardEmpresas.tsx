@@ -49,7 +49,7 @@ const pricingCardsEmpresas: PricingCardProps[] = [
     color: "#0a69b7",
   },
   {
-    title: "Empresa Escencial",
+    title: "Empresa Esencial",
     description: "Rendimiento garantizado para oficinas y equipos exigentes.",
     features: {
       speed: "100 Mbps",

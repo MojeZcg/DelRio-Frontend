@@ -19,7 +19,7 @@ export default function Footer() {
               className="mb-4 select-none"
             />
             <p className="text-sm leading-relaxed text-gray-400">
-              Conectamos hogares y empresas con internet de alta velocidad,
+              Conectamos hogares y empresas con internet de alta calidad,
               atención humana y un compromiso real con el servicio.
             </p>
           </div>
@@ -138,8 +138,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} DelRio Internet. Todos los
             derechos reservados.
           </p>
-          <p className="text-xs text-gray-400">
-            Desarrollado por{" "}
+          <p className="text-[11.5px] text-gray-400">
+            Diseñada y Desarrollada por{" "}
             <Link
               target="_blank"
               href="https://www.linkedin.com/in/montenegrowalter/"

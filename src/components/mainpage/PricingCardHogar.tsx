@@ -19,6 +19,7 @@ interface PlanFeatures {
   speed: string;
   price: number;
   installation?: boolean;
+  tv?: boolean;
   support?: boolean;
   wifi?: boolean;
   full?: boolean;
@@ -36,15 +37,15 @@ interface PricingCardProps {
 const pricingCards: PricingCardProps[] = [
   {
     title: "Plan Standard",
-    description:
-      "Velocidad mínima para navegación, redes sociales y uso básico.",
+    description: "Velocidad para navegación, redes sociales y uso básico.",
     features: {
       speed: "50 Mbps",
       price: 15000,
       installation: true,
+      tv: true,
       support: true,
       wifi: true,
-      full: true,
+      full: false,
     },
     color: "#1661ec",
     planmsg: "Hola! Quiero saber mas sobre el Plan Standard",
@@ -56,9 +57,10 @@ const pricingCards: PricingCardProps[] = [
       speed: "100 Mbps",
       price: 20000,
       installation: true,
+      tv: true,
       support: true,
       wifi: true,
-      full: true,
+      full: false,
     },
     color: "#323dd8",
     recomended: true,
@@ -71,9 +73,10 @@ const pricingCards: PricingCardProps[] = [
       speed: "300 Mbps",
       price: 30000,
       installation: true,
+      tv: true,
       support: true,
       wifi: true,
-      full: true,
+      full: false,
     },
     color: "#24228f",
     planmsg: "Hola! Quiero saber mas sobre el Plan Élite",
@@ -87,21 +90,25 @@ interface FeatureItem {
 
 const featureList: FeatureItem[] = [
   { label: "Instalación Profesional", key: "installation" },
-  { label: "Soporte técnico especializado", key: "support" },
-  { label: "WiFi 6", key: "wifi" },
+  { label: "Soporte Especializado", key: "support" },
+  { label: "Series, Peliculas, Deportes y TV", key: "tv" },
+  { label: "WiFi 2.4/5Ghz", key: "wifi" },
   {
     label: (
-      <div className="flex items-center gap-2">
-        Beneficios Full
+      <div className="flex gap-1.5">
+        Accede a
+        <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
+          Beneficios Full
+        </span>
         <HoverCard>
           <HoverCardTrigger className="flex items-center">
             <Info size={16} />
           </HoverCardTrigger>
           <HoverCardContent className="max-w-[260px] text-sm leading-snug">
             Posiblididad de contratar los beneficios full, con{" "}
-            <strong>IP fija</strong> con
-            <strong> soporte especializado 24/7</strong>, monitoreo de la red y
-            más beneficios exclusivos.
+            <strong>IP fija</strong>, Wifi 6 y
+            <strong> soporte especializado</strong>, ademas de beneficios
+            exclusivos.
           </HoverCardContent>
         </HoverCard>
       </div>
@@ -129,17 +136,18 @@ function PricingCard({
           </div>
         )}
         <div
-          className="flex h-32 w-full flex-col items-center justify-center rounded-t-lg text-center text-white"
+          className="flex h-36 w-full flex-col items-center justify-center rounded-t-lg text-center text-white"
           style={{ backgroundColor: color }}
         >
-          <h3 className="pb-1 text-3xl font-bold">{title}</h3>
-          <p className="text-2xl">{features.speed}</p>
+          <h3 className="pb-2 text-3xl font-bold">{title}</h3>
+
+          <p className="max-w-76 text-center text-[13.5px] font-medium">
+            {description}
+          </p>
         </div>
 
         <div className="flex w-full flex-col items-center justify-center px-6 pb-2">
-          <p className="pt-4 pb-6 text-center text-xs">{description}</p>
-
-          <div className="flex w-full flex-col gap-3 pb-8 font-semibold">
+          <div className="flex w-full flex-col gap-3 pt-6 pb-8 font-semibold">
             {featureList.map((item, i) => (
               <div key={i} className="flex flex-col gap-3">
                 <span className="my-1 ml-0.5 flex items-center justify-between">
@@ -156,13 +164,17 @@ function PricingCard({
           <Link
             target="_blank"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent(planmsg)}`}
-            className="group mb-6 rounded-lg px-12 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
+            className="group mb-4 rounded-lg px-12 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
             style={{ backgroundColor: color }}
           >
             <span className="transition-all duration-500 group-hover:text-white">
               Contrata ahora
             </span>
           </Link>
+          <span className="mb-4 text-xs text-gray-600">
+            * Estos servicios estan sujetos a disponibilidad técnica y
+            condiciones de red.
+          </span>
         </div>
       </div>
     </div>
