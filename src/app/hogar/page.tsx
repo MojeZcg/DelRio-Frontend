@@ -50,7 +50,7 @@ export default function InternetHogarPage() {
     { text: "Velocidades simétricas en todos los planes" },
     { text: "Soporte remoto con resolución rápida" },
     { text: "Instalación profesional incluida" },
-    { text: "WiFi 6 con mejor cobertura y rendimiento" },
+    { text: "Wifi 5/6* con mejor cobertura y rendimiento" },
   ];
 
   return (
@@ -64,7 +64,7 @@ export default function InternetHogarPage() {
             Conectá tu hogar con velocidades simétricas,{" "}
             <HoverCard>
               <HoverCardTrigger className="inline text-yellow-200">
-                WiFi 6
+                WiFi 6*
               </HoverCardTrigger>
               <HoverCardContent className="max-w-[260px] text-sm leading-snug">
                 Sujeto a{" "}

@@ -106,7 +106,7 @@ const featureList: FeatureItem[] = [
           </HoverCardTrigger>
           <HoverCardContent className="max-w-[260px] text-sm leading-snug">
             Posiblididad de contratar los beneficios full, con{" "}
-            <strong>IP fija</strong>, Wifi 6 y
+            <strong>IP fija</strong>, Wifi 5/6* y
             <strong> soporte especializado</strong>, ademas de beneficios
             exclusivos.
           </HoverCardContent>
