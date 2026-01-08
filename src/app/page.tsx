@@ -1,5 +1,4 @@
 import HeroImage from "@/components/mainpage/HeroImage";
-import PricingCardsEmpresas from "@/components/mainpage/PricingCardEmpresas";
 import PricingCards from "@/components/mainpage/PricingCardHogar";
 import Image from "next/image";
 import Link from "next/link";
