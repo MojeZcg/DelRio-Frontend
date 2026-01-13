@@ -36,23 +36,8 @@ interface PricingCardProps {
 
 const pricingCards: PricingCardProps[] = [
   {
-    title: "Plan Standard",
-    description: "Velocidad para navegación, redes sociales y uso básico.",
-    features: {
-      speed: "50 Mbps",
-      price: 15000,
-      installation: true,
-      tv: true,
-      support: true,
-      wifi: true,
-      full: false,
-    },
-    color: "#1661ec",
-    planmsg: "Hola! Quiero saber mas sobre el Plan Standard",
-  },
-  {
     title: "Plan Esencial",
-    description: "Equilibrio perfecto para hogares con múltiples dispositivos.",
+    description: "Velocidad para navegación, redes sociales y uso básico.",
     features: {
       speed: "100 Mbps",
       price: 20000,
@@ -62,9 +47,24 @@ const pricingCards: PricingCardProps[] = [
       wifi: true,
       full: false,
     },
-    color: "#323dd8",
-    recomended: true,
+    color: "#1661ec",
     planmsg: "Hola! Quiero saber mas sobre el Plan Esencial",
+  },
+  {
+    title: "Plan Estándar",
+    description: "Equilibrio perfecto para hogares con múltiples dispositivos.",
+    features: {
+      speed: "50 Mbps",
+      price: 15000,
+      installation: true,
+      tv: true,
+      support: true,
+      wifi: true,
+      full: false,
+    },
+    recomended: true,
+    color: "#323dd8",
+    planmsg: "Hola! Quiero saber mas sobre el Plan Standard",
   },
   {
     title: "Plan Élite",
