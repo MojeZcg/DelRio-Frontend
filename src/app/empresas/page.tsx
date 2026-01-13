@@ -5,11 +5,17 @@ import {
   Check,
   CheckCircle,
   FlaskConical,
+  Info,
   LifeBuoy,
   ShieldCheck,
   Star,
   Zap,
 } from "lucide-react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 import { generateMetadata } from "@/lib/seo";
 import { contactos } from "@/lib/contacto";
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
@@ -125,7 +131,7 @@ export default function EmpresasPage() {
               <Link
                 target="_blank"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Necesito información sobre planes empresariales.")}`}
-                className="group inline-flex w-full items-center justify-center gap-3 rounded-xl bg-linear-to-r from-blue-600 to-blue-700 px-8 py-4 font-bold text-white shadow-2xl shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-600 hover:shadow-blue-400/40 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-xl border-2 bg-linear-to-r from-blue-600 to-blue-700 px-8 py-4 font-bold text-white shadow-2xl shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-600 hover:shadow-blue-400/40 focus:ring-2 focus:ring-blue-400 focus:ring-blue-900 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto"
               >
                 Solicitar Cotización
                 <ArrowRight
@@ -137,7 +143,7 @@ export default function EmpresasPage() {
               <Link
                 target="_blank"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero hablar con un asesor comercial.")}`}
-                className="group inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto"
+                className="group inline-flex w-full items-center justify-center rounded-xl border-2 border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto"
               >
                 Contactar Asesor
               </Link>
@@ -162,8 +168,20 @@ export default function EmpresasPage() {
               <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-green-500 to-emerald-600 shadow-lg">
                 <ShieldCheck size={26} className="text-white" />
               </div>
-              <h4 className="mb-2 text-lg font-bold text-white">
+              <h4 className="mb-2 flex flex-row items-center gap-1.5 text-lg font-bold text-white">
                 SLA Garantizado
+                <HoverCard>
+                  <HoverCardTrigger>
+                    <Info size={14} className="" />
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-70">
+                    <p className="p-1 text-sm">
+                      Solo para servicios Dedicados, nuestro acuerdo de nivel de
+                      servicio (SLA) asegura un tiempo de actividad del 99.7%
+                      con compensación contractual en caso de incumplimiento.
+                    </p>
+                  </HoverCardContent>
+                </HoverCard>
               </h4>
               <p className="text-sm text-gray-400">
                 99.7% uptime con compensación contractual
@@ -199,7 +217,7 @@ export default function EmpresasPage() {
 
       {/* === EMPRESAS CAROUSEL === */}
       <section className="relative z-10 w-full overflow-hidden border-y border-b border-white/30 bg-linear-to-b from-black/40 to-transparent py-16 backdrop-blur-lg md:py-12">
-        <div className="mx-auto max-w-[1600px] px-4">
+        <div className="mx-auto max-w-400 px-4">
           <div className="mb-12 text-center md:mb-10">
             <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-6 py-2 backdrop-blur-sm">
               <span className="h-2 w-2 animate-pulse rounded-full bg-blue-400"></span>
@@ -250,7 +268,7 @@ export default function EmpresasPage() {
               <div className="mb-6 flex w-34 flex-row items-center justify-center gap-2 rounded-full bg-linear-to-r from-blue-500/20 to-blue-700/20 py-1.5 backdrop-blur-sm">
                 <Check size={16} className="text-blue-300" />
                 <span className="text-xs font-bold tracking-wider text-blue-300 uppercase">
-                  Estandard
+                  Estándar
                 </span>
               </div>
 
