@@ -164,7 +164,7 @@ function PricingCard({
           <Link
             target="_blank"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent(planmsg)}`}
-            className="group mb-4 rounded-lg px-12 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
+            className="group mb-4 rounded-lg px-12 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-300 hover:scale-110"
             style={{ backgroundColor: color }}
           >
             <span className="transition-all duration-500 group-hover:text-white">
