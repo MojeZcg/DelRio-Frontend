@@ -15,18 +15,21 @@ export default function ContactForm() {
   const [estado, setEstado] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const comercial = process.env.COMERCIAL;
-
   function generarMensajeWhatsApp() {
     const texto = `Hola! Soy ${nombre}.%0A%0AEmail: ${email}%0A%0AMensaje:%0A${mensaje}`;
     return `https://wa.me/542615861188?text=${texto}`;
   }
 
   function handleSubmit(e: React.FormEvent) {
+    setLoading(true);
     e.preventDefault();
+
+    setEstado("Redirigiendo a WhatsApp...");
+
     const link = generarMensajeWhatsApp();
     window.open(link, "_blank");
-    setEstado("Redirigiendo a WhatsApp...");
+
+    setLoading(false);
   }
 
   return (

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { generateMetadata } from "@/lib/seo";
 import { contactos } from "@/lib/contacto";
 import { ArrowRight, LifeBuoy, ShieldCheck, Zap } from "lucide-react";
+import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
 
 export const metadata = generateMetadata({
   title: "DelRio Internet | Conectate con el mundo",
@@ -43,9 +44,9 @@ export default function Home() {
       </div>
 
       {/* Texto + Imagen lateral */}
-      <div className="min-h-xl flex h-150 w-full flex-col items-center justify-center md:flex-row xl:gap-20 2xl:gap-32">
-        <div className="flex max-w-xl flex-col items-center gap-14 text-center text-white md:items-start">
-          <div className="flex flex-col items-center gap-3 md:items-start md:text-left">
+      <section className="min-h-xl flex h-120 w-full flex-col items-center justify-center md:flex-row lg:h-150 xl:gap-20 2xl:gap-32">
+        <div className="flex max-w-xl flex-col items-center gap-10 text-center text-white md:items-start lg:gap-14">
+          <div className="flex flex-col items-center gap-6 md:items-start md:text-left lg:gap-3">
             <h1 className="text-5xl leading-tight font-bold">
               Tu{" "}
               <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
@@ -61,7 +62,7 @@ export default function Home() {
           <Link
             target="_blank"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de sus servicios en mi zona.")}`}
-            className="flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
+            className="mb-10 flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
           >
             Comprueba la disponibilidad{" "}
             <span className="hidden pl-1 md:inline"> en tu zona</span>
@@ -70,14 +71,14 @@ export default function Home() {
 
         {/* Imagen ilustrativa lateral */}
         <HeroImage />
-      </div>
+      </section>
 
       {/* === PLANES HOGAR === */}
       <section
         id="planes"
         className="-z-10 flex scroll-mt-24 flex-col items-center justify-center bg-white pb-12 text-black"
       >
-        <h2 className="pt-10 pb-14 text-center text-3xl font-semibold">
+        <h2 className="pt-10 pb-6 text-center text-3xl font-semibold lg:pb-14">
           Conocé nuestros planes diseñados para ti
         </h2>
 
@@ -85,9 +86,9 @@ export default function Home() {
       </section>
 
       {/* === DIFERENCIADORES === */}
-      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-14 text-center text-white">
+      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-10 text-center text-white lg:py-14">
         <h3 className="mb-6 text-3xl font-semibold">¿Por qué elegir DelRio?</h3>
-        <div className="flex flex-wrap justify-center gap-10 text-base">
+        <div className="flex flex-wrap justify-center gap-6 text-base lg:gap-10">
           <div className="max-w-xs">
             <p className="font-bold">Atención Personalizada</p>
             <p className="text-white/80">
@@ -109,65 +110,104 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-y bg-linear-to-br from-slate-800 to-black py-24 text-white">
-        <div className="opacity-10"></div>
-
-        <div className="relative mx-auto max-w-6xl px-6">
+      <section className="relative overflow-hidden border-y bg-linear-to-br from-slate-800 to-black py-12 text-white md:py-20">
+        <div className="px-4 pb-4 md:px-6">
           <div className="text-center">
-            <h4 className="mb-4 text-4xl font-bold md:text-5xl">
+            <h4 className="mb-3 text-3xl font-bold md:mb-4 md:text-5xl">
               Internet para Empresas
             </h4>
-            <p className="mx-auto mb-12 max-w-3xl text-lg text-blue-100">
-              Potenciá tu negocio con conexiones dedicadas, velocidades
-              simétricas garantizadas y soporte técnico prioritario diseñado
-              para empresas que no pueden esperar.
+            <p className="mx-auto mb-8 max-w-3xl px-2 text-base text-blue-100 md:mb-10 md:text-lg">
+              <span className="md:hidden">
+                Conexiones dedicadas y soporte prioritario para tu empresa.
+              </span>
+              <span className="hidden md:inline">
+                Potenciá tu negocio con conexiones dedicadas, velocidades
+                simétricas garantizadas y soporte técnico prioritario diseñado
+                para empresas que no pueden esperar.
+              </span>
             </p>
           </div>
 
-          <div className="mb-16 grid gap-6 md:grid-cols-3">
-            <div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm transition hover:bg-white/15">
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-700">
-                <Zap size={32} />
-              </div>
-              <h5 className="mb-2 text-xl font-semibold">
-                Velocidad Simétrica
-              </h5>
-              <p className="text-sm text-blue-100">
-                Misma velocidad de subida y bajada para videoconferencias y
-                transferencias sin interrupciones
-              </p>
-            </div>
-
-            <div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm transition hover:bg-white/15">
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-700">
-                <LifeBuoy size={26} />
-              </div>
-              <h5 className="mb-2 text-xl font-semibold">Soporte 24/7</h5>
-              <p className="text-sm text-blue-100">
-                Atención técnica prioritaria con resolución garantizada en menos
-                de 24 horas
-              </p>
-            </div>
-
-            <div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm transition hover:bg-white/15">
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-700">
-                <ShieldCheck size={26} />
-              </div>
-              <h5 className="mb-2 text-xl font-semibold">SLA Garantizado</h5>
-              <p className="text-sm text-blue-100">
-                Acuerdos de nivel de servicio con tiempo de actividad
-                garantizado
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
+          {/* Beneficios clave */}
+          <div className="mx-auto mb-12 grid max-w-7xl gap-6 px-4 md:mb-16 md:grid-cols-3 md:gap-8">
             <Link
               href="/empresas"
-              className="group inline-flex items-center gap-2.5 rounded-lg bg-white px-8 py-4 text-base font-semibold text-blue-950 shadow-sm transition hover:bg-blue-50 hover:shadow-xl hover:shadow-white/20"
+              className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/15 md:p-8"
             >
-              Conocé más sobre nuestros planes empresariales
-              <ArrowRight className="transition group-hover:translate-x-2" />
+              <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
+                <Zap size={26} className="md:h-[30px] md:w-[30px]" />
+              </div>
+              <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">
+                Velocidad Simétrica
+              </h5>
+              <p className="text-sm leading-relaxed text-blue-100">
+                Misma velocidad de subida y bajada, ideal para
+                videoconferencias, transferencias de archivos y operaciones en
+                la nube.
+              </p>
+            </Link>
+
+            <Link
+              href="/empresas"
+              className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/15 md:p-8"
+            >
+              <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
+                <LifeBuoy size={26} className="md:h-[30px] md:w-[30px]" />
+              </div>
+              <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">
+                Soporte Prioritario
+              </h5>
+              <p className="text-sm leading-relaxed text-blue-100">
+                Atención técnica dedicada con resolución garantizada en menos de
+                24 horas y canal directo de comunicación.
+              </p>
+            </Link>
+
+            <Link
+              href="/empresas"
+              className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/15 md:p-8"
+            >
+              <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
+                <ShieldCheck size={26} className="md:h-[30px] md:w-[30px]" />
+              </div>
+              <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">
+                SLA Garantizado
+              </h5>
+              <p className="text-sm leading-relaxed text-blue-100">
+                Acuerdos de nivel de servicio con tiempo de actividad
+                garantizado y compensaciones en caso de incumplimiento.
+              </p>
+            </Link>
+          </div>
+
+          {/* Empresas que confían */}
+          <div className="mb-8 md:mb-6">
+            <div className="mb-6 px-2 text-center md:mb-4 md:px-4">
+              <h5 className="mb-2 text-sm font-semibold tracking-wider text-blue-400 uppercase lg:text-base">
+                Empresas que confían en nosotros
+              </h5>
+              <p className="mx-auto max-w-3xl text-lg font-semibold text-white md:text-xl lg:text-2xl">
+                Conectamos a las empresas que impulsan el desarrollo de nuestra
+                región.
+              </p>
+            </div>
+            <EmpresasCarousel variant="dark" />
+          </div>
+
+          {/* CTA */}
+          <div className="px-4 text-center">
+            <Link
+              href="/empresas"
+              className="group inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-blue-950 shadow-lg transition-all hover:bg-blue-50 hover:shadow-2xl hover:shadow-blue-500/30 md:gap-3 md:px-10 md:py-4 md:text-base lg:text-[16.5px]"
+            >
+              <span className="hidden sm:inline">
+                Conocé más sobre nuestros planes empresariales
+              </span>
+              <span className="sm:hidden">Ver planes empresariales</span>
+              <ArrowRight
+                size={22}
+                className="transition-transform group-hover:translate-x-2 md:h-7 md:w-7"
+              />
             </Link>
           </div>
         </div>
@@ -197,7 +237,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-12 md:grid-cols-3 lg:gap-16">
+            <div className="mt-10 grid gap-6 md:grid-cols-3 lg:gap-16">
               <div className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md">
                 <h3 className="mb-3 text-2xl font-semibold text-(--delrio-light)">
                   Visión
