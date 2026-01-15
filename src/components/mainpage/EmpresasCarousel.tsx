@@ -60,8 +60,6 @@ interface EmpresasCarouselProps {
 export default function EmpresasCarousel({}: EmpresasCarouselProps) {
   return (
     <div className="relative w-full overflow-hidden">
-      {/* Gradientes laterales */}
-
       {/* Logos */}
       <div className="flex">
         <div className="animate-scroll flex shrink-0">

@@ -304,7 +304,7 @@ export default function EmpresasPage() {
 
               {/* CTA Button */}
               <Link
-                href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaria consultar sobre el plan Business para empresas.")}`}
+                href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaria consultar sobre el plan Empresarial.")}`}
                 className="group/btn mt-auto flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-blue-700 px-6 py-4 font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-600 hover:shadow-xl hover:shadow-blue-400/40 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent focus:outline-none"
               >
                 Solicitar Cotización
@@ -358,7 +358,7 @@ export default function EmpresasPage() {
               {/* CTA Button */}
               <Link
                 target="_blank"
-                href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaria consultar sobre el plan Business Full dedicado.")}`}
+                href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaria consultar sobre el plan Empresarial Full (Dedicado).")}`}
                 className="group/btn flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-blue-800 px-6 py-4 font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-700 hover:shadow-xl hover:shadow-blue-400/40 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent focus:outline-none"
               >
                 Solicitar Cotización

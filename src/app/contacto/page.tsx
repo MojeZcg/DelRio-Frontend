@@ -2,7 +2,7 @@ import ContactImage from "@/components/contactpage/ContactImage";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import ContactForm from "@/components/contactpage/ContactForm";
-import { FileCog, BadgeDollarSign, Wrench } from "lucide-react";
+import { FileCog, BadgeDollarSign, Wrench, Phone } from "lucide-react";
 
 import { generateMetadata } from "@/lib/seo";
 import { contactos } from "@/lib/contacto";
@@ -92,6 +92,19 @@ export default function ContactPage() {
                 className="text-[#6d8cff] hover:underline"
               >
                 {contactos.soporte.numero}
+              </Link>
+            </div>
+          </div>
+          <div className="mb-1 flex items-center justify-center gap-2">
+            <Phone className="h-4 w-4 text-[#6d8cff]" />
+            <div>
+              <strong>Telefono Fijo:</strong>{" "}
+              <Link
+                target="_blank"
+                href={`tel:${contactos.fisico.telefono}`}
+                className="text-[#6d8cff] hover:underline"
+              >
+                {contactos.fisico.telefono}
               </Link>
             </div>
           </div>
