@@ -191,7 +191,7 @@ export default function Home() {
                 región.
               </p>
             </div>
-            <EmpresasCarousel variant="dark" />
+            <EmpresasCarousel />
           </div>
 
           {/* CTA */}
