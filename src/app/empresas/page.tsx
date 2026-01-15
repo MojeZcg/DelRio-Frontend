@@ -152,13 +152,14 @@ export default function EmpresasPage() {
 
           {/* Columna derecha - Beneficios clave */}
           <div className="grid gap-4 sm:grid-cols-2">
+            <h2 className="sr-only">Beneficios clave</h2>
             <div className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all hover:border-blue-400/50 hover:bg-white/10">
               <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-blue-500 to-blue-600 shadow-lg">
                 <Zap size={26} className="text-white" />
               </div>
-              <h4 className="mb-2 text-lg font-bold text-white">
+              <h3 className="mb-2 text-lg font-bold text-white">
                 Velocidad Simétrica
-              </h4>
+              </h3>
               <p className="text-sm text-gray-400">
                 Mismo rendimiento en subida y bajada garantizado
               </p>
@@ -168,7 +169,7 @@ export default function EmpresasPage() {
               <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-green-500 to-emerald-600 shadow-lg">
                 <ShieldCheck size={26} className="text-white" />
               </div>
-              <h4 className="mb-2 flex flex-row items-center gap-1.5 text-lg font-bold text-white">
+              <h3 className="mb-2 flex flex-row items-center gap-1.5 text-lg font-bold text-white">
                 SLA Garantizado
                 <HoverCard>
                   <HoverCardTrigger>
@@ -182,7 +183,7 @@ export default function EmpresasPage() {
                     </p>
                   </HoverCardContent>
                 </HoverCard>
-              </h4>
+              </h3>
               <p className="text-sm text-gray-400">
                 99.7% uptime con compensación contractual
               </p>
@@ -192,9 +193,9 @@ export default function EmpresasPage() {
               <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-blue-500 to-blue-700 shadow-lg">
                 <LifeBuoy size={26} className="text-white" />
               </div>
-              <h4 className="mb-2 text-lg font-bold text-white">
+              <h3 className="mb-2 text-lg font-bold text-white">
                 Soporte 24/7
-              </h4>
+              </h3>
               <p className="text-sm text-gray-400">
                 Atención prioritaria sin esperas ni bots
               </p>
@@ -204,9 +205,9 @@ export default function EmpresasPage() {
               <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-orange-500 to-red-600 shadow-lg">
                 <FlaskConical size={26} className="text-white" />
               </div>
-              <h4 className="mb-2 text-lg font-bold text-white">
+              <h3 className="mb-2 text-lg font-bold text-white">
                 Instalación Rápida
-              </h4>
+              </h3>
               <p className="text-sm text-gray-400">
                 Equipamiento profesional en menos de 72hs
               </p>
@@ -225,16 +226,16 @@ export default function EmpresasPage() {
                 Casos de Éxito
               </span>
             </div>
-            <h3 className="mx-auto mb-4 max-w-4xl text-3xl font-black text-white md:text-4xl lg:text-5xl">
+            <h2 className="mx-auto mb-4 max-w-4xl text-3xl font-black text-white md:text-4xl lg:text-5xl">
               Empresas Líderes que Confían en Nuestra Red
-            </h3>
+            </h2>
             <p className="mx-auto max-w-2xl text-base text-gray-400 md:text-lg">
               Más de 100 empresas mendocinas impulsan su transformación digital
               con nuestra infraestructura
             </p>
           </div>
 
-          <EmpresasCarousel variant="dark" />
+          <EmpresasCarousel />
         </div>
       </section>
 
@@ -248,12 +249,12 @@ export default function EmpresasPage() {
                 PLANES CORPORATIVOS
               </span>
             </div>
-            <h3 className="mb-5 text-3xl font-black text-white md:text-4xl lg:text-5xl">
+            <h2 className="mb-5 text-3xl font-black text-white md:text-4xl lg:text-5xl">
               Planes Diseñados para tu{" "}
               <span className="bg-linear-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
                 Crecimiento
               </span>
-            </h3>
+            </h2>
             <p className="mx-auto max-w-3xl text-base text-gray-400 md:text-lg">
               Soluciones escalables con infraestructura dedicada, monitoreo
               continuo y atención ejecutiva personalizada
@@ -272,9 +273,9 @@ export default function EmpresasPage() {
                 </span>
               </div>
 
-              <h4 className="mb-3 text-3xl font-black text-white md:text-4xl">
+              <h3 className="mb-3 text-3xl font-black text-white md:text-4xl">
                 Empresarial
-              </h4>
+              </h3>
               <p className="mb-8 text-base leading-relaxed text-gray-300">
                 Conectividad balanceada y versátil para PyMEs en crecimiento.
                 Velocidades simétricas con soporte ágil incluido.
@@ -291,9 +292,9 @@ export default function EmpresasPage() {
                       <CheckCircle className="h-4 w-4 text-white" />
                     </div>
                     <div>
-                      <h5 className="mb-1 text-sm font-bold text-white">
+                      <h4 className="mb-1 text-sm font-bold text-white">
                         {item.title}
-                      </h5>
+                      </h4>
                       <p className="text-xs leading-relaxed text-gray-400">
                         {item.desc}
                       </p>
@@ -325,9 +326,9 @@ export default function EmpresasPage() {
                 </span>
               </div>
 
-              <h4 className="mb-3 text-3xl font-black text-white md:text-4xl">
+              <h3 className="mb-3 text-3xl font-black text-white md:text-4xl">
                 Empresarial Dedicado
-              </h4>
+              </h3>
               <p className="mb-8 text-base leading-relaxed text-gray-300">
                 Conectividad dedicada con máxima prioridad. SLA corporativo y
                 ejecutivo de cuenta asignado.
@@ -344,9 +345,9 @@ export default function EmpresasPage() {
                       <CheckCircle className="h-4 w-4 text-white" />
                     </div>
                     <div>
-                      <h5 className="mb-1 text-sm font-bold text-white">
+                      <h4 className="mb-1 text-sm font-bold text-white">
                         {item.title}
-                      </h5>
+                      </h4>
                       <p className="text-xs leading-relaxed text-gray-400">
                         {item.desc}
                       </p>

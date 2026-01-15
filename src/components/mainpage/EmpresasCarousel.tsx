@@ -73,11 +73,7 @@ export default function EmpresasCarousel() {
     <div className="relative w-full overflow-hidden">
       <div className="animate-scroll flex">
         {[...Array(2)].map((_, loopIndex) => (
-          <div
-            className="flex shrink-0"
-            key={loopIndex}
-            aria-hidden={loopIndex === 1}
-          >
+          <div className="flex shrink-0" key={loopIndex}>
             {companies.map((company, companyIndex) => (
               <div
                 key={`${loopIndex}-${companyIndex}`}

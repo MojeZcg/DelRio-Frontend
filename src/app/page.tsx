@@ -40,7 +40,7 @@ export default function Home() {
           className="object-cover will-change-transform"
           priority
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       {/* Texto + Imagen lateral */}
@@ -54,7 +54,7 @@ export default function Home() {
               </span>{" "}
               al mundo, más humana que nunca.
             </h1>
-            <p className="max-w-sm text-sm text-gray-200 md:text-lg lg:max-w-full">
+            <p className="max-w-sm text-sm text-white md:text-lg lg:max-w-full">
               Conectamos tu hogar con la velocidad y estabilidad que merecés.
             </p>
           </div>
