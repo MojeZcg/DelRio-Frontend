@@ -4,11 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const companies = [
-  {
-    name: "Chandon",
-    src: "/chandon.webp",
-    link: "https://www.chandon.com.ar/",
-  },
   { name: "Holcim", src: "/holcim.webp", link: "https://www.holcim.com.ar/" },
   {
     name: "Tuboscope",
@@ -16,14 +11,34 @@ const companies = [
     link: "https://www.nov.com/about/our-business-units/tuboscope",
   },
   {
-    name: "Casa Tapaus",
-    src: "/tapaus.webp",
-    link: "https://www.instagram.com/casatapaus/?hl=en",
+    name: "Casarena",
+    src: "/casarena.webp",
+    link: "https://www.casarena.com/",
+  },
+  {
+    name: "Chandon",
+    src: "/chandon.webp",
+    link: "https://www.chandon.com.ar/",
+  },
+  {
+    name: "Himan",
+    src: "/himan.webp",
+    link: "https://himan.com.ar/",
+  },
+  {
+    name: "Tahan",
+    src: "/tahan.webp",
+    link: "https://empresastahan.com/",
   },
   {
     name: "Matervini",
     src: "/matervini.webp",
     link: "https://www.matervini.com/",
+  },
+  {
+    name: "Casa Tapaus",
+    src: "/tapaus.webp",
+    link: "https://www.instagram.com/casatapaus/?hl=en",
   },
   { name: "Suri", src: "/suri.webp", link: "https://www.suri-sa.com.ar/" },
   {
@@ -53,57 +68,33 @@ const companies = [
   },
 ];
 
-interface EmpresasCarouselProps {
-  variant?: "dark" | "light";
-}
-
-export default function EmpresasCarousel({}: EmpresasCarouselProps) {
+export default function EmpresasCarousel() {
   return (
     <div className="relative w-full overflow-hidden">
-      {/* Logos */}
-      <div className="flex">
-        <div className="animate-scroll flex shrink-0">
-          {companies.map((company, index) => (
-            <div
-              key={index}
-              className="mx-0 flex shrink-0 items-center justify-center rounded-lg p-4 shadow-sm transition-all duration-300 select-none hover:shadow-md lg:mx-2"
-            >
-              <Link
-                target="_blank"
-                href={company.link}
-                className="relative h-30 w-40 lg:h-40 lg:w-50"
+      <div className="animate-scroll flex">
+        {[...Array(2)].map((_, loopIndex) => (
+          <div className="flex shrink-0" key={loopIndex}>
+            {companies.map((company, companyIndex) => (
+              <div
+                key={`${loopIndex}-${companyIndex}`}
+                className="mx-2 flex shrink-0 items-center justify-center rounded-lg p-4 shadow-sm transition-all duration-300 select-none hover:shadow-md"
               >
-                <Image
-                  src={`/logos-empresas${company.src}`}
-                  alt={company.name}
-                  fill
-                  className="object-contain transition-all duration-300 hover:scale-120 hover:opacity-100"
-                />
-              </Link>
-            </div>
-          ))}
-        </div>
-        <div className="animate-scroll flex shrink-0" aria-hidden="true">
-          {companies.map((company, index) => (
-            <div
-              key={`duplicate-${index}`}
-              className="mx-0 flex shrink-0 items-center justify-center rounded-lg p-4 shadow-sm transition-all duration-300 select-none hover:shadow-md lg:mx-2"
-            >
-              <Link
-                target="_blank"
-                href={company.link}
-                className="relative h-30 w-40 lg:h-40 lg:w-50"
-              >
-                <Image
-                  src={`/logos-empresas${company.src}`}
-                  alt={company.name}
-                  fill
-                  className="object-contain transition-all duration-300 hover:scale-120 hover:opacity-100"
-                />
-              </Link>
-            </div>
-          ))}
-        </div>
+                <Link
+                  target="_blank"
+                  href={company.link}
+                  className="relative h-30 w-40 lg:h-35 lg:w-45"
+                >
+                  <Image
+                    src={`/logos-empresas${company.src}`}
+                    alt={company.name}
+                    fill
+                    className="object-contain transition-all duration-300 hover:scale-120 hover:opacity-100"
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
 
       <style jsx>{`
@@ -112,11 +103,12 @@ export default function EmpresasCarousel({}: EmpresasCarouselProps) {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-100%);
+            transform: translateX(-50%);
           }
         }
         .animate-scroll {
           animation: scroll 60s linear infinite;
+          width: max-content;
         }
       `}</style>
     </div>
