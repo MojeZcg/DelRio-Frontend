@@ -28,7 +28,7 @@ export default function Navbar() {
   const clientLink = links.find((_, i) => i === 4);
 
   return (
-    <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/30 px-6 py-4 shadow-md shadow-white/10 select-none lg:px-12">
+    <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/30 px-6 py-3 shadow-md shadow-white/10 select-none lg:px-12">
       <Link href="/" className="lg:pl-6">
         <Image
           src="/logoTransparentWhite.webp"
