@@ -61,7 +61,7 @@ export default function Home() {
 
           <Link
             target="_blank"
-            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de sus servicios en mi zona.")}`}
+            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de los servicios en mi zona.")}`}
             className="mb-10 flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
           >
             Comprueba la disponibilidad{" "}

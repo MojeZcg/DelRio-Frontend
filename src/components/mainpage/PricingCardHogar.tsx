@@ -183,7 +183,7 @@ function PricingCard({
 
 export default function PricingCards() {
   return (
-    <div className="w-full">
+    <div id="planes" className="w-full scroll-mt-27">
       {/* 🖥️ Desktop layout */}
       <div className="hidden justify-center gap-4 bg-transparent md:flex xl:gap-16">
         {pricingCards.map((card, index) => (

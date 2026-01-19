@@ -32,7 +32,7 @@ export const metadata = generateMetadata({
 
 function PricingCardsHogar() {
   return (
-    <section id="planes" className="w-full scroll-mt-24 bg-gray-50 pt-10 pb-12">
+    <section className="w-full bg-gray-50 pt-10 pb-12">
       <div className="mx-auto">
         <h2 className="mb-14 text-center text-3xl font-bold text-gray-800">
           Planes Hogar
@@ -66,9 +66,11 @@ export default function InternetHogarPage() {
               <HoverCardTrigger className="inline text-yellow-200">
                 WiFi 6*
               </HoverCardTrigger>
-              <HoverCardContent className="max-w-[260px] text-sm leading-snug">
+              <HoverCardContent className="max-w-72 text-sm leading-snug">
                 Sujeto a{" "}
-                <strong>disponibilidad técnica y condiciones de red.</strong>
+                <span className="font-semibold">
+                  disponibilidad técnica y condiciones de red.
+                </span>
               </HoverCardContent>
             </HoverCard>{" "}
             y soporte confiable. Elegí el plan que mejor se adapte a vos.
