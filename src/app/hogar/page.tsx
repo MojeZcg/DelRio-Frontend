@@ -54,7 +54,7 @@ export default function InternetHogarPage() {
   ];
 
   return (
-    <main className="flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-white bg-linear-to-br from-(--delrio-medium) to-(--delrio-dark) pt-24">
+    <main className="flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-white bg-linear-to-br from-(--delrio-medium) to-(--delrio-dark) pt-22">
       <section className="w-full bg-transparent py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-6">
           <h1 className="text-4xl font-bold md:text-5xl">

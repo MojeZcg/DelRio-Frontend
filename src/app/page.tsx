@@ -29,7 +29,7 @@ export const metadata = generateMetadata({
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden pt-24">
+    <main className="overflow-x-hidden pt-22">
       {/* === HERO === */}
       <div className="fixed inset-0 -z-10">
         {/* Fondo principal */}
