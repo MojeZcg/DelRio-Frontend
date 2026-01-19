@@ -221,7 +221,7 @@ export default function Home() {
 
       {/* === SOBRE NOSOTROS === */}
       <section id="sobre-nosotros" className="bg-gray-50 text-gray-800">
-        <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="pb-6 text-center text-4xl font-bold">
             Sobre <span className="text-(--delrio-light)">Nosotros</span>
           </h2>
@@ -286,7 +286,7 @@ export default function Home() {
           </p>
           <Link
             target="_blank"
-            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero hablar con ustedes sobre sus planes de internet")}`}
+            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaria conocer sobre los planes de internet")}`}
             className="inline-block rounded-lg bg-white px-8 py-3 font-medium text-(--delrio-medium) transition hover:bg-blue-100"
           >
             Hablemos de tu conexión
