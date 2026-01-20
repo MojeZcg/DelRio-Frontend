@@ -104,7 +104,7 @@ const featureList: FeatureItem[] = [
           <HoverCardTrigger className="flex items-center">
             <Info size={16} />
           </HoverCardTrigger>
-          <HoverCardContent className="max-w-[260px] text-sm leading-snug">
+          <HoverCardContent className="max-w-65 text-sm leading-snug">
             Posiblididad de contratar los beneficios full, con{" "}
             <strong>IP fija</strong>, Wifi 5/6* y
             <strong> soporte especializado</strong>, ademas de beneficios

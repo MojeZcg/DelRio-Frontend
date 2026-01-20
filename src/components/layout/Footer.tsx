@@ -1,9 +1,69 @@
+"use client";
+
 import { ArrowUpRightIcon, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { contactos } from "@/lib/contacto";
+import toast from "react-hot-toast";
 
 export default function Footer() {
+  const handlePhoneClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (!isMobile) {
+      e.preventDefault();
+
+      // Intentar copiar al portapapeles
+      const copyToClipboard = (text: string) => {
+        // Método 1: Clipboard API (solo funciona en HTTPS o localhost)
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard
+            .writeText(text)
+            .then(() => {
+              toast.success("Número copiado al portapapeles");
+            })
+            .catch(() => {
+              fallbackCopy(text);
+            });
+        } else {
+          // Método 2: Fallback con textarea temporal
+          fallbackCopy(text);
+        }
+      };
+
+      const fallbackCopy = (text: string) => {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+
+        try {
+          const successful = document.execCommand("copy");
+          if (successful) {
+            toast.success("Número copiado en el portapapeles", {
+              style: {
+                borderRadius: "10px",
+                background: "#282828",
+                color: "#fff",
+              },
+            });
+          } else {
+            toast.error("No se pudo copiar. Número: " + text);
+          }
+        } catch (err) {
+          toast.error("No se pudo copiar. Número: " + text);
+          console.error("Error copiando al portapapeles:", err);
+        }
+
+        document.body.removeChild(textarea);
+      };
+
+      copyToClipboard(contactos.fisico.telefono);
+    }
+  };
+
   return (
     <footer className="border-t border-gray-700 bg-black text-gray-300">
       <div className="mx-auto w-full px-12 pt-10 pb-6">
@@ -73,11 +133,12 @@ export default function Footer() {
               <li>
                 <Link
                   target="_blank"
-                  href={`${contactos.administracion.whatsapp}?text=${encodeURIComponent("Hola! Quiero contratar el servicio de internet.")}`}
+                  href={`tel:${contactos.fisico.telefono}`}
+                  onClick={handlePhoneClick}
                   className="flex items-center gap-2"
                 >
                   <Phone className="h-4 w-4 text-blue-400" />
-                  <span>{contactos.administracion.numero}</span>
+                  <span>{contactos.fisico.telefono}</span>
                 </Link>
               </li>
               <li>

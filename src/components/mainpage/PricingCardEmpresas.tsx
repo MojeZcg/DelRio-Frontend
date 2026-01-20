@@ -140,7 +140,7 @@ function PricingCardEmpresas({
                   <HoverCardTrigger className="flex items-center">
                     <Info size={16} />
                   </HoverCardTrigger>
-                  <HoverCardContent className="max-w-[260px] text-sm leading-snug">
+                  <HoverCardContent className="max-w-65 text-sm leading-snug">
                     Posiblididad de contratar los{" "}
                     <strong>Beneficios full</strong>, con{" "}
                     <strong>SLA personalizado</strong> con{" "}
