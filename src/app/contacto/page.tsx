@@ -6,6 +6,7 @@ import { FileCog, BadgeDollarSign, Wrench, Phone } from "lucide-react";
 
 import { generateMetadata } from "@/lib/seo";
 import { contactos } from "@/lib/contacto";
+import FijoCopy from "@/components/FijoCopy";
 
 export const metadata = generateMetadata({
   title: "DelRio Internet | Conectate con nosotros",
@@ -97,15 +98,12 @@ export default function ContactPage() {
           </div>
           <div className="mb-1 flex items-center justify-center gap-2">
             <Phone className="h-4 w-4 text-[#6d8cff]" />
-            <div>
-              <strong>Telefono Fijo:</strong>{" "}
-              <Link
-                target="_blank"
-                href={`tel:${contactos.fisico.telefono}`}
-                className="text-[#6d8cff] hover:underline"
-              >
-                {contactos.fisico.telefono}
-              </Link>
+            <div className="flex gap-2">
+              <strong>Telefono Fijo:</strong>
+              <span className="text-[#6d8cff]">
+                {" "}
+                <FijoCopy />
+              </span>
             </div>
           </div>
           <p className="mt-4">
