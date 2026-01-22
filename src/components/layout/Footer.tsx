@@ -87,7 +87,9 @@ export default function Footer() {
                   className="flex items-center gap-2"
                 >
                   <Mail className="h-4 w-4 text-blue-400" />
-                  <span>{contactos.emails.administracion}</span>
+                  <span className="cursor-pointer hover:text-blue-500 hover:underline">
+                    {contactos.emails.administracion}
+                  </span>
                 </Link>
               </li>
               <li>
@@ -97,7 +99,10 @@ export default function Footer() {
                   className="flex items-start gap-2"
                 >
                   <MapPin className="mt-0.5 h-4 w-4 text-blue-400" />
-                  <span>{contactos.fisico.direccion}</span>
+
+                  <span className="cursor-pointer hover:text-blue-500 hover:underline">
+                    {contactos.fisico.direccion}
+                  </span>
                 </Link>
               </li>
             </ul>
