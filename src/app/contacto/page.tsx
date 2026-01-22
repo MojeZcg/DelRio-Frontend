@@ -20,6 +20,15 @@ export const metadata = generateMetadata({
     "soporte técnico internet Mendoza",
     "atención al cliente internet Mendoza",
   ],
+  alternates: {
+    canonical: "https://delriointernet.com.ar/contacto",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: "DelRio Internet", url: "https://delriointernet.com.ar" }],
+  publisher: "DelRio Internet",
 });
 
 export default function ContactPage() {

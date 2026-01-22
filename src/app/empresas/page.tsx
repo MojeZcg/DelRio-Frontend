@@ -32,6 +32,15 @@ export const metadata = generateMetadata({
     "internet dedicado Mendoza",
     "internet simétrico empresas Mendoza",
   ],
+  alternates: {
+    canonical: "https://delriointernet.com.ar/empresas",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: "DelRio Internet", url: "https://delriointernet.com.ar" }],
+  publisher: "DelRio Internet",
 });
 
 const planesBusiness = [

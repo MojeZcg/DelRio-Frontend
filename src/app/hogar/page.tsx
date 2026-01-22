@@ -22,6 +22,15 @@ export const metadata = generateMetadata({
     "fibra óptica hogar Mendoza",
     "wifi para casa en Mendoza",
   ],
+  alternates: {
+    canonical: "https://delriointernet.com.ar/hogar",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: "DelRio Internet", url: "https://delriointernet.com.ar" }],
+  publisher: "DelRio Internet",
 });
 
 function PricingCardsHogar() {

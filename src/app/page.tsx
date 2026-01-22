@@ -13,6 +13,19 @@ export const metadata = generateMetadata({
   description:
     "Conéctate al mundo sin límites con Internet DelRio: planes de alta velocidad simétrica, tecnología WiFi 6, soporte técnico confiable y una instalación profesional pensada para tu comodidad.",
   url: "https://delriointernet.com.ar/",
+  alternates: {
+    canonical: "https://delriointernet.com.ar/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  authors: [{ name: "DelRio Internet", url: "https://delriointernet.com.ar" }],
+  publisher: "DelRio Internet",
   keywords: [
     "internet en Pedriel",
     "internet en Mendoza",
