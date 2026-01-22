@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   Check,
-  CheckCircle,
   FlaskConical,
   Info,
   LifeBuoy,
@@ -382,7 +381,7 @@ export default function EmpresasPage() {
                 title="Contactar con nuestro equipo comercial"
                 target="_blank"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Necesito un plan corporativo personalizado.")}`}
-                className="font-semibold text-blue-400 underline decoration-blue-400/30 underline-offset-4 transition hover:text-blue-300 hover:decoration-blue-300/50"
+                className="font-semibold text-blue-500 underline decoration-blue-400/30 underline-offset-4 transition hover:text-blue-300 hover:decoration-blue-300/50"
               >
                 Contacta con nuestro equipo comercial
               </Link>
