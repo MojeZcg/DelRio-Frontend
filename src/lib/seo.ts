@@ -6,6 +6,15 @@ interface SEOProps {
   url?: string;
   image?: string;
   keywords?: string[];
+  alternates?: {
+    canonical?: string;
+  };
+  robots?: {
+    index?: boolean;
+    follow?: boolean;
+  };
+  authors?: Array<{ name: string; url?: string }>;
+  publisher?: string;
 }
 
 export function generateMetadata({
@@ -14,11 +23,19 @@ export function generateMetadata({
   url = "https://delriointernet.com.ar",
   image = "https://delriointernet.com.ar/og-default.png",
   keywords = [],
+  alternates,
+  robots,
+  authors,
+  publisher,
 }: SEOProps): Metadata {
   return {
     title,
     description,
     keywords,
+    ...(alternates && { alternates }),
+    ...(robots && { robots }),
+    ...(authors && { authors }),
+    ...(publisher && { publisher }),
     openGraph: {
       title,
       description,
