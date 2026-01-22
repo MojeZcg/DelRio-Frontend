@@ -29,7 +29,11 @@ export default function Navbar() {
 
   return (
     <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/30 px-6 py-3 shadow-md shadow-white/10 select-none lg:px-12">
-      <Link href="/" className="lg:pl-6">
+      <Link
+        title="Pagina principal DelRio Internet"
+        href="/"
+        className="lg:pl-6"
+      >
         <Image
           title="DelRio Internet Logo"
           src="/logoTransparentWhite.webp"

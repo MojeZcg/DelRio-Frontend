@@ -164,7 +164,7 @@ export default function Footer() {
           <p className="text-[11.5px] text-gray-400">
             Diseñada y Desarrollada por{" "}
             <Link
-              title="Desarrollador de la web"
+              title="Desarrollador de DelRio Internet Walter J. Montenegro"
               target="_blank"
               href="https://www.linkedin.com/in/montenegrowalter/"
               className="text-white"

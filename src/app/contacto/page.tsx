@@ -49,6 +49,7 @@ export default function ContactPage() {
             <div>
               <strong>Administración:</strong>{" "}
               <Link
+                title="Contacto Administración DelRio Internet"
                 target="_blank"
                 href={`${contactos.administracion.whatsapp}?text=${encodeURIComponent("Hola! Quiero contratar el servicio de internet.")}`}
                 className="text-[#6d8cff] hover:underline"
@@ -63,6 +64,7 @@ export default function ContactPage() {
             <div>
               <strong>Comercial:</strong>{" "}
               <Link
+                title="Contacto Comercial DelRio Internet"
                 target="_blank"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero recibir información sobre los planes de internet para mi hogar o empresa.")}`}
                 className="text-[#6d8cff] hover:underline"
@@ -77,6 +79,7 @@ export default function ContactPage() {
             <div>
               <strong>Soporte Técnico:</strong>{" "}
               <Link
+                title="Soporte tecnico DelRio Internet"
                 target="_blank"
                 href={`${contactos.soporte.whatsapp}?text=${encodeURIComponent(
                   "Hola! Necesito asistencia técnica con mi servicio de internet.",
@@ -100,6 +103,7 @@ export default function ContactPage() {
           <p className="mt-4">
             ✉️ <strong>Correo:</strong>{" "}
             <Link
+              title="Mail Administración DelRio Internet"
               target="_blank"
               href="mailto:administracion@delriointernet.com.ar"
               className="text-[#6d8cff] hover:underline"

@@ -129,7 +129,7 @@ export default function Home() {
           {/* Beneficios clave */}
           <div className="mx-auto mb-12 grid max-w-7xl gap-6 px-4 md:mb-16 md:grid-cols-3 md:gap-8">
             <Link
-              title=""
+              title="Velocidad Simétrica DelRio Internet"
               href="/empresas"
               className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/15 md:p-8"
             >
@@ -147,6 +147,7 @@ export default function Home() {
             </Link>
 
             <Link
+              title="Soporte Técnico Prioritario DelRio Internet"
               href="/empresas"
               className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/15 md:p-8"
             >
@@ -163,6 +164,7 @@ export default function Home() {
             </Link>
 
             <Link
+              title="SLA Garantizado DelRio Internet"
               href="/empresas"
               className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/15 md:p-8"
             >
@@ -285,6 +287,7 @@ export default function Home() {
             conexión, confianza.
           </p>
           <Link
+            title="Hablemos de tu conexión"
             target="_blank"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaria conocer sobre los planes de internet")}`}
             className="inline-block rounded-lg bg-white px-8 py-3 font-medium text-(--delrio-medium) transition hover:bg-blue-100"
