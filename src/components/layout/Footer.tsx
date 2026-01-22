@@ -39,6 +39,14 @@ export default function Footer() {
                   href="/"
                   className="underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hogar"
+                  className="underline-offset-2 transition-colors hover:text-white hover:underline"
+                >
                   Hogar
                 </Link>
               </li>
