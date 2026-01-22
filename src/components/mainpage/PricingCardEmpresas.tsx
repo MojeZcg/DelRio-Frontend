@@ -156,6 +156,7 @@ function PricingCardEmpresas({
           </div>
 
           <Link
+            title={`Solicitar asesor comercial para ${title}`}
             target="_blank"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero solicitar el plan " + title)}`}
             className="group rounded-lg px-10 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"

@@ -70,6 +70,7 @@ export default function InternetHogarPage() {
             y soporte confiable. Elegí el plan que mejor se adapte a vos.
           </p>
           <Link
+            title="Ver planes de Internet Hogar DelRio"
             href="#planes"
             className="mt-8 inline-block rounded-xl bg-white px-8 py-3 font-semibold text-blue-800 shadow-md transition-all hover:bg-blue-100"
           >

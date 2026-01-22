@@ -125,7 +125,8 @@ export default function EmpresasPage() {
               <Link
                 target="_blank"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Necesito información sobre planes empresariales.")}`}
-                className="group inline-flex w-full items-center justify-center gap-3 rounded-xl border-2 bg-linear-to-r from-blue-600 to-blue-700 px-8 py-4 font-bold text-white shadow-2xl shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-600 hover:shadow-blue-400/40 focus:ring-2 focus:ring-blue-400 focus:ring-blue-900 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-xl border-2 bg-linear-to-r from-blue-600 to-blue-700 px-8 py-4 font-bold text-white shadow-2xl shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-600 hover:shadow-blue-400/40 focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto"
+                title="Solicitar Cotización Planes Empresariales DelRio Internet"
               >
                 Solicitar Cotización
                 <ArrowRight
@@ -135,6 +136,7 @@ export default function EmpresasPage() {
               </Link>
 
               <Link
+                title="Contactar Asesor Planes Empresariales DelRio Internet"
                 target="_blank"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero hablar con un asesor comercial.")}`}
                 className="group inline-flex w-full items-center justify-center rounded-xl border-2 border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto"
@@ -299,8 +301,10 @@ export default function EmpresasPage() {
 
               {/* CTA Button */}
               <Link
+                target="_blank"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaria consultar sobre el plan Empresarial.")}`}
                 className="group/btn mt-auto flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-blue-700 px-6 py-4 font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-600 hover:shadow-xl hover:shadow-blue-400/40 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent focus:outline-none"
+                title="Solicitar Cotización Plan Empresarial DelRio Internet"
               >
                 Solicitar Cotización
                 <ArrowRight
@@ -355,6 +359,7 @@ export default function EmpresasPage() {
                 target="_blank"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaria consultar sobre el plan Empresarial Full (Dedicado).")}`}
                 className="group/btn flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-blue-800 px-6 py-4 font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-700 hover:shadow-xl hover:shadow-blue-400/40 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent focus:outline-none"
+                title="Solicitar Cotización Plan Empresarial DelRio Internet"
               >
                 Solicitar Cotización
                 <ArrowRight
@@ -370,6 +375,7 @@ export default function EmpresasPage() {
             <p className="text-sm text-gray-400">
               ¿Necesitas una solución personalizada?{" "}
               <Link
+                title="Contactar con nuestro equipo comercial"
                 target="_blank"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Necesito un plan corporativo personalizado.")}`}
                 className="font-semibold text-blue-400 underline decoration-blue-400/30 underline-offset-4 transition hover:text-blue-300 hover:decoration-blue-300/50"

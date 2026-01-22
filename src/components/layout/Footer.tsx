@@ -37,6 +37,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  title="Inicio DelRio Internet"
                   href="/"
                   className="underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
@@ -45,6 +46,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  title="Hogar DelRio Internet"
                   href="/hogar"
                   className="underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
@@ -53,6 +55,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  title="Empresas DelRio Internet"
                   href="/empresas"
                   className="underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
@@ -61,6 +64,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  title="Contacto DelRio Internet"
                   href="/contacto"
                   className="underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
@@ -69,6 +73,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  title="Portal de Clientes DelRio Internet"
                   href="https://delriointernet.portaldeinternet.me/users/login"
                   rel="noopener noreferrer"
                   className="underline-offset-2 transition-colors hover:text-white hover:underline"
@@ -91,6 +96,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  title="Email Administración DelRio Internet"
                   target="_blank"
                   href={`mailto:${contactos.emails.administracion}`}
                   className="flex items-center gap-2"
@@ -103,6 +109,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  title="Ubicación Física DelRio Internet"
                   target="_blank"
                   href={contactos.fisico.maps}
                   className="flex items-start gap-2"
@@ -125,6 +132,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  title="Términos y Condiciones DelRio Internet"
                   target="_blank"
                   href="/terminos-condiciones.pdf"
                   className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
@@ -135,6 +143,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  title="Dar de baja DelRio internet"
                   href={`${contactos.administracion.whatsapp}?text=${encodeURIComponent("Hola! Quiero dar de baja mi servicio")}`}
                   className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
@@ -155,6 +164,7 @@ export default function Footer() {
           <p className="text-[11.5px] text-gray-400">
             Diseñada y Desarrollada por{" "}
             <Link
+              title="Desarrollador de la web"
               target="_blank"
               href="https://www.linkedin.com/in/montenegrowalter/"
               className="text-white"

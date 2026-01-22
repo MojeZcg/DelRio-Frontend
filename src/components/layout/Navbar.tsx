@@ -42,6 +42,7 @@ export default function Navbar() {
       <nav className="flex items-center gap-8 text-lg text-white">
         {clientLink && (
           <Link
+            title="Clientes DelRio Internet"
             href={clientLink.href}
             className="flex items-center gap-1 underline-offset-4 transition-all hover:underline lg:hidden"
           >
@@ -55,6 +56,7 @@ export default function Navbar() {
             return (
               <li key={href}>
                 <Link
+                  title={`${name} DelRio Internet`}
                   href={href}
                   className={`flex items-center gap-1 underline-offset-4 transition-all hover:underline ${
                     active ? "text-white underline" : "text-gray-200"
@@ -81,6 +83,7 @@ export default function Navbar() {
                     <div key={href}>
                       <DropdownMenuItem className="p-0">
                         <Link
+                          title={`${name} DelRio Internet`}
                           href={href}
                           className={`flex h-full w-full items-center gap-1 rounded-md p-3 text-lg underline-offset-4 transition-all hover:underline ${
                             active ? "bg-white text-black" : "text-white"

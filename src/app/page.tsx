@@ -57,6 +57,7 @@ export default function Home() {
           </div>
 
           <Link
+            title="Comprobar disponibilidad"
             target="_blank"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de los servicios en mi zona.")}`}
             className="mb-10 flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
@@ -128,11 +129,12 @@ export default function Home() {
           {/* Beneficios clave */}
           <div className="mx-auto mb-12 grid max-w-7xl gap-6 px-4 md:mb-16 md:grid-cols-3 md:gap-8">
             <Link
+              title=""
               href="/empresas"
               className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/15 md:p-8"
             >
               <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
-                <Zap size={26} className="md:h-[30px] md:w-[30px]" />
+                <Zap size={26} className="md:h-7.5 md:w-7.5" />
               </div>
               <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">
                 Velocidad Simétrica
@@ -149,7 +151,7 @@ export default function Home() {
               className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/15 md:p-8"
             >
               <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
-                <LifeBuoy size={26} className="md:h-[30px] md:w-[30px]" />
+                <LifeBuoy size={26} className="md:h-7.5 md:w-7.5" />
               </div>
               <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">
                 Soporte Prioritario
@@ -165,7 +167,7 @@ export default function Home() {
               className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/15 md:p-8"
             >
               <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
-                <ShieldCheck size={26} className="md:h-[30px] md:w-[30px]" />
+                <ShieldCheck size={26} className="md:h-7.5 md:w-7.5" />
               </div>
               <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">
                 SLA Garantizado
@@ -196,6 +198,7 @@ export default function Home() {
             <Link
               href="/empresas"
               className="group inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-blue-950 shadow-lg transition-all hover:bg-blue-50 hover:shadow-2xl hover:shadow-blue-500/30 md:gap-3 md:px-10 md:py-4 md:text-base lg:text-[16.5px]"
+              title="Conocé más sobre nuestros planes empresariales"
             >
               <span className="hidden sm:inline">
                 Conocé más sobre nuestros planes empresariales

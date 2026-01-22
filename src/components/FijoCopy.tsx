@@ -63,6 +63,7 @@ export default function FijoCopy() {
   };
   return (
     <Link
+      title="Contacto Fijo DelRio Internet"
       target="_blank"
       href={`tel:${contactos.fisico.telefono}`}
       onClick={handlePhoneClick}

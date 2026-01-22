@@ -80,6 +80,7 @@ export default function EmpresasCarousel() {
                 className="mx-2 flex shrink-0 items-center justify-center rounded-lg p-4 shadow-sm transition-all duration-300 select-none hover:shadow-md"
               >
                 <Link
+                  title={`${company.name} Sitio Oficial`}
                   target="_blank"
                   href={company.link}
                   className="relative h-30 w-40 lg:h-35 lg:w-45"
