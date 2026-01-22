@@ -85,6 +85,7 @@ export default function EmpresasCarousel() {
                   className="relative h-30 w-40 lg:h-35 lg:w-45"
                 >
                   <Image
+                    title={`${company.name} Logo DelRio Internet`}
                     src={`/logos-empresas${company.src}`}
                     alt={company.name}
                     fill

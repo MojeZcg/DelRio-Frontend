@@ -30,6 +30,7 @@ export default function Home() {
       <div className="fixed inset-0 -z-10">
         {/* Fondo principal */}
         <Image
+          title="Fondo principal Delrio Internet"
           src="/bg.webp"
           alt="Fondo principal DelRio"
           fill

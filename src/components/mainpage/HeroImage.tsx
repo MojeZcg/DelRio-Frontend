@@ -45,6 +45,7 @@ export default function HeroCarousel() {
 
                   {/* Image */}
                   <Image
+                    title={`Hero image ${index + 1} DelRio Internet`}
                     src={src}
                     alt={`Hero image ${index + 1}`}
                     fill

@@ -86,6 +86,7 @@ export default function EmpresasPage() {
       {/* 🌆 Fondo fijo con overlay */}
       <div className="fixed inset-0 -z-10">
         <Image
+          title="Fondo Empresarial DelRio Internet"
           src="/empresa.webp"
           alt="Fondo empresarial"
           fill

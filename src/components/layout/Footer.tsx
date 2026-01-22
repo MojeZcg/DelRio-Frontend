@@ -16,6 +16,7 @@ export default function Footer() {
           {/* Logo + descripción */}
           <div>
             <Image
+              title="DelRio Internet Logo"
               src="/logoTransparentWhite.webp"
               alt="DelRio Internet Logo"
               width={160}

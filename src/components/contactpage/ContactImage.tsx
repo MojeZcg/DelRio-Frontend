@@ -15,6 +15,7 @@ export default function ContactImage() {
 
       {/* Imagen */}
       <Image
+        title="Imagen de contacto DelRio Internet"
         src="/contacto.webp"
         alt="Contacto"
         width={1920}

@@ -31,8 +31,9 @@ export default function Navbar() {
     <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/30 px-6 py-3 shadow-md shadow-white/10 select-none lg:px-12">
       <Link href="/" className="lg:pl-6">
         <Image
+          title="DelRio Internet Logo"
           src="/logoTransparentWhite.webp"
-          alt="DelRio Logo"
+          alt="DelRio Internet Logo"
           width={995}
           height={511}
           className="h-12 w-auto lg:h-16"
