@@ -11,22 +11,16 @@ import {
 import { generateMetadata } from "@/lib/seo";
 
 export const metadata = generateMetadata({
-  title: "DelRio Internet | Internet para tu hogar",
+  title: "Internet para tu hogar | DelRio Internet",
   description:
-    "Conectá tu hogar con Internet DelRio: planes simétricos, WiFi 6, soporte confiable e instalación profesional.",
+    "Disfruta en tu hogar de una conexión estable y veloz con Internet DelRio: planes simétricos ideales para streaming, videollamadas y gaming, con WiFi 6, soporte confiable e instalación profesional.",
   url: "https://delriointernet.com.ar/hogar",
   keywords: [
-    "internet",
-    "fibra óptica",
-    "50 Mbps",
-    "100 Mbps",
-    "300 Mbps",
-    "planes de internet",
-    "internet hogar",
-    "planes de internet hogar",
-    "proveedores de internet",
-    "delrio",
-    "delrio internet",
+    "internet residencial en Pedriel",
+    "internet residencial en Mendoza",
+    "internet para el hogar en Mendoza",
+    "fibra óptica hogar Mendoza",
+    "wifi para casa en Mendoza",
   ],
 });
 

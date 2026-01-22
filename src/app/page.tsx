@@ -9,21 +9,17 @@ import { ArrowRight, LifeBuoy, ShieldCheck, Zap } from "lucide-react";
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
 
 export const metadata = generateMetadata({
-  title: "DelRio Internet | Conectate con el mundo",
+  title: "Internet por Fibra Óptica o Wireless | DelRio Internet",
   description:
-    "Conectate al mundo con Internet DelRio: planes simétricos, WiFi 6, soporte confiable e instalación profesional.",
+    "Conéctate al mundo sin límites con Internet DelRio: planes de alta velocidad simétrica, tecnología WiFi 6, soporte técnico confiable y una instalación profesional pensada para tu comodidad.",
   url: "https://delriointernet.com.ar/",
   keywords: [
-    "internet",
-    "fibra óptica",
-    "internet hogar",
-    "internet empresas",
-    "planes de internet hogar",
-    "planes de internet empresas",
-    "proveedores de internet",
-    "delrio",
-    "delrio internet",
-    "planes de internet",
+    "internet en Pedriel",
+    "internet en Mendoza",
+    "proveedor de internet en Pedriel",
+    "proveedor de internet en Mendoza",
+    "internet fibra óptica Mendoza",
+    "internet de alta velocidad Mendoza",
   ],
 });
 

@@ -21,23 +21,16 @@ import { contactos } from "@/lib/contacto";
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
 
 export const metadata = generateMetadata({
-  title: "DelRio Internet | Tu mejor opción en Internet para Empresas",
+  title: "Internet para Empresas | DelRio Internet",
   description:
-    "Conectá tu Empresa con Internet DelRio: SLA garantizado, soporte confiable e instalación profesional.",
+    "Impulsa tu negocio con Internet DelRio: soluciones de conectividad empresarial con alta velocidad simétrica, máxima estabilidad, WiFi 6 y soporte técnico especializado para que tu empresa nunca se detenga.",
   url: "https://delriointernet.com.ar/empresas",
   keywords: [
-    "delrio",
-    "delrio internet",
-    "internet",
-    "fibra óptica",
-    "50 Mbps",
-    "100 Mbps",
-    "300 Mbps",
-    "internet dedicado",
-    "planes de internet",
-    "internet empresas",
-    "planes de internet empresas",
-    "proveedores de internet",
+    "internet empresarial en Mendoza",
+    "internet para empresas en Pedriel",
+    "fibra óptica empresarial Mendoza",
+    "internet dedicado Mendoza",
+    "internet simétrico empresas Mendoza",
   ],
 });
 

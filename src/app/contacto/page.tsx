@@ -11,23 +11,14 @@ import FijoCopy from "@/components/FijoCopy";
 export const metadata = generateMetadata({
   title: "DelRio Internet | Conectate con nosotros",
   description:
-    "Conectá tu hogar con Internet DelRio: planes simétricos, WiFi 6, soporte confiable e instalación profesional.",
+    "¿Tienes dudas o necesitas asesoría? En Internet DelRio estamos para ayudarte. Contáctanos y recibe atención personalizada, soporte confiable y toda la información que necesitas para elegir el plan ideal.”",
   url: "https://delriointernet.com.ar/contacto",
   keywords: [
-    "delrio",
-    "delrio internet",
-    "internet",
-    "fibra óptica",
-    "internet dedicado",
-    "planes de internet",
-    "internet empresas",
-    "planes de internet empresas",
-    "proveedores de internet",
-    "internet hogar",
-    "planes de internet hogar",
-    "50 Mbps",
-    "100 Mbps",
-    "300 Mbps",
+    "contratar internet en Mendoza",
+    "contratar internet en Pedriel",
+    "contacto proveedor de internet Mendoza",
+    "soporte técnico internet Mendoza",
+    "atención al cliente internet Mendoza",
   ],
 });
 
