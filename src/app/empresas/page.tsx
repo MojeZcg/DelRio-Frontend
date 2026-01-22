@@ -16,11 +16,10 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { generateMetadata } from "@/lib/seo";
 import { contactos } from "@/lib/contacto";
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
 
-export const metadata = generateMetadata({
+export const metadata = {
   title: "Internet para Empresas | DelRio Internet",
   description:
     "Impulsa tu negocio con Internet DelRio: soluciones de conectividad empresarial con alta velocidad simétrica, máxima estabilidad, WiFi 6 y soporte técnico especializado para que tu empresa nunca se detenga.",
@@ -41,7 +40,7 @@ export const metadata = generateMetadata({
   },
   authors: [{ name: "DelRio Internet", url: "https://delriointernet.com.ar" }],
   publisher: "DelRio Internet",
-});
+};
 
 const planesBusiness = [
   {

@@ -8,9 +8,8 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { generateMetadata } from "@/lib/seo";
 
-export const metadata = generateMetadata({
+export const metadata = {
   title: "Internet para tu hogar | DelRio Internet",
   description:
     "Disfruta en tu hogar de una conexión estable y veloz con Internet DelRio: planes simétricos ideales para streaming, videollamadas y gaming, con WiFi 6, soporte confiable e instalación profesional.",
@@ -31,7 +30,7 @@ export const metadata = generateMetadata({
   },
   authors: [{ name: "DelRio Internet", url: "https://delriointernet.com.ar" }],
   publisher: "DelRio Internet",
-});
+};
 
 function PricingCardsHogar() {
   return (

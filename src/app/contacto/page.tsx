@@ -3,12 +3,10 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import ContactForm from "@/components/contactpage/ContactForm";
 import { FileCog, BadgeDollarSign, Wrench, Phone } from "lucide-react";
-
-import { generateMetadata } from "@/lib/seo";
 import { contactos } from "@/lib/contacto";
 import FijoCopy from "@/components/FijoCopy";
 
-export const metadata = generateMetadata({
+export const metadata = {
   title: "DelRio Internet | Conectate con nosotros",
   description:
     "¿Tienes dudas o necesitas asesoría? En Internet DelRio estamos para ayudarte. Contáctanos y recibe atención personalizada, soporte confiable y toda la información que necesitas para elegir el plan ideal.”",
@@ -29,7 +27,7 @@ export const metadata = generateMetadata({
   },
   authors: [{ name: "DelRio Internet", url: "https://delriointernet.com.ar" }],
   publisher: "DelRio Internet",
-});
+};
 
 export default function ContactPage() {
   return (

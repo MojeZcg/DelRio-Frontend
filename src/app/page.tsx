@@ -2,13 +2,11 @@ import HeroImage from "@/components/mainpage/HeroImage";
 import PricingCards from "@/components/mainpage/PricingCardHogar";
 import Image from "next/image";
 import Link from "next/link";
-
-import { generateMetadata } from "@/lib/seo";
 import { contactos } from "@/lib/contacto";
 import { ArrowRight, LifeBuoy, ShieldCheck, Zap } from "lucide-react";
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
 
-export const metadata = generateMetadata({
+export const metadata = {
   title: "Internet por Fibra Óptica o Wireless | DelRio Internet",
   description:
     "Conéctate al mundo sin límites con Internet DelRio: planes de alta velocidad simétrica, tecnología WiFi 6, soporte técnico confiable y una instalación profesional pensada para tu comodidad.",
@@ -34,7 +32,7 @@ export const metadata = generateMetadata({
     "internet fibra óptica Mendoza",
     "internet de alta velocidad Mendoza",
   ],
-});
+};
 
 export default function Home() {
   return (
