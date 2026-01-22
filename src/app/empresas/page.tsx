@@ -292,9 +292,7 @@ export default function EmpresasPage() {
                     key={i}
                     className="flex items-start gap-3 rounded-lg bg-white/5 p-3 backdrop-blur-sm transition hover:bg-white/10"
                   >
-                    <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-green-400 to-emerald-500">
-                      <CheckCircle className="h-4 w-4 text-white" />
-                    </div>
+                    <Check size={24} className="text-green-500" />
                     <div>
                       <h4 className="mb-1 text-sm font-bold text-white">
                         {item.title}
@@ -341,15 +339,13 @@ export default function EmpresasPage() {
               </p>
 
               {/* Features List */}
-              <div className="mb-8 space-y-4">
+              <div className="mb-10 space-y-4">
                 {planesFull.map((item, i) => (
                   <div
                     key={i}
                     className="flex items-start gap-3 rounded-lg bg-white/5 p-3 backdrop-blur-sm transition hover:bg-white/10"
                   >
-                    <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-blue-400 to-blue-600">
-                      <CheckCircle className="h-4 w-4 text-white" />
-                    </div>
+                    <Check size={24} className="text-green-500" />
                     <div>
                       <h4 className="mb-1 text-sm font-bold text-white">
                         {item.title}
