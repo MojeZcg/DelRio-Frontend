@@ -4,7 +4,6 @@ import { ArrowUpRightIcon, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { contactos } from "@/lib/contacto";
-import toast from "react-hot-toast";
 import FijoCopy from "../FijoCopy";
 
 export default function Footer() {
