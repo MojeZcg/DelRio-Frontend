@@ -79,7 +79,7 @@ const planesFull = [
   },
   {
     title: "Contratos de Servicio personalizados",
-    desc: "Ofrecemos SLA adaptados a cada cliente corporativo según sus objetivos y necesidades.",
+    desc: "Ofrecemos SLA adaptados a cada cliente corporativo según los objetivos y necesidades de su empresa.",
   },
   {
     title: "Atención ejecutiva exclusiva",
@@ -333,8 +333,7 @@ export default function EmpresasPage() {
                 Empresarial Dedicado
               </h3>
               <p className="mb-8 text-base leading-relaxed text-gray-300">
-                Conectividad dedicada con máxima prioridad. SLA corporativo y
-                ejecutivo de cuenta asignado.
+                Conectividad dedicada con máxima prioridad con SLA Empresarial.
               </p>
 
               {/* Features List */}
@@ -380,7 +379,7 @@ export default function EmpresasPage() {
               <Link
                 title="Contactar con nuestro equipo comercial"
                 target="_blank"
-                href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Necesito un plan corporativo personalizado.")}`}
+                href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Necesito un plan empresarial personalizado.")}`}
                 className="font-semibold text-blue-500 underline decoration-blue-400/30 underline-offset-4 transition hover:text-blue-300 hover:decoration-blue-300/50"
               >
                 Contacta con nuestro equipo comercial
