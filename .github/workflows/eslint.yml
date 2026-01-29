@@ -31,10 +31,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: pnpm install
-
-      - name: Install SARIF formatter
-        run: pnpm add -D @microsoft/eslint-formatter-sarif
+        run: pnpm instal
 
       - name: Run ESLint
         run: pnpm lint
