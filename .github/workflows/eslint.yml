@@ -29,7 +29,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
@@ -38,7 +37,7 @@ jobs:
         run: pnpm add -D @microsoft/eslint-formatter-sarif
 
       - name: Run ESLint
-        run: pnpm exec eslint .
+        run: pnpm lint
           --ext .js,.jsx,.ts,.tsx
           --format @microsoft/eslint-formatter-sarif
           --output-file eslint-results.sarif
