@@ -1,4 +1,4 @@
-# 🌐 DelRio Internet - Sitio Web Corporativo
+# 🌐 DelRio Internet - Sitio Web
 
 <div align="center">
 
@@ -112,14 +112,13 @@ DelRio Internet es un proveedor de servicios de Internet (ISP) que ofrece:
 
 ### UI Components
 
-- **[Radix UI](https://www.radix-ui.com/)** - Componentes primitivos accesibles
+- **[Shadcn UI](https://ui.shadcn.com/)** - Componentes primitivos accesibles
   - Dialog (modales)
   - Dropdown Menu
   - Hover Card
   - Label
   - Select
   - Separator
-  - Slot
 - **[Lucide React](https://lucide.dev/)** - Iconos modernos
 - **[Embla Carousel](https://www.embla-carousel.com/)** - Carruseles y sliders
 
@@ -247,15 +246,8 @@ Navega a [http://localhost:3000](http://localhost:3000)
 
 ### Variables de Entorno
 
-El proyecto no requiere variables de entorno para funcionar en modo desarrollo, pero puedes crear un archivo `.env.local` para configuraciones personalizadas:
+El proyecto no requiere variables de entorno para funcionar en modo desarrollo, pero puedes crear un archivo `.env.local` para configuraciones personalizadas.
 
-```env
-# .env.local (opcional)
-NEXT_PUBLIC_SITE_URL=https://delriointernet.com.ar
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX  # Google Analytics ID (si aplica)
-```
-
----
 
 ## 📜 Scripts Disponibles
 
@@ -422,100 +414,6 @@ Todas las imágenes usan el componente `next/image`:
 - Responsive images
 - Placeholder blur
 
----
-
-## 🌐 Deploy
-
-### Deploy en Vercel (Recomendado)
-
-1. **Conectar con GitHub**
-   - Ve a [vercel.com](https://vercel.com)
-   - Importa tu repositorio
-
-2. **Configurar el proyecto**
-
-   ```bash
-   Framework Preset: Next.js
-   Build Command: pnpm build
-   Output Directory: .next
-   Install Command: pnpm install
-   ```
-
-3. **Deploy automático**
-   - Cada push a `main` despliega automáticamente
-   - Preview deployments en cada PR
-
-### Deploy Manual
-
-```bash
-# Build de producción
-pnpm build
-
-# Iniciar servidor
-pnpm start
-```
-
-### Variables de Entorno en Producción
-
-En Vercel, configura las variables en:
-
-- Settings → Environment Variables
-
----
-
-## 📂 Estructura de Archivos Detallada
-
-```
-src/
-├── app/
-│   ├── layout.tsx              # Layout raíz con metadata global
-│   ├── page.tsx                # Página principal (/)
-│   ├── loading.tsx             # Loading state global
-│   ├── globals.css             # Estilos globales + Tailwind
-│   │
-│   ├── contacto/
-│   │   └── page.tsx            # Página de contacto
-│   │
-│   ├── empresas/
-│   │   └── page.tsx            # Planes empresariales
-│   │
-│   └── hogar/
-│       └── page.tsx            # Planes hogar
-│
-├── components/
-│   ├── layout/
-│   │   ├── Navbar.tsx          # Navegación principal
-│   │   └── Footer.tsx          # Pie de página
-│   │
-│   ├── mainpage/
-│   │   ├── HeroImage.tsx       # Hero section
-│   │   ├── PricingCardHogar.tsx
-│   │   └── EmpresasCarousel.tsx
-│   │
-│   ├── contactpage/
-│   │   ├── ContactForm.tsx     # Formulario
-│   │   └── ContactImage.tsx    # Imagen decorativa
-│   │
-│   ├── ui/                     # Componentes base de shadcn/ui
-│   │   ├── button.tsx
-│   │   ├── card.tsx
-│   │   ├── dialog.tsx
-│   │   ├── dropdown-menu.tsx
-│   │   ├── hover-card.tsx
-│   │   ├── label.tsx
-│   │   ├── select.tsx
-│   │   └── separator.tsx
-│   │
-│   └── FijoCopy.tsx            # Botón WhatsApp flotante
-│
-└── lib/
-    ├── seo.ts                  # Funciones helper para SEO
-    ├── contacto.ts             # Datos de contacto centralizados
-    └── utils.ts                # Utilidades (cn, etc)
-```
-
----
-
 ## 🎨 Personalización
 
 ### Colores
@@ -611,7 +509,7 @@ Este proyecto es propiedad de **DelRio Internet**. Todos los derechos reservados
 - [Next.js](https://nextjs.org/) por el increíble framework
 - [Vercel](https://vercel.com) por el hosting y analytics
 - [Tailwind CSS](https://tailwindcss.com/) por el sistema de diseño
-- [Radix UI](https://www.radix-ui.com/) por los componentes accesibles
+- [Shadcn UI]([https://www.radix-ui.com/](https://ui.shadcn.com/)) por los componentes accesibles
 - [Lucide](https://lucide.dev/) por los iconos
 
 ---
