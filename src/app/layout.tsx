@@ -47,6 +47,14 @@ export const metadata: Metadata = {
       "Proveedor de Internet por fibra óptica e inalámbrico en Mendoza. Conexión rápida, estable y con soporte local.",
     url: "https://delriointernet.com.ar",
     siteName: "Del Río Internet",
+    images: [
+      {
+        url: "/og-default.png",
+        width: 1536,
+        height: 1024,
+        alt: "Del Río Internet",
+      },
+    ],
   },
 };
 
