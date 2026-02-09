@@ -131,7 +131,7 @@ export default function EmpresasPage() {
             <div className="flex flex-col items-center gap-4 sm:flex-row lg:items-start">
               <Link
                 target="_blank"
-                href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Necesito información sobre planes empresariales.")}`}
+                href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Necesito información sobre los planes empresariales.")}`}
                 className="group inline-flex w-full items-center justify-center gap-3 rounded-xl border-2 bg-linear-to-r from-blue-600 to-blue-700 px-8 py-4 font-bold text-white shadow-2xl shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-600 hover:shadow-blue-400/40 focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto"
                 title="Solicitar Cotización Planes Empresariales DelRio Internet"
               >
