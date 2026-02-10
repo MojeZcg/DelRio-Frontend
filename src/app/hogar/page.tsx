@@ -52,7 +52,7 @@ export default function InternetHogarPage() {
     { text: "Velocidades simétricas en todos los planes" },
     { text: "Soporte remoto con resolución rápida" },
     { text: "Instalación profesional incluida" },
-    { text: "Wifi 5/6* con mejor cobertura y rendimiento" },
+    { text: "Wifi 6* con mejor cobertura y rendimiento" },
   ];
 
   return (
@@ -110,11 +110,13 @@ export default function InternetHogarPage() {
         </div>
       </section>
 
-      <footer className="pb-8 text-center text-xs text-gray-200">
-        * Las velocidades indicadas son máximas teóricas. Se garantiza un mínimo
-        del 60 % del ancho de banda contratado, sujeto a disponibilidad técnica
-        y condiciones de red.
-      </footer>
+      <section className="pb-8 text-center text-xs text-gray-300">
+        <p className="">
+          * La disponibilidad de WiFi 6 depende del equipo del cliente y la
+          cobertura en su área. Recomendamos verificar la compatibilidad de tus
+          dispositivos para aprovechar esta tecnología.
+        </p>
+      </section>
     </main>
   );
 }
