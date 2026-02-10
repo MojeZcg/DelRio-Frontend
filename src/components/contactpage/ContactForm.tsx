@@ -35,7 +35,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto flex w-full max-w-3xl flex-col gap-4 text-left"
+      className="mx-auto flex w-full max-w-3xl flex-col gap-3 text-left"
     >
       <div>
         <Label

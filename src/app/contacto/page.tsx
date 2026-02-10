@@ -32,13 +32,13 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-linear-to-tl from-slate-950 via-slate-900 to-(--delrio-dark) pt-22 text-white">
-      <div className="px-6 py-10 2xl:pt-10 2xl:pb-14">
+      <div className="px-6 py-10 2xl:py-14">
         <div className="flex items-center justify-center gap-24">
           <div className="relative z-10 w-full max-w-xl text-center">
-            <h1 className="mb-4 bg-clip-text text-5xl font-bold text-white">
+            <h1 className="mb-3 bg-clip-text text-5xl font-bold text-white">
               Contactanos
             </h1>
-            <p className="mb-10 text-sm text-gray-300">
+            <p className="mb-4 text-sm text-gray-300">
               Estamos para ayudarte. Completá el formulario para un contacto mas
               personalizado.
             </p>
@@ -47,7 +47,7 @@ export default function ContactPage() {
           </div>
           <ContactImage />
         </div>
-        <Separator className="my-14" />
+        <Separator className="mt-14 mb-10" />
 
         {/* Contacto directo */}
         <div className="text-center text-gray-300">
