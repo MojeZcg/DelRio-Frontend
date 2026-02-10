@@ -112,9 +112,9 @@ export default function InternetHogarPage() {
 
       <section className="pb-8 text-center text-xs text-gray-300">
         <p className="">
-          * La disponibilidad de WiFi 6 depende del equipo del cliente y la
-          cobertura en su área. Recomendamos verificar la compatibilidad de tus
-          dispositivos para aprovechar esta tecnología.
+          * La disponibilidad de la tecnologia WiFi 6 depende del equipo del
+          cliente. Recomendamos verificar la compatibilidad de tus dispositivos
+          para aprovechar esta tecnología.
         </p>
       </section>
     </main>
