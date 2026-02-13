@@ -7,7 +7,7 @@ import { ArrowRight, LifeBuoy, ShieldCheck, Zap } from "lucide-react";
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
 
 export const metadata = {
-  title: "Internet por Fibra Óptica o Wireless | DelRio Internet",
+  title: "Internet por Fibra Óptica | DelRio Internet",
   description:
     "Conéctate al mundo sin límites con Internet DelRio: planes de alta velocidad simétrica, tecnología WiFi 6, soporte técnico confiable y una instalación profesional pensada para tu comodidad.",
   url: "https://delriointernet.com.ar/",
