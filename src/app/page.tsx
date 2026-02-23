@@ -154,7 +154,7 @@ export default function Home() {
 
           <div className="rounded-3xl border border-gray-200 bg-gray-50 p-6 md:p-8">
             <h5 className="mb-5 text-lg font-semibold md:text-xl">
-              ¿Qué resolvemos en tu lugar?
+              ¿Qué resolvemos?
             </h5>
             <ul className="space-y-4 text-sm text-gray-700 md:text-base">
               <li className="flex items-start gap-3">
