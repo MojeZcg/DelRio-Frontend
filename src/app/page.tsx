@@ -127,6 +127,71 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-white py-14 text-gray-900 md:py-18">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2 md:items-center md:gap-12">
+          <div>
+            <p className="mb-3 text-sm font-semibold tracking-wide text-(--delrio-medium) uppercase">
+              Servicio para hogares y comercios
+            </p>
+            <h4 className="mb-4 text-3xl font-bold md:text-5xl">
+              Trazados de red interna y conectividad dentro de tu espacio
+            </h4>
+            <p className="mb-6 text-base leading-relaxed text-gray-600 md:text-lg">
+              Diseñamos e instalamos el recorrido interno de tu red para que la
+              conexión llegue a cada ambiente, con una estructura prolija,
+              estable y lista para escalar cuando lo necesites.
+            </p>
+            <Link
+              title="Cotizar trazado de red interna"
+              target="_blank"
+              href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero cotizar el servicio de trazado de red interna y conectividad para mi domicilio, local u oficina.")}`}
+              className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-7 py-3 text-sm font-semibold text-white transition hover:opacity-95 md:px-9 md:text-base"
+            >
+              Cotizar trazado y conectividad
+              <ArrowRight size={20} />
+            </Link>
+          </div>
+
+          <div className="rounded-3xl border border-gray-200 bg-gray-50 p-6 md:p-8">
+            <h5 className="mb-5 text-lg font-semibold md:text-xl">
+              ¿Qué resolvemos en tu lugar?
+            </h5>
+            <ul className="space-y-4 text-sm text-gray-700 md:text-base">
+              <li className="flex items-start gap-3">
+                <Zap
+                  size={18}
+                  className="mt-0.5 shrink-0 text-(--delrio-medium)"
+                />
+                <span>
+                  Distribución inteligente para mejorar cobertura en
+                  habitaciones, oficinas y áreas de trabajo.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Wifi
+                  size={18}
+                  className="mt-0.5 shrink-0 text-(--delrio-medium)"
+                />
+                <span>
+                  Conectividad estable para TV, cámaras, notebooks, consolas y
+                  dispositivos IoT.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <LifeBuoy
+                  size={18}
+                  className="mt-0.5 shrink-0 text-(--delrio-medium)"
+                />
+                <span>
+                  Asesoramiento técnico personalizado antes, durante y después
+                  de la instalación.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section className="relative overflow-hidden border-y bg-linear-to-br from-slate-800 to-black py-12 text-white md:py-20">
         <div className="px-4 pb-4 md:px-6">
           <div className="text-center">
