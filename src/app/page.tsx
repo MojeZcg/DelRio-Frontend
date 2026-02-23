@@ -3,7 +3,15 @@ import PricingCards from "@/components/mainpage/PricingCardHogar";
 import Image from "next/image";
 import Link from "next/link";
 import { contactos } from "@/lib/contacto";
-import { ArrowRight, LifeBuoy, ShieldCheck, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  LifeBuoy,
+  Radio,
+  ShieldCheck,
+  Users,
+  Wifi,
+  Zap,
+} from "lucide-react";
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
 
 export const metadata = {
@@ -221,6 +229,72 @@ export default function Home() {
                 size={22}
                 className="transition-transform group-hover:translate-x-2 md:h-7 md:w-7"
               />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-14 text-gray-900 md:py-18">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto mb-10 max-w-5xl text-center md:mb-12">
+            <h4 className="mb-6 text-3xl font-bold md:text-5xl">
+              Internet y conectividad para eventos
+            </h4>
+            <p className="text-base text-gray-600 md:text-lg">
+              Diseñamos soluciones de red para festivales, ferias, congresos y
+              encuentros de gran escala, con cobertura estable para eventos de
+              hasta{" "}
+              <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text font-semibold text-transparent">
+                10.000 personas
+              </span>
+              .
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3 md:gap-6">
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-(--delrio-medium)/10 text-(--delrio-medium)">
+                <Wifi size={24} />
+              </div>
+              <h5 className="mb-2 text-lg font-semibold">Cobertura total</h5>
+              <p className="text-sm leading-relaxed text-gray-600">
+                Implementación de puntos de acceso estratégicos para áreas de
+                alta densidad, con roaming fluido y señal estable.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-(--delrio-medium)/10 text-(--delrio-medium)">
+                <Users size={24} />
+              </div>
+              <h5 className="mb-2 text-lg font-semibold">Alta concurrencia</h5>
+              <p className="text-sm leading-relaxed text-gray-600">
+                Arquitectura optimizada para soportar miles de dispositivos
+                simultáneos sin afectar la experiencia del público.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-(--delrio-medium)/10 text-(--delrio-medium)">
+                <Radio size={24} />
+              </div>
+              <h5 className="mb-2 text-lg font-semibold">Red por zonas</h5>
+              <p className="text-sm leading-relaxed text-gray-600">
+                Segmentación de la conectividad para prensa, producción,
+                organización y público general, con mayor orden y rendimiento.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 text-center md:mt-12">
+            <Link
+              title="Cotizar conectividad para eventos"
+              target="_blank"
+              href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero cotizar internet y conectividad para un evento.")}`}
+              className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-7 py-3 text-sm font-semibold text-white transition hover:opacity-95 md:px-9 md:text-base"
+            >
+              Cotizar conectividad para eventos
+              <ArrowRight size={20} />
             </Link>
           </div>
         </div>
