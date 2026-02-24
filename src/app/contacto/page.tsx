@@ -122,6 +122,44 @@ export default function ContactPage() {
             Horario de atención: {contactos.fisico.horario}
           </p>
         </div>
+
+        <section className="mx-auto mt-24 max-w-7xl rounded-2xl border border-white/10 bg-white/5 p-6 text-left backdrop-blur-sm md:p-8">
+          <h2 className="mb-4 text-2xl font-bold text-white">
+            ¿Qué podés resolver desde esta página de contacto?
+          </h2>
+          <ul className="list-disc pl-10">
+            <li className="mb-4 text-sm leading-relaxed text-gray-300 md:text-base">
+              Esta sección está pensada para ayudarte a resolver de forma rápida
+              cualquier consulta relacionada con nuestros servicios de internet
+              para hogar y empresas en Mendoza. Si todavía no sos cliente, podés
+              escribirnos para validar cobertura en tu zona, conocer qué plan se
+              adapta mejor a tu uso diario y entender cómo es el proceso de
+              instalación. Nuestro equipo comercial te guía paso a paso para que
+              tomes una decisión informada, con datos claros sobre velocidad,
+              estabilidad, equipamiento y tiempos estimados de activación.
+            </li>
+            <li className="mb-4 text-sm leading-relaxed text-gray-300 md:text-base">
+              Si ya sos cliente, también podés usar este canal para solicitar
+              soporte técnico, resolver dudas de facturación, consultar medios
+              de pago o gestionar cambios de titularidad y actualización de
+              datos. Priorizamos una atención humana, directa y sin derivaciones
+              innecesarias: cada área responde sobre su especialidad para darte
+              una solución concreta en el menor tiempo posible. Además, cuando
+              el caso lo requiere, hacemos seguimiento hasta confirmar que el
+              servicio quedó funcionando correctamente.
+            </li>
+            <li className="text-sm leading-relaxed text-gray-300 md:text-base">
+              Para acelerar la atención, te recomendamos incluir en tu mensaje
+              el domicilio de instalación, un número de contacto y una breve
+              descripción de tu consulta. Si se trata de una incidencia técnica,
+              sumar detalles como luces del equipo, horarios en los que ocurre
+              la falla o dispositivos afectados nos permite diagnosticar mejor
+              desde el primer contacto. Nuestro objetivo es simple: que tengas
+              una conexión estable, acompañamiento real y respuestas claras cada
+              vez que necesites comunicarte con DelRio Internet.
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
   );
