@@ -45,6 +45,35 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="overflow-x-hidden pt-22">
+      <div
+        className="sr-only"
+        itemScope
+        itemType="https://schema.org/InternetServiceProvider"
+      >
+        <meta itemProp="name" content="Del Río Internet" />
+        <meta itemProp="url" content="https://delriointernet.com.ar/" />
+        <meta
+          itemProp="description"
+          content="Proveedor de internet por fibra óptica para hogares y empresas en Mendoza."
+        />
+        <meta itemProp="telephone" content={contactos.fisico.telefono} />
+        <meta itemProp="email" content={contactos.emails.administracion} />
+        <meta itemProp="areaServed" content="Mendoza" />
+        <meta itemProp="sameAs" content={contactos.fisico.maps} />
+
+        <div
+          itemProp="address"
+          itemScope
+          itemType="https://schema.org/PostalAddress"
+        >
+          <meta itemProp="streetAddress" content="Quintana 1180" />
+          <meta itemProp="addressLocality" content="Perdriel" />
+          <meta itemProp="addressRegion" content="Mendoza" />
+          <meta itemProp="postalCode" content="M5507" />
+          <meta itemProp="addressCountry" content="AR" />
+        </div>
+      </div>
+
       {/* === HERO === */}
       <div className="fixed inset-0 -z-10">
         {/* Fondo principal */}
