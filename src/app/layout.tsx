@@ -29,9 +29,6 @@ export const metadata: Metadata = {
     "internet rural Mendoza",
     "internet alta velocidad",
   ],
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,
