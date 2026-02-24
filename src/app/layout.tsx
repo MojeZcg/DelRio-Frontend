@@ -3,13 +3,12 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Toaster } from "react-hot-toast";
+import Adicionales from "@/components/layout/Adicionales";
 
 const getMonserrat = Montserrat({
   variable: "--font-monserrat",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -66,14 +65,11 @@ export default function RootLayout({
   return (
     <html lang="es-AR">
       <body className={`${getMonserrat.variable} antialiased`}>
-        <Toaster position="bottom-right" reverseOrder={false} />
-
         <Navbar />
         {children}
         <Footer />
 
-        <Analytics />
-        <SpeedInsights />
+        <Adicionales />
       </body>
     </html>
   );

@@ -97,6 +97,7 @@ export default function Footer() {
                 <Link
                   title="Email Administración DelRio Internet"
                   target="_blank"
+                  rel="noopener noreferrer"
                   href={`mailto:${contactos.emails.administracion}`}
                   className="flex items-center gap-2"
                 >
@@ -110,6 +111,7 @@ export default function Footer() {
                 <Link
                   title="Ubicación Física DelRio Internet"
                   target="_blank"
+                  rel="noopener noreferrer"
                   href={contactos.fisico.maps}
                   className="flex items-start gap-2"
                 >
@@ -133,6 +135,7 @@ export default function Footer() {
                 <Link
                   title="Términos y Condiciones DelRio Internet"
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="/terminos-condiciones.pdf"
                   className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
@@ -165,6 +168,7 @@ export default function Footer() {
             <Link
               title="Desarrollador de DelRio Internet Walter J. Montenegro"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.linkedin.com/in/montenegrowalter/"
               className="text-white"
             >

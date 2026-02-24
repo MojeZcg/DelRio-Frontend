@@ -82,6 +82,7 @@ export default function EmpresasCarousel() {
                 <Link
                   title={`${company.name} Sitio Oficial`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   href={company.link}
                   className="relative h-30 w-40 lg:h-35 lg:w-45"
                 >
