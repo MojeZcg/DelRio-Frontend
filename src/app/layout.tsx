@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Del Río Internet",
     images: [
       {
-        url: "/og-default.png",
+        url: "/og-default.webp",
         width: 1536,
         height: 1024,
         alt: "Del Río Internet",
