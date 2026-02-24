@@ -122,9 +122,10 @@ export default function EmpresasPage() {
             </h1>
 
             <p className="mb-6 text-sm leading-relaxed text-gray-300 md:text-lg lg:text-sm">
-              Impulsamos el crecimiento de tu empresa con infraestructura de red
-              dedicada, velocidades simétricas garantizadas y soporte técnico
-              disponible las 24 horas.
+              Nuestra Conectividad Empresarial de Alto Rendimiento impulsa el
+              crecimiento de tu empresa con infraestructura de red dedicada,
+              velocidades simétricas garantizadas y soporte técnico disponible
+              las 24 horas.
             </p>
 
             <div className="flex flex-col items-center gap-4 sm:flex-row lg:items-start">

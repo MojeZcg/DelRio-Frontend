@@ -62,7 +62,8 @@ export default function InternetHogarPage() {
             Internet Hogar DelRio
           </h1>
           <p className="mt-4 text-lg text-blue-100">
-            Conectá tu hogar con velocidades simétricas,{" "}
+            Internet Hogar DelRio para conectár tu hogar con velocidades
+            simétricas,{" "}
             <HoverCard>
               <HoverCardTrigger className="inline text-yellow-200">
                 WiFi 6*

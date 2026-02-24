@@ -7,7 +7,7 @@ import { contactos } from "@/lib/contacto";
 import FijoCopy from "@/components/FijoCopy";
 
 export const metadata = {
-  title: " Conectate con nosotros | DelRio Internet",
+  title: "Conectate con nosotros | DelRio Internet",
   description:
     "¿Tienes dudas o necesitas asesoría? En Internet DelRio estamos para ayudarte. Contáctanos y recibe atención personalizada, soporte confiable y toda la información que necesitas para elegir el plan ideal.”",
   keywords: [
@@ -38,8 +38,8 @@ export default function ContactPage() {
               Contactanos
             </h1>
             <p className="mb-4 text-sm text-gray-300">
-              Estamos para ayudarte. Completá el formulario para un contacto mas
-              personalizado.
+              Contactanos y conectate con nosotros al instante. Completá el
+              formulario para una atención más personalizada.
             </p>
 
             <ContactForm />
