@@ -50,7 +50,7 @@ export default function ContactForm() {
           type="text"
           required
           placeholder="Tu nombre completo"
-          className="bg-white/10 text-gray-100 placeholder-gray-400"
+          className="bg-white/10 text-gray-100 placeholder:text-gray-400"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
         />
@@ -69,7 +69,7 @@ export default function ContactForm() {
           type="email"
           required
           placeholder="nombre@correo.com"
-          className="bg-white/10 text-gray-100 placeholder-gray-400"
+          className="bg-white/10 text-gray-100 placeholder:text-gray-400"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -87,7 +87,7 @@ export default function ContactForm() {
           name="mensaje"
           required
           placeholder="Contanos cómo podemos ayudarte..."
-          className="min-h-42 bg-white/10 text-gray-100 placeholder-gray-400"
+          className="min-h-42 bg-white/10 text-gray-100 placeholder:text-gray-400"
           rows={12}
           value={mensaje}
           onChange={(e) => setMensaje(e.target.value)}
