@@ -60,7 +60,7 @@ export default function Home() {
       </div>
 
       {/* Texto + Imagen lateral */}
-      <section className="min-h-xl flex h-120 w-full flex-col items-center justify-center md:flex-row lg:h-150 xl:gap-20 2xl:gap-32">
+      <section className="min-h-xl flex h-120 w-full flex-col items-center justify-center md:flex-row lg:h-155 xl:gap-20 2xl:gap-32">
         <div className="flex max-w-xl flex-col items-center gap-10 text-center text-white md:items-start lg:gap-14">
           <div className="flex flex-col items-center gap-6 md:items-start md:text-left lg:gap-3">
             <h1 className="text-5xl leading-tight font-bold">
