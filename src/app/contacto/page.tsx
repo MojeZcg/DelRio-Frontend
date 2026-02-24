@@ -126,7 +126,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <section className="mx-auto mt-24 max-w-7xl rounded-2xl border border-white/10 bg-white/5 p-6 text-left backdrop-blur-sm md:p-8">
+        <section className="mx-auto mt-16 max-w-7xl rounded-2xl border border-white/10 bg-white/5 p-6 text-left backdrop-blur-sm md:p-8">
           <h2 className="mb-4 text-2xl font-bold text-white">
             ¿Qué podés resolver desde esta página de contacto?
           </h2>

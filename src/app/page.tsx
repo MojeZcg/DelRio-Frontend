@@ -98,7 +98,7 @@ export default function Home() {
               </span>{" "}
               al mundo, más humana que nunca.
             </h1>
-            <p className="max-w-sm pt-3 text-xs text-gray-100 md:text-lg lg:max-w-full">
+            <p className="hidden max-w-sm pt-3 text-xs text-gray-100 md:text-lg lg:max-w-full xl:block">
               Conecta tu hogar por{" "}
               <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
                 Fibra óptica en Mendoza

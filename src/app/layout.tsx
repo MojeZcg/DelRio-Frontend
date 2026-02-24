@@ -33,6 +33,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [{ url: "/logoTransparentWhite.webp", type: "image/webp" }],
+    shortcut: [{ url: "/logoTransparentWhite.webp", type: "image/webp" }],
+    apple: [{ url: "/logoTransparentWhite.webp", type: "image/webp" }],
+  },
   authors: [{ name: "Del Río Internet" }],
   publisher: "Del Río Internet",
   openGraph: {
