@@ -13,7 +13,6 @@ export const metadata = {
   title: "Internet para tu hogar | DelRio Internet",
   description:
     "Disfruta en tu hogar de una conexión estable y veloz con Internet DelRio: planes simétricos ideales para streaming, videollamadas y gaming, con WiFi 6, soporte confiable e instalación profesional.",
-  url: "https://delriointernet.com.ar/hogar",
   keywords: [
     "internet residencial en Pedriel",
     "internet residencial en Mendoza",
@@ -22,7 +21,7 @@ export const metadata = {
     "wifi para casa en Mendoza",
   ],
   alternates: {
-    canonical: "https://delriointernet.com.ar/hogar",
+    canonical: "/hogar",
   },
   robots: {
     index: true,

@@ -18,9 +18,8 @@ export const metadata = {
   title: "Internet por Fibra Óptica en Mendoza | Del Río Internet",
   description:
     "Conéctate al mundo sin límites con DelRio Internet. Planes de alta velocidad simétrica, soporte técnico y instalación profesional pensada para tu comodidad.",
-  url: "https://delriointernet.com.ar/",
   alternates: {
-    canonical: "https://delriointernet.com.ar/",
+    canonical: "/",
   },
   robots: {
     index: true,

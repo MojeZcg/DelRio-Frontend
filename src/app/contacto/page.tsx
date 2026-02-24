@@ -10,7 +10,6 @@ export const metadata = {
   title: " Conectate con nosotros | DelRio Internet",
   description:
     "¿Tienes dudas o necesitas asesoría? En Internet DelRio estamos para ayudarte. Contáctanos y recibe atención personalizada, soporte confiable y toda la información que necesitas para elegir el plan ideal.”",
-  url: "https://delriointernet.com.ar/contacto",
   keywords: [
     "contratar internet en Mendoza",
     "contratar internet en Pedriel",
@@ -19,7 +18,7 @@ export const metadata = {
     "atención al cliente internet Mendoza",
   ],
   alternates: {
-    canonical: "https://delriointernet.com.ar/contacto",
+    canonical: "/contacto",
   },
   robots: {
     index: true,

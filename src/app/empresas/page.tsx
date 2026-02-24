@@ -22,7 +22,6 @@ export const metadata = {
   title: "Internet para Empresas | DelRio Internet",
   description:
     "Impulsa tu negocio con Internet DelRio: soluciones de conectividad empresarial con alta velocidad simétrica, máxima estabilidad, WiFi 6 y soporte técnico especializado para que tu empresa nunca se detenga.",
-  url: "https://delriointernet.com.ar/empresas",
   keywords: [
     "internet empresarial en Mendoza",
     "internet para empresas en Pedriel",
@@ -31,7 +30,7 @@ export const metadata = {
     "internet simétrico empresas Mendoza",
   ],
   alternates: {
-    canonical: "https://delriointernet.com.ar/empresas",
+    canonical: "/empresas",
   },
   robots: {
     index: true,
