@@ -60,18 +60,28 @@ export default function Home() {
       </div>
 
       {/* Texto + Imagen lateral */}
-      <section className="min-h-xl flex h-120 w-full flex-col items-center justify-center md:flex-row lg:h-155 xl:gap-20 2xl:gap-32">
+      <section className="min-h-xl flex h-120 w-full flex-col items-center justify-center md:flex-row lg:h-155 xl:gap-20 2xl:gap-26">
         <div className="flex max-w-xl flex-col items-center gap-10 text-center text-white md:items-start lg:gap-14">
           <div className="flex flex-col items-center gap-6 md:items-start md:text-left lg:gap-3">
-            <h1 className="text-5xl leading-tight font-bold">
+            <h1 className="max-w-lg text-5xl leading-tight font-bold">
               Tu{" "}
               <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
                 conexión
               </span>{" "}
               al mundo, más humana que nunca.
             </h1>
-            <p className="max-w-sm text-sm text-white md:text-lg lg:max-w-full">
-              Conectamos tu hogar con la velocidad y estabilidad que merecés.
+            <p className="max-w-sm pt-3 text-xs text-gray-100 md:text-lg lg:max-w-full">
+              Conecta tu hogar por{" "}
+              <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
+                Fibra óptica en Mendoza
+              </span>{" "}
+              con{" "}
+              <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
+                Del Río Internet
+              </span>{" "}
+              <br />
+              Ubicado en Mendoza. Disfruta de nuestros planes con la atención
+              que mereces.
             </p>
           </div>
 
