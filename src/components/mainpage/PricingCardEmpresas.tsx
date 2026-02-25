@@ -37,7 +37,7 @@ interface PricingCardProps {
 
 const pricingCardsEmpresas: PricingCardProps[] = [
   {
-    title: "Empresa Estandard",
+    title: "Empresa Standard",
     description: "Conectividad confiable para tu negocio en crecimiento.",
     features: {
       speed: "50 Mbps",
@@ -49,7 +49,7 @@ const pricingCardsEmpresas: PricingCardProps[] = [
     color: "#0a69b7",
   },
   {
-    title: "Empresa Escencial",
+    title: "Empresa Esencial",
     description: "Rendimiento garantizado para oficinas y equipos exigentes.",
     features: {
       speed: "100 Mbps",
@@ -140,7 +140,7 @@ function PricingCardEmpresas({
                   <HoverCardTrigger className="flex items-center">
                     <Info size={16} />
                   </HoverCardTrigger>
-                  <HoverCardContent className="max-w-[260px] text-sm leading-snug">
+                  <HoverCardContent className="max-w-65 text-sm leading-snug">
                     Posiblididad de contratar los{" "}
                     <strong>Beneficios full</strong>, con{" "}
                     <strong>SLA personalizado</strong> con{" "}
@@ -156,7 +156,9 @@ function PricingCardEmpresas({
           </div>
 
           <Link
+            title={`Solicitar asesor comercial para ${title}`}
             target="_blank"
+            rel="noopener noreferrer"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero solicitar el plan " + title)}`}
             className="group rounded-lg px-10 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
             style={{ backgroundColor: color }}

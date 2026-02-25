@@ -1,2 +1,9 @@
+packages:
+  - "."
+
 ignoredBuiltDependencies:
-  - '@vercel/speed-insights'
+  - "@vercel/speed-insights"
+
+onlyBuiltDependencies:
+  - sharp
+  - unrs-resolver

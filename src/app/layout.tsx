@@ -3,15 +3,16 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import Adicionales from "@/components/layout/Adicionales";
 
 const getMonserrat = Montserrat({
   variable: "--font-monserrat",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://delriointernet.com.ar"),
   title: "Del Río Internet",
   description:
     "Del Río Internet es un proveedor de servicios de Internet en Mendoza, Argentina. Ofrecemos soluciones de conectividad de alta calidad para hogares y empresas, con Internet rápido, confiable y asequible, respaldado por soporte técnico local y un fuerte compromiso con la satisfacción del cliente.",
@@ -28,6 +29,17 @@ export const metadata: Metadata = {
     "internet rural Mendoza",
     "internet alta velocidad",
   ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: [{ url: "/logoTransparentWhite.webp", type: "image/webp" }],
+    shortcut: [{ url: "/logoTransparentWhite.webp", type: "image/webp" }],
+    apple: [{ url: "/logoTransparentWhite.webp", type: "image/webp" }],
+  },
+  authors: [{ name: "Del Río Internet" }],
+  publisher: "Del Río Internet",
   openGraph: {
     type: "website",
     locale: "es_AR",
@@ -35,6 +47,15 @@ export const metadata: Metadata = {
     description:
       "Proveedor de Internet por fibra óptica e inalámbrico en Mendoza. Conexión rápida, estable y con soporte local.",
     url: "https://delriointernet.com.ar",
+    siteName: "Del Río Internet",
+    images: [
+      {
+        url: "/og.webp",
+        width: 1536,
+        height: 1024,
+        alt: "Del Río Internet",
+      },
+    ],
   },
 };
 
@@ -50,8 +71,7 @@ export default function RootLayout({
         {children}
         <Footer />
 
-        <Analytics />
-        <SpeedInsights />
+        <Adicionales />
       </body>
     </html>
   );

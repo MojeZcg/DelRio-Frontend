@@ -28,11 +28,16 @@ export default function Navbar() {
   const clientLink = links.find((_, i) => i === 4);
 
   return (
-    <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/30 px-6 py-4 shadow-md shadow-white/10 select-none lg:px-12">
-      <Link href="/" className="lg:pl-6">
+    <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/30 px-6 py-3 shadow-md shadow-white/10 select-none lg:px-12">
+      <Link
+        title="Pagina principal DelRio Internet"
+        href="/"
+        className="lg:pl-6"
+      >
         <Image
+          title="DelRio Internet Logo"
           src="/logoTransparentWhite.webp"
-          alt="DelRio Logo"
+          alt="DelRio Internet Logo"
           width={995}
           height={511}
           className="h-12 w-auto lg:h-16"
@@ -41,6 +46,7 @@ export default function Navbar() {
       <nav className="flex items-center gap-8 text-lg text-white">
         {clientLink && (
           <Link
+            title="Clientes DelRio Internet"
             href={clientLink.href}
             className="flex items-center gap-1 underline-offset-4 transition-all hover:underline lg:hidden"
           >
@@ -54,6 +60,7 @@ export default function Navbar() {
             return (
               <li key={href}>
                 <Link
+                  title={`${name} DelRio Internet`}
                   href={href}
                   className={`flex items-center gap-1 underline-offset-4 transition-all hover:underline ${
                     active ? "text-white underline" : "text-gray-200"
@@ -80,6 +87,7 @@ export default function Navbar() {
                     <div key={href}>
                       <DropdownMenuItem className="p-0">
                         <Link
+                          title={`${name} DelRio Internet`}
                           href={href}
                           className={`flex h-full w-full items-center gap-1 rounded-md p-3 text-lg underline-offset-4 transition-all hover:underline ${
                             active ? "bg-white text-black" : "text-white"

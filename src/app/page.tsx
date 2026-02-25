@@ -1,69 +1,124 @@
 import HeroImage from "@/components/mainpage/HeroImage";
-import PricingCardsEmpresas from "@/components/mainpage/PricingCardEmpresas";
 import PricingCards from "@/components/mainpage/PricingCardHogar";
 import Image from "next/image";
 import Link from "next/link";
-
-import { generateMetadata } from "@/lib/seo";
 import { contactos } from "@/lib/contacto";
+import {
+  ArrowRight,
+  LifeBuoy,
+  Radio,
+  ShieldCheck,
+  Users,
+  Wifi,
+  Zap,
+} from "lucide-react";
+import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
 
-export const metadata = generateMetadata({
-  title: "DelRio Internet | Conectate con el mundo",
+export const metadata = {
+  title: "Internet por Fibra Óptica en Mendoza | Del Río Internet",
   description:
-    "Conectate al mundo con Internet DelRio: planes simétricos, WiFi 6, soporte confiable e instalación profesional.",
-  url: "https://delriointernet.com.ar/",
+    "Conéctate al mundo sin límites con DelRio Internet. Planes de alta velocidad simétrica, soporte técnico y instalación profesional pensada para tu comodidad.",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  authors: [{ name: "DelRio Internet", url: "https://delriointernet.com.ar" }],
+  publisher: "DelRio Internet",
   keywords: [
-    "internet",
-    "fibra óptica",
-    "internet hogar",
-    "internet empresas",
-    "planes de internet hogar",
-    "planes de internet empresas",
-    "proveedores de internet",
-    "delrio",
-    "delrio internet",
-    "planes de internet",
+    "internet en Pedriel",
+    "internet en Mendoza",
+    "proveedor de internet en Pedriel",
+    "proveedor de internet en Mendoza",
+    "internet fibra óptica Mendoza",
+    "internet de alta velocidad Mendoza",
   ],
-});
+};
 
 export default function Home() {
-  const comercial = process.env.COMERCIAL;
-
   return (
-    <main className="overflow-x-hidden pt-24">
+    <main className="overflow-x-hidden pt-22">
+      <div
+        className="sr-only"
+        itemScope
+        itemType="https://schema.org/InternetServiceProvider"
+      >
+        <meta itemProp="name" content="Del Río Internet" />
+        <meta itemProp="url" content="https://delriointernet.com.ar/" />
+        <meta
+          itemProp="description"
+          content="Proveedor de internet por fibra óptica para hogares y empresas en Mendoza."
+        />
+        <meta itemProp="telephone" content={contactos.fisico.telefono} />
+        <meta itemProp="email" content={contactos.emails.administracion} />
+        <meta itemProp="areaServed" content="Mendoza" />
+        <meta itemProp="sameAs" content={contactos.fisico.maps} />
+
+        <div
+          itemProp="address"
+          itemScope
+          itemType="https://schema.org/PostalAddress"
+        >
+          <meta itemProp="streetAddress" content="Quintana 1180" />
+          <meta itemProp="addressLocality" content="Perdriel" />
+          <meta itemProp="addressRegion" content="Mendoza" />
+          <meta itemProp="postalCode" content="M5507" />
+          <meta itemProp="addressCountry" content="AR" />
+        </div>
+      </div>
+
       {/* === HERO === */}
       <div className="fixed inset-0 -z-10">
         {/* Fondo principal */}
         <Image
+          title="Fondo principal Delrio Internet"
           src="/bg.webp"
           alt="Fondo principal DelRio"
           fill
           className="object-cover will-change-transform"
           priority
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       {/* Texto + Imagen lateral */}
-      <div className="min-h-xl flex h-150 w-full flex-col items-center justify-center md:flex-row xl:gap-20 2xl:gap-32">
-        <div className="flex max-w-xl flex-col items-center gap-14 text-center text-white md:items-start">
-          <div className="flex flex-col items-center gap-3 md:items-start md:text-left">
-            <h1 className="text-5xl leading-tight font-bold">
+      <section className="min-h-xl flex h-120 w-full flex-col items-center justify-center md:flex-row lg:h-155 xl:gap-20 2xl:gap-26">
+        <div className="flex max-w-xl flex-col items-center gap-10 text-center text-white md:items-start lg:gap-14">
+          <div className="flex flex-col items-center gap-6 md:items-start md:text-left lg:gap-3">
+            <h1 className="max-w-lg text-5xl leading-tight font-bold">
               Tu{" "}
               <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
                 conexión
               </span>{" "}
               al mundo, más humana que nunca.
             </h1>
-            <p className="max-w-sm text-sm text-gray-200 md:text-lg lg:max-w-full">
-              Conectamos tu hogar con la velocidad y estabilidad que merecés.
+            <p className="hidden max-w-sm pt-3 text-xs text-gray-100 md:text-lg lg:max-w-full xl:block">
+              Conecta tu hogar por{" "}
+              <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
+                Fibra óptica en Mendoza
+              </span>{" "}
+              con{" "}
+              <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
+                Del Río Internet
+              </span>{" "}
+              <br />
+              Ubicado en Mendoza. Disfruta de nuestros planes con la atención
+              que mereces.
             </p>
           </div>
 
           <Link
+            title="Comprobar disponibilidad"
             target="_blank"
-            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de sus servicios en mi zona.")}`}
-            className="flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
+            rel="noopener noreferrer"
+            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de los servicios en mi zona.")}`}
+            className="mb-10 flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
           >
             Comprueba la disponibilidad{" "}
             <span className="hidden pl-1 md:inline"> en tu zona</span>
@@ -72,38 +127,24 @@ export default function Home() {
 
         {/* Imagen ilustrativa lateral */}
         <HeroImage />
-      </div>
+      </section>
 
       {/* === PLANES HOGAR === */}
       <section
         id="planes"
-        className="-z-10 flex scroll-mt-24 flex-col items-center justify-center bg-white text-black"
+        className="-z-10 flex scroll-mt-24 flex-col items-center justify-center bg-white pb-12 text-black"
       >
-        <h2 className="pt-10 pb-14 text-center text-3xl font-semibold">
+        <h2 className="pt-10 pb-6 text-center text-3xl font-semibold lg:pb-14">
           Conocé nuestros planes diseñados para ti
         </h2>
 
         <PricingCards />
-
-        <p className="max-w-sm pt-10 pb-12 text-center text-xs text-gray-800 md:max-w-2xl md:text-sm xl:max-w-7xl">
-          Hasta{" "}
-          <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
-            300 Mbps
-          </span>{" "}
-          con WiFi 6, conexión estable y soporte prioritario. Accedé a series,
-          películas y descuentos exclusivos, con cámaras de seguridad en
-          comodato e IP fija para mayor control. Las velocidades indicadas son
-          máximas teóricas. Se garantiza un mínimo del 60 % del ancho de banda
-          contratado, sujeto a disponibilidad técnica y condiciones de red.
-        </p>
       </section>
 
       {/* === DIFERENCIADORES === */}
-      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-20 text-center text-white">
-        <h3 className="mb-10 text-3xl font-semibold">
-          ¿Por qué elegir DelRio?
-        </h3>
-        <div className="flex flex-wrap justify-center gap-10 text-lg">
+      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-10 text-center text-white lg:py-14">
+        <h3 className="mb-6 text-3xl font-semibold">¿Por qué elegir DelRio?</h3>
+        <div className="flex flex-wrap justify-center gap-6 text-base lg:gap-10">
           <div className="max-w-xs">
             <p className="font-bold">Atención Personalizada</p>
             <p className="text-white/80">
@@ -125,37 +166,255 @@ export default function Home() {
         </div>
       </section>
 
-      {/* === PLANES EMPRESAS === */}
-      <section
-        id="planesempresas"
-        className="flex scroll-mt-24 flex-col items-center justify-center bg-white text-black"
-      >
-        <h3 className="py-12 text-center text-3xl font-semibold">
-          Planes para empresas que impulsan tu negocio
-        </h3>
+      <section className="bg-white py-14 text-gray-900 md:py-18">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2 md:items-center md:gap-12">
+          <div>
+            <p className="mb-3 text-sm font-semibold tracking-wide text-(--delrio-medium) uppercase">
+              Servicio para hogares y comercios
+            </p>
+            <h4 className="mb-4 text-3xl font-bold md:text-5xl">
+              Trazados de red interna y conectividad dentro de tu espacio
+            </h4>
+            <p className="mb-6 text-base leading-relaxed text-gray-600 md:text-lg">
+              Diseñamos e instalamos el recorrido interno de tu red para que la
+              conexión llegue a cada ambiente, con una estructura prolija,
+              estable y lista para escalar cuando lo necesites.
+            </p>
+            <Link
+              title="Cotizar trazado de red interna"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero cotizar el servicio de trazado de red interna y conectividad para mi domicilio, local u oficina.")}`}
+              className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-7 py-3 text-sm font-semibold text-white transition hover:opacity-95 md:px-9 md:text-base"
+            >
+              Cotizar trazado y conectividad
+              <ArrowRight size={20} />
+            </Link>
+          </div>
 
-        <PricingCardsEmpresas />
-
-        <p className="max-w-2xl py-10 text-center text-sm lg:max-w-4xl">
-          Soluciones de internet empresarial desde{" "}
-          <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
-            300 Mbps
-          </span>{" "}
-          con instalación profesional, ademas con beneficios full podes optar a
-          soporte técnico prioritario y IP fija. Ideal para mantener tu negocio
-          siempre conectado y eficiente.
-        </p>
+          <div className="rounded-3xl border border-gray-200 bg-gray-50 p-6 md:p-8">
+            <h5 className="mb-5 text-lg font-semibold md:text-xl">
+              ¿Qué resolvemos?
+            </h5>
+            <ul className="space-y-4 text-sm text-gray-700 md:text-base">
+              <li className="flex items-start gap-3">
+                <Zap
+                  size={18}
+                  className="mt-0.5 shrink-0 text-(--delrio-medium)"
+                />
+                <span>
+                  Distribución inteligente para mejorar cobertura en
+                  habitaciones, oficinas y áreas de trabajo.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Wifi
+                  size={18}
+                  className="mt-0.5 shrink-0 text-(--delrio-medium)"
+                />
+                <span>
+                  Conectividad estable para TV, cámaras, notebooks, consolas y
+                  dispositivos IoT.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <LifeBuoy
+                  size={18}
+                  className="mt-0.5 shrink-0 text-(--delrio-medium)"
+                />
+                <span>
+                  Asesoramiento técnico personalizado antes, durante y después
+                  de la instalación.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <section className="flex flex-col items-center bg-linear-to-t from-(--delrio-medium) to-(--delrio-dark) py-20 text-center text-white backdrop-blur-md">
-        <h4 className="mb-4 max-w-sm text-lg font-semibold md:text-2xl lg:max-w-full">
+      <section className="relative overflow-hidden border-y bg-linear-to-br from-slate-800 to-black py-12 text-white md:py-20">
+        <div className="px-4 pb-4 md:px-6">
+          <div className="text-center">
+            <h4 className="mb-3 text-3xl font-bold md:mb-4 md:text-5xl">
+              Internet para Empresas
+            </h4>
+            <p className="mx-auto mb-8 max-w-3xl px-2 text-base text-blue-100 md:mb-10 md:text-lg">
+              <span className="md:hidden">
+                Conexiones dedicadas y soporte prioritario para tu empresa.
+              </span>
+              <span className="hidden md:inline">
+                Potenciá tu negocio con conexiones dedicadas, velocidades
+                simétricas garantizadas y soporte técnico prioritario diseñado
+                para empresas que no pueden esperar.
+              </span>
+            </p>
+          </div>
+
+          {/* Beneficios clave */}
+          <div className="mx-auto mb-12 grid max-w-7xl gap-6 px-4 md:mb-16 md:grid-cols-3 md:gap-8">
+            <Link
+              title="Velocidad Simétrica DelRio Internet"
+              href="/empresas"
+              className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/15 md:p-8"
+            >
+              <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition-all duration-300 group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
+                <Zap size={26} className="md:h-7.5 md:w-7.5" />
+              </div>
+              <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">
+                Velocidad Simétrica
+              </h5>
+              <p className="text-sm leading-relaxed text-blue-100">
+                Misma velocidad de subida y bajada, ideal para
+                videoconferencias, transferencias de archivos y operaciones en
+                la nube.
+              </p>
+            </Link>
+
+            <Link
+              title="Soporte Técnico Prioritario DelRio Internet"
+              href="/empresas"
+              className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/15 md:p-8"
+            >
+              <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition-all duration-300 group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
+                <LifeBuoy size={26} className="md:h-7.5 md:w-7.5" />
+              </div>
+              <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">
+                Soporte Prioritario
+              </h5>
+              <p className="text-sm leading-relaxed text-blue-100">
+                Atención técnica dedicada con resolución garantizada en menos de
+                24 horas y canal directo de comunicación.
+              </p>
+            </Link>
+
+            <Link
+              title="SLA Garantizado DelRio Internet"
+              href="/empresas"
+              className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/15 md:p-8"
+            >
+              <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition-all duration-300 group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
+                <ShieldCheck size={26} className="md:h-7.5 md:w-7.5" />
+              </div>
+              <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">
+                SLA Garantizado
+              </h5>
+              <p className="text-sm leading-relaxed text-blue-100">
+                Acuerdos de nivel de servicio con tiempo de actividad
+                garantizado y compensaciones en caso de incumplimiento.
+              </p>
+            </Link>
+          </div>
+
+          {/* Empresas que confían */}
+          <div className="mb-8 md:mb-6">
+            <div className="mb-6 px-2 text-center md:mb-4 md:px-4">
+              <h5 className="mb-2 text-sm font-semibold tracking-wider text-blue-400 uppercase lg:text-base">
+                Empresas que confían en nosotros
+              </h5>
+              <p className="mx-auto max-w-3xl text-lg font-semibold text-white md:text-xl lg:text-2xl">
+                Conectamos a las empresas que impulsan el desarrollo de nuestra
+                región.
+              </p>
+            </div>
+            <EmpresasCarousel />
+          </div>
+
+          {/* CTA */}
+          <div className="px-4 text-center">
+            <Link
+              href="/empresas"
+              className="group inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-blue-950 shadow-lg transition-all hover:bg-blue-50 hover:shadow-2xl hover:shadow-blue-500/30 md:gap-3 md:px-10 md:py-4 md:text-base lg:text-[16.5px]"
+              title="Conocé más sobre nuestros planes empresariales"
+            >
+              <span className="hidden sm:inline">
+                Conocé más sobre nuestros planes empresariales
+              </span>
+              <span className="sm:hidden">Ver planes empresariales</span>
+              <ArrowRight
+                size={22}
+                className="transition-transform group-hover:translate-x-2 md:h-7 md:w-7"
+              />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-14 text-gray-900 md:py-18">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto mb-10 max-w-5xl text-center md:mb-12">
+            <h4 className="mb-6 text-3xl font-bold md:text-5xl">
+              Internet y conectividad para eventos
+            </h4>
+            <p className="text-base text-gray-600 md:text-lg">
+              Diseñamos soluciones de red para festivales, ferias, congresos y
+              encuentros de gran escala, con cobertura estable para eventos de
+              hasta{" "}
+              <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text font-semibold text-transparent">
+                10.000 personas
+              </span>
+              .
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3 md:gap-6">
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-(--delrio-medium)/10 text-(--delrio-medium)">
+                <Wifi size={24} />
+              </div>
+              <h5 className="mb-2 text-lg font-semibold">Cobertura total</h5>
+              <p className="text-sm leading-relaxed text-gray-600">
+                Implementación de puntos de acceso estratégicos para áreas de
+                alta densidad, con roaming fluido y señal estable.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-(--delrio-medium)/10 text-(--delrio-medium)">
+                <Users size={24} />
+              </div>
+              <h5 className="mb-2 text-lg font-semibold">Alta concurrencia</h5>
+              <p className="text-sm leading-relaxed text-gray-600">
+                Arquitectura optimizada para soportar miles de dispositivos
+                simultáneos sin afectar la experiencia del público.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-(--delrio-medium)/10 text-(--delrio-medium)">
+                <Radio size={24} />
+              </div>
+              <h5 className="mb-2 text-lg font-semibold">Red por zonas</h5>
+              <p className="text-sm leading-relaxed text-gray-600">
+                Segmentación de la conectividad para prensa, producción,
+                organización y público general, con mayor orden y rendimiento.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 text-center md:mt-12">
+            <Link
+              title="Cotizar conectividad para eventos"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero cotizar internet y conectividad para un evento.")}`}
+              className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-7 py-3 text-sm font-semibold text-white transition hover:opacity-95 md:px-9 md:text-base"
+            >
+              Cotizar conectividad para eventos
+              <ArrowRight size={20} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex flex-col items-center bg-linear-to-t from-(--delrio-medium) to-(--delrio-dark) py-16 text-center text-white backdrop-blur-md">
+        <h4 className="max-w-sm text-lg font-semibold md:text-2xl lg:max-w-full">
           Más que una conexión, impulsamos tu manera de vivir el mundo digital.
         </h4>
       </section>
 
       {/* === SOBRE NOSOTROS === */}
       <section id="sobre-nosotros" className="bg-gray-50 text-gray-800">
-        <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="pb-6 text-center text-4xl font-bold">
             Sobre <span className="text-(--delrio-light)">Nosotros</span>
           </h2>
@@ -171,7 +430,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-12 md:grid-cols-3 lg:gap-16">
+            <div className="mt-10 grid gap-6 md:grid-cols-3 lg:gap-16">
               <div className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md">
                 <h3 className="mb-3 text-2xl font-semibold text-(--delrio-light)">
                   Visión
@@ -219,8 +478,10 @@ export default function Home() {
             conexión, confianza.
           </p>
           <Link
+            title="Hablemos de tu conexión"
             target="_blank"
-            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero hablar con ustedes sobre sus planes de internet")}`}
+            rel="noopener noreferrer"
+            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaria conocer sobre los planes de internet")}`}
             className="inline-block rounded-lg bg-white px-8 py-3 font-medium text-(--delrio-medium) transition hover:bg-blue-100"
           >
             Hablemos de tu conexión

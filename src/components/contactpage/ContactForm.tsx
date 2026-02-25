@@ -15,24 +15,27 @@ export default function ContactForm() {
   const [estado, setEstado] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const comercial = process.env.COMERCIAL;
-
   function generarMensajeWhatsApp() {
     const texto = `Hola! Soy ${nombre}.%0A%0AEmail: ${email}%0A%0AMensaje:%0A${mensaje}`;
     return `https://wa.me/542615861188?text=${texto}`;
   }
 
   function handleSubmit(e: React.FormEvent) {
+    setLoading(true);
     e.preventDefault();
+
+    setEstado("Redirigiendo a WhatsApp...");
+
     const link = generarMensajeWhatsApp();
     window.open(link, "_blank");
-    setEstado("Redirigiendo a WhatsApp...");
+
+    setLoading(false);
   }
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto flex w-full max-w-3xl flex-col gap-4 text-left"
+      className="mx-auto flex w-full max-w-3xl flex-col gap-3 text-left"
     >
       <div>
         <Label
@@ -47,7 +50,7 @@ export default function ContactForm() {
           type="text"
           required
           placeholder="Tu nombre completo"
-          className="bg-white/10 text-gray-100 placeholder-gray-400"
+          className="bg-white/10 text-gray-100 placeholder:text-gray-400"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
         />
@@ -66,7 +69,7 @@ export default function ContactForm() {
           type="email"
           required
           placeholder="nombre@correo.com"
-          className="bg-white/10 text-gray-100 placeholder-gray-400"
+          className="bg-white/10 text-gray-100 placeholder:text-gray-400"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -84,7 +87,7 @@ export default function ContactForm() {
           name="mensaje"
           required
           placeholder="Contanos cómo podemos ayudarte..."
-          className="min-h-42 bg-white/10 text-gray-100 placeholder-gray-400"
+          className="min-h-42 bg-white/10 text-gray-100 placeholder:text-gray-400"
           rows={12}
           value={mensaje}
           onChange={(e) => setMensaje(e.target.value)}
