@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_AR",
-    title: "Del Río Internet",
+    title: "Internet por fibra óptica en Mendoza | Del Río Internet",
     description:
       "Proveedor de Internet por fibra óptica e inalámbrico en Mendoza. Conexión rápida, estable y con soporte local.",
     url: "https://delriointernet.com.ar",
