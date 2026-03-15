@@ -89,7 +89,7 @@ export default function Home() {
 
       {/* Texto + Imagen lateral */}
       <section className="min-h-xl flex h-120 w-full flex-col items-center justify-center md:flex-row lg:h-155 xl:gap-20 2xl:gap-26">
-        <div className="flex max-w-xl flex-col items-center gap-10 text-center text-white md:items-start lg:gap-14">
+        <div className="flex max-w-xl flex-col items-center gap-10 text-center text-white md:items-start lg:gap-12">
           <div className="flex flex-col items-center gap-6 md:items-start md:text-left lg:gap-3">
             <h1 className="max-w-lg text-5xl leading-tight font-bold">
               Tu{" "}
@@ -98,7 +98,7 @@ export default function Home() {
               </span>{" "}
               al mundo, más humana que nunca.
             </h1>
-            <p className="hidden max-w-sm pt-3 text-xs text-gray-100 md:text-lg lg:max-w-full xl:block">
+            <p className="hidden max-w-sm pt-3 text-xs text-white md:text-lg lg:max-w-full xl:block">
               Conecta tu hogar por{" "}
               <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
                 Fibra óptica en Mendoza
@@ -118,7 +118,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de los servicios en mi zona.")}`}
-            className="mb-10 flex h-12 items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
+            className="mb-10 flex h-12 w-full items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
           >
             Comprueba la disponibilidad{" "}
             <span className="hidden pl-1 md:inline"> en tu zona</span>
