@@ -146,6 +146,8 @@ export default function Footer() {
               <li>
                 <Link
                   title="Dar de baja DelRio internet"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href={`${contactos.administracion.whatsapp}?text=${encodeURIComponent("Hola! Quiero dar de baja mi servicio")}`}
                   className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
