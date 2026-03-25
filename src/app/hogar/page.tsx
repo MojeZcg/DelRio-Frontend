@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/hover-card";
 
 export const metadata = {
-  title: "Internet para tu hogar | DelRio Internet",
+  title: "DelRio Internet | Internet para tu hogar en Mendoza",
   description:
     "Disfruta en tu hogar de una conexión estable y veloz con Internet DelRio: planes simétricos ideales para streaming, videollamadas y gaming, con WiFi 6, soporte confiable e instalación profesional.",
   keywords: [

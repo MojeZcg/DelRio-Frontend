@@ -19,7 +19,7 @@ import { contactos } from "@/lib/contacto";
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
 
 export const metadata = {
-  title: "Internet para Empresas | DelRio Internet",
+  title: "DelRio Internet | Internet para Empresas en Mendoza",
   description:
     "Impulsa tu negocio con Internet DelRio: soluciones de conectividad empresarial con alta velocidad simétrica, máxima estabilidad, WiFi 6 y soporte técnico especializado para que tu empresa nunca se detenga.",
   keywords: [
