@@ -15,7 +15,7 @@ import {
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
 
 export const metadata = {
-  title: "Internet por Fibra Óptica en Mendoza | Del Río Internet",
+  title: "DelRio Internet | Internet por Fibra Óptica en Mendoza",
   description:
     "Conéctate al mundo sin límites con DelRio Internet. Planes de alta velocidad simétrica, soporte técnico y instalación profesional pensada para tu comodidad.",
   alternates: {
