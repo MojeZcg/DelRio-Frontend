@@ -96,20 +96,22 @@ export default function Home() {
               <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
                 conexión
               </span>{" "}
-              al mundo, más humana que nunca.
+              con el mundo, más humana que nunca.
             </h1>
+
             <p className="hidden max-w-sm pt-3 text-xs text-white md:text-lg lg:max-w-full xl:block">
-              Conecta tu hogar por{" "}
+              Conectá tu hogar con{" "}
               <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
-                Fibra óptica en Mendoza
+                fibra óptica en Mendoza
               </span>{" "}
-              con{" "}
+              junto a{" "}
               <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
                 Del Río Internet
-              </span>{" "}
+              </span>
+              .
               <br />
-              Ubicado en Mendoza. Disfruta de nuestros planes con la atención
-              que mereces.
+              Planes confiables, atención cercana y la velocidad que necesitás
+              todos los días.
             </p>
           </div>
 
