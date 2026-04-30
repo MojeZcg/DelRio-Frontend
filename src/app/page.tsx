@@ -88,81 +88,96 @@ export default function Home() {
       </div>
 
       {/* Texto + Imagen lateral */}
-      <section className="min-h-xl flex h-120 w-full flex-col items-center justify-center md:flex-row lg:h-155 xl:gap-20 2xl:gap-26">
-        <div className="flex max-w-xl flex-col items-center gap-10 text-center text-white md:items-start lg:gap-12">
-          <div className="flex flex-col items-center gap-6 md:items-start md:text-left lg:gap-3">
-            <h1 className="max-w-lg text-5xl leading-tight font-bold">
-              Tu{" "}
-              <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
-                conexión
-              </span>{" "}
-              con el mundo, más humana que nunca.
-            </h1>
+      <div className="relative z-10 shadow-lg shadow-black/40">
+        <section className="min-h-xl flex h-120 w-full flex-col items-center justify-center md:flex-row lg:h-155 xl:gap-20 2xl:gap-26">
+          <div className="flex max-w-xl flex-col items-center gap-10 text-center text-white md:items-start lg:gap-12">
+            <div className="flex flex-col items-center gap-6 md:items-start md:text-left lg:gap-3">
+              <h1 className="max-w-lg text-5xl leading-tight font-bold">
+                Tu{" "}
+                <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
+                  conexión
+                </span>{" "}
+                con el mundo, más humana que nunca.
+              </h1>
 
-            <p className="hidden max-w-sm pt-3 text-xs text-white md:text-lg lg:max-w-full xl:block">
-              Conectá tu hogar con{" "}
-              <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
-                fibra óptica en Mendoza
-              </span>{" "}
-              junto a{" "}
-              <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
-                Del Río Internet
-              </span>
-              .
-              <br />
-              Planes confiables, atención cercana y la velocidad que necesitás
-              todos los días.
-            </p>
+              <p className="hidden max-w-sm pt-3 text-xs text-white md:text-lg lg:max-w-full xl:block">
+                Conectá tu hogar con{" "}
+                <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
+                  fibra óptica en Mendoza
+                </span>{" "}
+                junto a{" "}
+                <span className="bg-linear-to-r from-(--delrio-light) to-(--delrio-medium) bg-clip-text font-semibold text-transparent">
+                  Del Río Internet
+                </span>
+                .
+                <br />
+                Planes confiables, atención cercana y la velocidad que necesitás
+                todos los días.
+              </p>
+            </div>
+
+            <Link
+              title="Comprobar disponibilidad"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de los servicios en mi zona.")}`}
+              className="mb-10 flex h-12 w-full items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
+            >
+              Comprueba la disponibilidad{" "}
+              <span className="hidden pl-1 md:inline"> en tu zona</span>
+            </Link>
           </div>
 
-          <Link
-            title="Comprobar disponibilidad"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de los servicios en mi zona.")}`}
-            className="mb-10 flex h-12 w-full items-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-32"
-          >
-            Comprueba la disponibilidad{" "}
-            <span className="hidden pl-1 md:inline"> en tu zona</span>
-          </Link>
-        </div>
-
-        {/* Imagen ilustrativa lateral */}
-        <HeroImage />
-      </section>
+          {/* Imagen ilustrativa lateral */}
+          <HeroImage />
+        </section>
+      </div>
 
       {/* === PLANES HOGAR === */}
       <section
         id="planes"
         className="-z-10 flex scroll-mt-24 flex-col items-center justify-center bg-white pb-12 text-black"
       >
-        <h2 className="pt-10 pb-6 text-center text-3xl font-semibold lg:pb-14">
-          Conocé nuestros planes diseñados para ti
+        <h2 className="pt-10 pb-3 text-center text-3xl font-semibold lg:pb-3">
+          Planes de internet para tu hogar
         </h2>
+
+        <p className="max-w-xl px-4 pb-6 text-center text-base text-gray-600 lg:pb-12">
+          Fibra óptica en Mendoza para navegar, estudiar, trabajar y disfrutar
+          en casa.
+        </p>
 
         <PricingCards />
       </section>
 
       {/* === DIFERENCIADORES === */}
-      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-10 text-center text-white lg:py-14">
-        <h3 className="mb-6 text-3xl font-semibold">¿Por qué elegir DelRio?</h3>
+      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-8 text-center text-white lg:py-10">
+        <h3 className="mb-6 text-2xl font-semibold">
+          ¿Por qué elegir Del Río Internet?
+        </h3>
+
         <div className="flex flex-wrap justify-center gap-6 text-base lg:gap-10">
           <div className="max-w-xs">
-            <p className="font-bold">Atención Personalizada</p>
+            <p className="font-bold">Atención real</p>
             <p className="text-white/80">
-              Soporte humano y asistencia técnica directa, sin bots ni esperas.
+              Hablás con personas, no con bots. Soporte cercano cuando lo
+              necesitás.
             </p>
           </div>
+
           <div className="max-w-xs">
-            <p className="font-bold">Infraestructura Propia</p>
+            <p className="font-bold">Red propia</p>
             <p className="text-white/80">
-              Control total de red para garantizar estabilidad y rendimiento.
+              Infraestructura propia que asegura estabilidad y mejor
+              rendimiento.
             </p>
           </div>
+
           <div className="max-w-xs">
-            <p className="font-bold">Soporte Humano</p>
+            <p className="font-bold">Respuesta rápida</p>
             <p className="text-white/80">
-              Soporte técnico rápido y eficiente con personal capacitado.
+              Resolución ágil de problemas para que no pierdas tiempo sin
+              conexión.
             </p>
           </div>
         </div>
