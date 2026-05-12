@@ -43,7 +43,7 @@ function toTelHref(numero: string): string {
 
 export default function AccesoDirectoContactosPage() {
   return (
-    <div className="bg-slate-950 px-4 pt-28 pb-8 text-white md:px-8 md:pt-28">
+    <div className="bg-slate-950 px-4 pt-24 pb-8 text-white md:px-8 md:pt-28">
       <div className="mx-auto w-full max-w-6xl">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_1.6fr] lg:items-start">
           <section className="rounded-2xl border border-white/10 bg-white/5 p-5 lg:sticky lg:top-8">

@@ -20,13 +20,8 @@ export default function Navbar() {
     { name: "Internet Hogar", href: "/hogar" },
     { name: "Internet Empresas", href: "/empresas" },
     { name: "Contacto", href: "/contacto" },
-    {
-      name: "Clientes",
-      href: "https://delriointernet.portaldeinternet.me/users/login",
-    },
   ];
-
-  const clientLink = links.find((_, i) => i === 4);
+  const portalHref = "https://delriointernet.portaldeinternet.me/users/login";
 
   return (
     <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/50 px-4 py-2.5 shadow-md shadow-white/10 select-none sm:px-6 lg:px-12 lg:py-3">
@@ -45,16 +40,14 @@ export default function Navbar() {
         />
       </Link>
       <nav className="flex items-center gap-3 text-lg text-white sm:gap-6 lg:gap-8">
-        {clientLink && (
-          <Link
-            title="Clientes DelRio Internet"
-            href={clientLink.href}
-            className="hidden items-center gap-1 text-base underline-offset-4 transition-all hover:underline sm:flex lg:hidden"
-          >
-            <User size={14} />
-            Clientes
-          </Link>
-        )}
+        <Link
+          title="Portal DelRio Internet"
+          href={portalHref}
+          className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium text-white transition-all hover:border-white/40 hover:bg-white/20"
+        >
+          <User className="h-4 w-4" />
+          Portal Clientes
+        </Link>
         <ul className="hidden gap-8 text-lg lg:flex">
           {links.map(({ name, href }) => {
             const active = pathname === href;
@@ -67,7 +60,6 @@ export default function Navbar() {
                     active ? "text-white underline" : "text-gray-200"
                   }`}
                 >
-                  {name === "Clientes" && <User className="h-5 w-5" />}
                   {name}
                 </Link>
               </li>
@@ -113,7 +105,6 @@ export default function Navbar() {
                         }`}
                       >
                         <span className="inline-flex items-center gap-2">
-                          {name === "Clientes" && <User className="h-4 w-4" />}
                           {name}
                         </span>
                         {active && (
@@ -121,7 +112,7 @@ export default function Navbar() {
                         )}
                       </Link>
                     </DropdownMenuItem>
-                    {name !== "Clientes" && (
+                    {name !== "Contacto" && (
                       <DropdownMenuSeparator className="my-1 bg-white/10" />
                     )}
                   </div>

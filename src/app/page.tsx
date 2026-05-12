@@ -151,34 +151,44 @@ export default function Home() {
       </section>
 
       {/* === DIFERENCIADORES === */}
-      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-8 text-center text-white lg:py-10">
-        <h3 className="mb-6 text-2xl font-semibold">
-          ¿Por qué elegir Del Río Internet?
-        </h3>
+      <section className="bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) py-10 text-white md:py-12">
+        <div className="mx-auto max-w-6xl px-5 sm:px-6">
+          <h3 className="mb-2 text-center text-2xl font-semibold text-balance md:text-3xl">
+            ¿Por qué elegir Del Río Internet?
+          </h3>
+          <p className="mx-auto mb-6 max-w-2xl text-center text-sm text-white/80 sm:text-base md:mb-8">
+            Conectividad estable, soporte cercano y una red pensada para tu día
+            a día.
+          </p>
 
-        <div className="flex flex-wrap justify-center gap-6 text-base lg:gap-10">
-          <div className="max-w-xs">
-            <p className="font-bold">Atención real</p>
-            <p className="text-white/80">
-              Hablás con personas, no con bots. Soporte cercano cuando lo
-              necesitás.
-            </p>
-          </div>
+          <div className="grid gap-3 text-left sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-5">
+            <div className="rounded-2xl border border-white/20 bg-white/8 p-4 backdrop-blur-[2px] sm:p-5">
+              <p className="mb-1 text-base font-bold sm:text-lg">
+                Atención real
+              </p>
+              <p className="text-sm leading-relaxed text-white/85 sm:text-[15px]">
+                Hablás con personas, no con bots. Soporte cercano cuando lo
+                necesitás.
+              </p>
+            </div>
 
-          <div className="max-w-xs">
-            <p className="font-bold">Red propia</p>
-            <p className="text-white/80">
-              Infraestructura propia que asegura estabilidad y mejor
-              rendimiento.
-            </p>
-          </div>
+            <div className="rounded-2xl border border-white/20 bg-white/8 p-4 backdrop-blur-[2px] sm:p-5">
+              <p className="mb-1 text-base font-bold sm:text-lg">Red propia</p>
+              <p className="text-sm leading-relaxed text-white/85 sm:text-[15px]">
+                Infraestructura propia que asegura estabilidad y mejor
+                rendimiento.
+              </p>
+            </div>
 
-          <div className="max-w-xs">
-            <p className="font-bold">Respuesta rápida</p>
-            <p className="text-white/80">
-              Resolución ágil de problemas para que no pierdas tiempo sin
-              conexión.
-            </p>
+            <div className="rounded-2xl border border-white/20 bg-white/8 p-4 backdrop-blur-[2px] sm:col-span-2 sm:p-5 lg:col-span-1">
+              <p className="mb-1 text-base font-bold sm:text-lg">
+                Respuesta rápida
+              </p>
+              <p className="text-sm leading-relaxed text-white/85 sm:text-[15px]">
+                Resolución ágil de problemas para que no pierdas tiempo sin
+                conexión.
+              </p>
+            </div>
           </div>
         </div>
       </section>
