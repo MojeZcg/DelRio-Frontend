@@ -77,7 +77,7 @@ export default function EmpresasCarousel() {
             {companies.map((company, companyIndex) => (
               <div
                 key={`${loopIndex}-${companyIndex}`}
-                className="mx-2 flex shrink-0 items-center justify-center rounded-lg p-4 shadow-sm transition-all duration-300 select-none hover:shadow-md"
+                className="flex shrink-0 items-center justify-center rounded-lg px-0 py-2 shadow-sm transition-all duration-300 select-none hover:shadow-md sm:mx-2 lg:px-3"
               >
                 <Link
                   title={`${company.name} Sitio Oficial`}

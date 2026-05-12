@@ -89,7 +89,7 @@ export default function Home() {
 
       {/* Texto + Imagen lateral */}
       <div className="relative z-10 shadow-lg shadow-black/40">
-        <section className="flex min-h-120 w-full flex-col items-center justify-center px-4 py-10 md:min-h-0 md:flex-row md:px-0 md:py-0 lg:h-155 xl:gap-20 2xl:gap-26">
+        <section className="flex w-full flex-col items-center justify-center px-4 py-10 md:min-h-0 md:flex-row md:px-0 md:py-0 lg:h-155 xl:gap-20 2xl:gap-26">
           <div className="flex max-w-xl flex-col items-center gap-10 text-center text-white md:items-start lg:gap-12">
             <div className="flex flex-col items-center gap-6 md:items-start md:text-left lg:gap-3">
               <h1 className="max-w-lg text-5xl leading-tight font-bold">
@@ -139,7 +139,10 @@ export default function Home() {
         className="-z-10 flex scroll-mt-24 flex-col items-center justify-center bg-white pb-12 text-black"
       >
         <h2 className="pt-10 pb-3 text-center text-3xl font-semibold lg:pb-3">
-          Planes de internet para tu hogar
+          <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
+            Internet
+          </span>{" "}
+          para tu hogar
         </h2>
 
         <p className="max-w-xl px-4 pb-6 text-center text-base text-gray-600 lg:pb-12">
@@ -302,7 +305,7 @@ export default function Home() {
               href="/empresas"
               className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/15 md:p-8"
             >
-              <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition-all duration-300 group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
+              <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-900 transition-all duration-300 group-hover:bg-emerald-700 md:mb-4 md:h-16 md:w-16">
                 <LifeBuoy size={26} className="md:h-7.5 md:w-7.5" />
               </div>
               <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">

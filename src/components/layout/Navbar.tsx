@@ -24,7 +24,7 @@ export default function Navbar() {
   const portalHref = "https://delriointernet.portaldeinternet.me/users/login";
 
   return (
-    <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/50 px-4 py-2.5 shadow-md shadow-white/10 select-none sm:px-6 lg:px-12 lg:py-3">
+    <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/50 px-4 py-3.5 shadow-md shadow-white/10 select-none sm:px-6 lg:px-12">
       <Link
         title="Pagina principal DelRio Internet"
         href="/"
@@ -36,16 +36,16 @@ export default function Navbar() {
           alt="DelRio Internet Logo"
           width={995}
           height={511}
-          className="h-10 w-auto sm:h-12 lg:h-16"
+          className="h-12 w-auto sm:h-12 lg:h-16"
         />
       </Link>
       <nav className="flex items-center gap-3 text-lg text-white sm:gap-6 lg:gap-8">
         <Link
           title="Portal DelRio Internet"
           href={portalHref}
-          className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium text-white transition-all hover:border-white/40 hover:bg-white/20"
+          className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium text-white transition-all hover:border-white/40 hover:bg-white/20 lg:hidden"
         >
-          <User className="h-4 w-4" />
+          <User size={16} />
           Portal Clientes
         </Link>
         <ul className="hidden gap-8 text-lg lg:flex">
@@ -60,11 +60,21 @@ export default function Navbar() {
                     active ? "text-white underline" : "text-gray-200"
                   }`}
                 >
-                  {name}
+                  {name === "Internet Empresas" ? "Empresas" : name}
                 </Link>
               </li>
             );
           })}
+          <li>
+            <Link
+              title="Portal DelRio Internet"
+              href={portalHref}
+              className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium text-white transition-all hover:border-white/40 hover:bg-white/20"
+            >
+              <User size={16} />
+              Portal Clientes
+            </Link>
+          </li>
         </ul>
 
         <div className="text-white lg:hidden">

@@ -195,7 +195,7 @@ export default function EmpresasPage() {
             </div>
 
             <div className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all hover:border-blue-400/50 hover:bg-white/10">
-              <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-blue-500 to-blue-700 shadow-lg">
+              <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-cyan-500 to-sky-700 shadow-lg">
                 <LifeBuoy size={26} className="text-white" />
               </div>
               <h3 className="mb-2 text-lg font-bold text-white">
@@ -291,9 +291,12 @@ export default function EmpresasPage() {
                 {planesBusiness.map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 rounded-lg bg-white/5 p-3 backdrop-blur-sm transition hover:bg-white/10"
+                    className="flex items-start gap-2 rounded-lg bg-white/5 p-3 backdrop-blur-sm transition hover:bg-white/10 lg:gap-3"
                   >
-                    <Check size={24} className="text-green-500" />
+                    <Check
+                      size={22}
+                      className="mt-0.5 shrink-0 text-green-500"
+                    />
                     <div>
                       <h4 className="mb-1 text-sm font-bold text-white">
                         {item.title}
@@ -344,9 +347,12 @@ export default function EmpresasPage() {
                 {planesFull.map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 rounded-lg bg-white/5 p-3 backdrop-blur-sm transition hover:bg-white/10"
+                    className="flex items-start gap-2 rounded-lg bg-white/5 p-3 backdrop-blur-sm transition hover:bg-white/10 lg:gap-3"
                   >
-                    <Check size={24} className="text-green-500" />
+                    <Check
+                      size={22}
+                      className="mt-0.5 shrink-0 text-green-500"
+                    />
                     <div>
                       <h4 className="mb-1 text-sm font-bold text-white">
                         {item.title}
