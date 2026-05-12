@@ -7,6 +7,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -16,8 +17,8 @@ export default function Navbar() {
 
   const links = [
     { name: "Inicio", href: "/" },
-    { name: "Hogar", href: "/hogar" },
-    { name: "Empresas", href: "/empresas" },
+    { name: "Internet Hogar", href: "/hogar" },
+    { name: "Internet Empresas", href: "/empresas" },
     { name: "Contacto", href: "/contacto" },
     {
       name: "Clientes",
@@ -28,7 +29,7 @@ export default function Navbar() {
   const clientLink = links.find((_, i) => i === 4);
 
   return (
-    <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/50 px-6 py-3 shadow-md shadow-white/10 select-none lg:px-12">
+    <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/50 px-4 py-2.5 shadow-md shadow-white/10 select-none sm:px-6 lg:px-12 lg:py-3">
       <Link
         title="Pagina principal DelRio Internet"
         href="/"
@@ -40,15 +41,15 @@ export default function Navbar() {
           alt="DelRio Internet Logo"
           width={995}
           height={511}
-          className="h-12 w-auto lg:h-16"
+          className="h-10 w-auto sm:h-12 lg:h-16"
         />
       </Link>
-      <nav className="flex items-center gap-8 text-lg text-white">
+      <nav className="flex items-center gap-3 text-lg text-white sm:gap-6 lg:gap-8">
         {clientLink && (
           <Link
             title="Clientes DelRio Internet"
             href={clientLink.href}
-            className="flex items-center gap-1 underline-offset-4 transition-all hover:underline lg:hidden"
+            className="hidden items-center gap-1 text-base underline-offset-4 transition-all hover:underline sm:flex lg:hidden"
           >
             <User size={14} />
             Clientes
@@ -76,29 +77,54 @@ export default function Navbar() {
 
         <div className="text-white lg:hidden">
           <DropdownMenu>
-            <DropdownMenuTrigger>
-              <Menu size={42} />
+            <DropdownMenuTrigger asChild>
+              <button
+                type="button"
+                aria-label="Abrir menu de navegacion"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 bg-white/5 text-white transition-all duration-300 hover:border-white/40 hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:outline-none"
+              >
+                <Menu size={24} />
+              </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="mt-2 mr-2 h-auto w-48 bg-[#050f1e]/70 text-white">
+            <DropdownMenuContent
+              sideOffset={10}
+              align="end"
+              className="w-[calc(100vw-1.5rem)] max-w-xs rounded-2xl border border-white/15 bg-[#050f1e]/90 p-2 text-white shadow-2xl shadow-black/50 backdrop-blur-md sm:w-64"
+            >
+              <DropdownMenuLabel className="px-2 pb-1 text-xs tracking-wide text-white/60 uppercase">
+                Navegacion
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator className="mx-1 mb-1 bg-white/15" />
               {links.map(({ name, href }) => {
                 const active = pathname === href;
                 return (
-                  name !== "Clientes" && (
-                    <div key={href}>
-                      <DropdownMenuItem className="p-0">
-                        <Link
-                          title={`${name} DelRio Internet`}
-                          href={href}
-                          className={`flex h-full w-full items-center gap-1 rounded-md p-3 text-lg underline-offset-4 transition-all hover:underline ${
-                            active ? "bg-white text-black" : "text-white"
-                          }`}
-                        >
+                  <div key={href}>
+                    <DropdownMenuItem
+                      asChild
+                      className="p-0 focus:bg-transparent"
+                    >
+                      <Link
+                        title={`${name} DelRio Internet`}
+                        href={href}
+                        className={`flex h-full w-full items-center justify-between rounded-xl px-3 py-2.5 text-base font-medium transition-all duration-200 focus-visible:outline-none ${
+                          active
+                            ? "bg-white text-black shadow-md"
+                            : "text-white/90 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        <span className="inline-flex items-center gap-2">
+                          {name === "Clientes" && <User className="h-4 w-4" />}
                           {name}
-                        </Link>
-                      </DropdownMenuItem>
-                      {name !== "Contacto" && <DropdownMenuSeparator />}
-                    </div>
-                  )
+                        </span>
+                        {active && (
+                          <span className="h-2 w-2 rounded-full bg-(--delrio-medium)" />
+                        )}
+                      </Link>
+                    </DropdownMenuItem>
+                    {name !== "Clientes" && (
+                      <DropdownMenuSeparator className="my-1 bg-white/10" />
+                    )}
+                  </div>
                 );
               })}
             </DropdownMenuContent>

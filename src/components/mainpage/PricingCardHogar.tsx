@@ -2,8 +2,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Link from "next/link";
 import {
@@ -95,14 +93,14 @@ const featureList: FeatureItem[] = [
   { label: "WiFi 2.4/5Ghz", key: "wifi" },
   {
     label: (
-      <div className="flex gap-1.5">
+      <div className="flex items-center justify-between gap-1.5">
         Accede a
-        <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
-          Beneficios Full
-        </span>
         <HoverCard>
           <HoverCardTrigger className="flex items-center">
-            <Info size={16} />
+            <span className="bg-linear-to-r from-(--delrio-light) via-(--delrio-medium) to-(--delrio-dark) bg-clip-text text-transparent">
+              Beneficios Full
+            </span>{" "}
+            <Info size={16} className="hidden lg:flex" />
           </HoverCardTrigger>
           <HoverCardContent className="max-w-65 text-sm leading-snug">
             Posiblididad de contratar los beneficios full, con{" "}
@@ -128,7 +126,7 @@ function PricingCard({
   return (
     <div className="relative overflow-visible rounded-2xl pt-4 lg:p-0">
       <div
-        className={`flex h-full w-68 flex-col items-center overflow-hidden border-x border-b shadow-lg shadow-gray-300 lg:w-72 lg:rounded-2xl lg:border-3 xl:w-86 ${recomended ? "lg:border-green-500" : "lg:border-gray-100/20"}`}
+        className={`flex h-full w-full max-w-68 flex-col items-center overflow-hidden rounded-2xl border lg:w-72 lg:max-w-none lg:border-3 lg:shadow-lg lg:shadow-gray-300 xl:w-86 ${recomended ? "lg:border-green-500" : "lg:border-gray-100/20"}`}
       >
         {recomended && (
           <div className="absolute top-1 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1 rounded-xl bg-green-500 px-10 py-1 text-sm font-medium text-white shadow-md lg:-top-4">
@@ -147,9 +145,9 @@ function PricingCard({
         </div>
 
         <div className="flex w-full flex-col items-center justify-center px-6 pb-2">
-          <div className="flex w-full flex-col gap-3 pt-6 pb-8 font-semibold">
+          <div className="flex w-full flex-col gap-2 pt-6 pb-8 font-semibold">
             {featureList.map((item, i) => (
-              <div key={i} className="flex flex-col gap-3">
+              <div key={i} className="flex flex-col gap-2">
                 <span className="my-1 ml-0.5 flex items-center justify-between">
                   {item.label}
                   {features[item.key] && (
@@ -166,7 +164,7 @@ function PricingCard({
             target="_blank"
             rel="noopener noreferrer"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent(planmsg)}`}
-            className="group mb-4 rounded-lg px-12 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-300 hover:scale-110"
+            className="group mb-4 rounded-lg px-8 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-300 hover:scale-110 lg:px-12"
             style={{ backgroundColor: color }}
           >
             <span className="transition-all duration-500 group-hover:text-white">
@@ -194,17 +192,21 @@ export default function PricingCards() {
       </div>
 
       {/* 📱 Mobile carousel */}
-      <div className="md:hidden">
-        <Carousel className="mx-auto w-full max-w-68 bg-transparent">
-          <CarouselContent>
+      <div className="px-2 md:hidden">
+        <Carousel
+          className="w-full bg-transparent"
+          opts={{ align: "center", startIndex: 1 }}
+        >
+          <CarouselContent className="">
             {pricingCards.map((card, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem
+                key={index}
+                className="flex basis-[70%] justify-center"
+              >
                 <PricingCard {...card} />
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
         </Carousel>
       </div>
     </div>

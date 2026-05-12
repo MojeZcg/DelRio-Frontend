@@ -9,20 +9,20 @@ import FijoCopy from "../FijoCopy";
 export default function Footer() {
   return (
     <footer className="border-t border-gray-700 bg-black text-gray-300">
-      <div className="mx-auto w-full px-12 pt-10 pb-6">
+      <div className="mx-auto w-full px-5 pt-10 pb-6 sm:px-8 lg:px-12">
         {/* === TOP SECTION === */}
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4">
           {/* Logo + descripción */}
-          <div>
+          <div className="text-center sm:text-left">
             <Image
               title="DelRio Internet Logo"
               src="/logoTransparentWhite.webp"
               alt="DelRio Internet Logo"
               width={160}
               height={80}
-              className="mb-4 select-none"
+              className="mx-auto mb-4 select-none sm:mx-0"
             />
-            <p className="text-sm leading-relaxed text-gray-400">
+            <p className="mx-auto max-w-sm text-sm leading-relaxed text-gray-400 sm:mx-0 sm:max-w-none">
               Conectamos hogares y empresas con internet de alta calidad,
               atención humana y un compromiso real con el servicio.
             </p>
@@ -30,7 +30,7 @@ export default function Footer() {
 
           {/* Navegación principal */}
           <div>
-            <h2 className="mb-3 text-lg font-semibold text-white">
+            <h2 className="mb-3 text-base font-semibold text-white sm:text-lg">
               Navegación
             </h2>
             <ul className="space-y-2 text-sm">
@@ -85,7 +85,9 @@ export default function Footer() {
 
           {/* Contacto */}
           <div>
-            <h2 className="mb-3 text-lg font-semibold text-white">Contacto</h2>
+            <h2 className="mb-3 text-base font-semibold text-white sm:text-lg">
+              Contacto
+            </h2>
             <ul className="space-y-2 text-sm">
               <li>
                 <div className="flex items-center gap-2">
@@ -99,7 +101,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={`mailto:${contactos.emails.administracion}`}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 break-all"
                 >
                   <Mail className="h-4 w-4 text-blue-400" />
                   <span className="cursor-pointer hover:text-blue-500 hover:underline">
@@ -117,7 +119,7 @@ export default function Footer() {
                 >
                   <MapPin className="mt-0.5 h-4 w-4 text-blue-400" />
 
-                  <span className="cursor-pointer hover:text-blue-500 hover:underline">
+                  <span className="cursor-pointer text-sm leading-snug hover:text-blue-500 hover:underline">
                     {contactos.fisico.direccion}
                   </span>
                 </Link>
@@ -127,7 +129,7 @@ export default function Footer() {
 
           {/* Acceso rápido / términos */}
           <div>
-            <h2 className="mb-3 text-lg font-semibold text-white">
+            <h2 className="mb-3 text-base font-semibold text-white sm:text-lg">
               Información legal
             </h2>
             <ul className="space-y-2 text-sm">
@@ -160,12 +162,12 @@ export default function Footer() {
         </div>
 
         {/* === BOTTOM SECTION === */}
-        <div className="mt-10 flex flex-col items-center justify-between gap-5 border-t border-gray-700 pt-4 text-start text-xs text-gray-400 sm:flex-row md:gap-0">
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-700 pt-4 text-center text-xs text-gray-400 sm:flex-row sm:items-end sm:text-left md:gap-0">
           <p className="text-center">
             &copy; {new Date().getFullYear()} DelRio Internet. Todos los
             derechos reservados.
           </p>
-          <p className="text-[11.5px] text-gray-400">
+          <p className="text-[11.5px] leading-relaxed text-gray-400 sm:text-right">
             Diseñada y Desarrollada por{" "}
             <Link
               title="Desarrollador de DelRio Internet Walter J. Montenegro"
