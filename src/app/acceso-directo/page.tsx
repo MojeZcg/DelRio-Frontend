@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { contactos } from "@/lib/contacto";
+import { TrackedContactLink } from "@/components/analytics/TrackedContactLink";
 
 export const metadata: Metadata = {
   title: "DelRio Internet | Acceso directo de contactos",
@@ -69,23 +70,29 @@ export default function AccesoDirectoContactosPage() {
                   <p className="mt-1 text-sm text-slate-300">{area.numero}</p>
 
                   <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-1">
-                    <Link
+                    <TrackedContactLink
                       href={toTelHref(area.numero)}
+                      contactType="phone"
+                      contactArea={area.key}
+                      contactLabel={`llamar_${area.key}`}
                       className="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-cyan-500"
                     >
                       <Phone className="h-4 w-4" />
                       Llamar
-                    </Link>
+                    </TrackedContactLink>
 
-                    <Link
+                    <TrackedContactLink
                       href={`${area.whatsapp}?text=${encodeURIComponent(area.mensaje)}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      contactType="whatsapp"
+                      contactArea={area.key}
+                      contactLabel={`whatsapp_${area.key}`}
                       className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-emerald-500"
                     >
                       <MessageCircle className="h-4 w-4" />
                       WhatsApp
-                    </Link>
+                    </TrackedContactLink>
                   </div>
                 </section>
               ))}
@@ -95,39 +102,51 @@ export default function AccesoDirectoContactosPage() {
               <h2 className="text-lg font-semibold">Otros contactos</h2>
 
               <div className="mt-3 grid gap-2 text-sm md:grid-cols-2">
-                <Link
+                <TrackedContactLink
                   href={`tel:${contactos.fisico.telefono}`}
+                  contactType="phone"
+                  contactArea="fisico"
+                  contactLabel="phone_fisico"
                   className="flex items-center gap-2 text-cyan-300 hover:underline"
                 >
                   <Phone className="h-4 w-4" />
                   Teléfono fijo: {contactos.fisico.telefono}
-                </Link>
+                </TrackedContactLink>
 
-                <Link
+                <TrackedContactLink
                   href={`mailto:${contactos.emails.administracion}`}
+                  contactType="email"
+                  contactArea="administracion"
+                  contactLabel="email_administracion"
                   className="flex items-center gap-2 text-cyan-300 hover:underline"
                 >
                   <Mail className="h-4 w-4" />
                   {contactos.emails.administracion}
-                </Link>
+                </TrackedContactLink>
 
-                <Link
+                <TrackedContactLink
                   href={`mailto:${contactos.emails.soporte}`}
+                  contactType="email"
+                  contactArea="soporte"
+                  contactLabel="email_soporte"
                   className="flex items-center gap-2 text-cyan-300 hover:underline"
                 >
                   <Mail className="h-4 w-4" />
                   {contactos.emails.soporte}
-                </Link>
+                </TrackedContactLink>
 
-                <Link
+                <TrackedContactLink
                   href={contactos.fisico.maps}
                   target="_blank"
                   rel="noopener noreferrer"
+                  contactType="maps"
+                  contactArea="fisico"
+                  contactLabel="maps_fisico"
                   className="flex items-center gap-2 text-cyan-300 hover:underline md:col-span-2"
                 >
                   <MapPin className="h-4 w-4" />
                   {contactos.fisico.direccion}
-                </Link>
+                </TrackedContactLink>
               </div>
 
               <p className="mt-3 text-xs text-slate-400">
