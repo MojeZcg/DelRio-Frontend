@@ -93,7 +93,7 @@ function PricingCardEmpresas({
         className={`flex w-68 flex-col items-center rounded-2xl border border-x border-b border-gray-300 shadow-lg shadow-gray-300 lg:w-72 lg:rounded-2xl lg:border-3 xl:w-86 ${recomended ? "lg:border-green-500" : "lg:border-gray-100/50"}`}
       >
         {recomended && (
-          <div className="absolute top-1 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-lg bg-green-500 px-10 py-1 text-sm font-medium text-white shadow-md md:-top-4">
+          <div className="absolute top-1 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-lg bg-green-700 px-10 py-1 text-sm font-medium text-white shadow-md md:-top-4">
             Recomendado <BadgeCheck className="h-4 w-4" />
           </div>
         )}

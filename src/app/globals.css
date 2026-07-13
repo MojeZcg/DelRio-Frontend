@@ -201,6 +201,21 @@
   background-color: rgba(220, 230, 240, 0.8);
 }
 
+/* Scroll infinito de logos de empresas */
+@keyframes logos-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logos-scroll {
+  width: max-content;
+  animation: logos-scroll 60s linear infinite;
+}
+
 /* Scrollbar oculto pero scrolleable */
 .scrollbar-hidden {
   -ms-overflow-style: none;

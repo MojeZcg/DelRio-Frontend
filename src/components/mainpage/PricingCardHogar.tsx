@@ -129,7 +129,7 @@ function PricingCard({
         className={`flex h-full w-full max-w-68 flex-col items-center overflow-hidden rounded-2xl border shadow-lg shadow-gray-300 lg:w-72 lg:max-w-none lg:border-3 xl:w-86 ${recomended ? "lg:border-green-500" : "lg:border-gray-100/20"}`}
       >
         {recomended && (
-          <div className="absolute top-1 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1 rounded-xl bg-green-500 px-10 py-1 text-sm font-medium text-white shadow-md lg:-top-4">
+          <div className="absolute top-1 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1 rounded-xl bg-green-700 px-10 py-1 text-sm font-medium text-white shadow-md lg:-top-4">
             Recomendado <BadgeCheck className="h-4 w-4" />
           </div>
         )}

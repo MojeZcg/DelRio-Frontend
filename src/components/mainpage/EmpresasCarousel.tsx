@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -71,7 +69,7 @@ const companies = [
 export default function EmpresasCarousel() {
   return (
     <div className="relative w-full overflow-hidden">
-      <div className="animate-scroll flex">
+      <div className="animate-logos-scroll flex">
         {[...Array(2)].map((_, loopIndex) => (
           <div className="flex shrink-0" key={loopIndex}>
             {companies.map((company, companyIndex) => (
@@ -91,6 +89,7 @@ export default function EmpresasCarousel() {
                     src={`/logos-empresas${company.src}`}
                     alt={company.name}
                     fill
+                    sizes="180px"
                     className="object-contain transition-all duration-300 hover:scale-120 hover:opacity-100"
                   />
                 </Link>
@@ -99,21 +98,6 @@ export default function EmpresasCarousel() {
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-scroll {
-          animation: scroll 60s linear infinite;
-          width: max-content;
-        }
-      `}</style>
     </div>
   );
 }

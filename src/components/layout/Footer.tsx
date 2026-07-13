@@ -174,7 +174,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/montenegrowalter/"
-              className="text-white"
+              className="text-white underline underline-offset-2"
             >
               Walter J. Montenegro
             </Link>

@@ -8,7 +8,9 @@ import Adicionales from "@/components/layout/Adicionales";
 const getMonserrat = Montserrat({
   variable: "--font-monserrat",
   subsets: ["latin"],
-  display: "swap",
+  // "optional" evita el re-paint del swap de fuente, que retrasaba el LCP:
+  // si la fuente no llega a tiempo se usa el fallback ajustado y no se cambia.
+  display: "optional",
 });
 
 export const metadata: Metadata = {
