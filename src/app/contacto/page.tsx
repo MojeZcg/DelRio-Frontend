@@ -5,6 +5,7 @@ import ContactForm from "@/components/contactpage/ContactForm";
 import { FileCog, BadgeDollarSign, Wrench, Phone } from "lucide-react";
 import { contactos } from "@/lib/contacto";
 import FijoCopy from "@/components/FijoCopy";
+import { TrackedContactLink } from "@/components/analytics/TrackedContactLink";
 
 export const metadata = {
   title: "DelRio Internet | Conectate con nosotros",
@@ -54,15 +55,18 @@ export default function ContactPage() {
             <FileCog className="h-4 w-4 text-[#6d8cff]" />
             <div>
               <strong>Administración:</strong>{" "}
-              <Link
+              <TrackedContactLink
                 title="Contacto Administración DelRio Internet"
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`${contactos.administracion.whatsapp}?text=${encodeURIComponent("Hola! Quiero contratar el servicio de internet.")}`}
+                contactType="whatsapp"
+                contactArea="administracion"
+                contactLabel="contacto_administracion"
                 className="text-[#6d8cff] hover:underline"
               >
                 {contactos.administracion.numero}
-              </Link>
+              </TrackedContactLink>
             </div>
           </div>
 
@@ -70,15 +74,18 @@ export default function ContactPage() {
             <BadgeDollarSign className="h-4 w-4 text-[#6d8cff]" />
             <div>
               <strong>Comercial:</strong>{" "}
-              <Link
+              <TrackedContactLink
                 title="Contacto Comercial DelRio Internet"
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero recibir información sobre los planes de internet para mi hogar o empresa.")}`}
+                contactType="whatsapp"
+                contactArea="comercial"
+                contactLabel="contacto_comercial"
                 className="text-[#6d8cff] hover:underline"
               >
                 {contactos.comercial.numero}
-              </Link>
+              </TrackedContactLink>
             </div>
           </div>
 
@@ -86,17 +93,20 @@ export default function ContactPage() {
             <Wrench className="h-4 w-4 text-[#6d8cff]" />
             <div>
               <strong>Soporte Técnico:</strong>{" "}
-              <Link
+              <TrackedContactLink
                 title="Soporte tecnico DelRio Internet"
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`${contactos.soporte.whatsapp}?text=${encodeURIComponent(
                   "Hola! Necesito asistencia técnica con mi servicio de internet.",
                 )}`}
+                contactType="whatsapp"
+                contactArea="soporte"
+                contactLabel="contacto_soporte"
                 className="text-[#6d8cff] hover:underline"
               >
                 {contactos.soporte.numero}
-              </Link>
+              </TrackedContactLink>
             </div>
           </div>
           <div className="mb-1 flex items-center justify-center gap-2">

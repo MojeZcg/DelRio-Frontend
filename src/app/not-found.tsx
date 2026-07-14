@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 import { contactos } from "@/lib/contacto";
+import { TrackedContactLink } from "@/components/analytics/TrackedContactLink";
 
 const accesos = [
   {
@@ -77,15 +78,18 @@ export default function NotFound() {
               <ArrowLeft className="h-4 w-4" />
               Volver al inicio
             </Link>
-            <Link
+            <TrackedContactLink
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
+              contactType="whatsapp"
+              contactArea="soporte"
+              contactLabel="404_reportar_enlace"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/8 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/12"
             >
               <LifeBuoy className="h-4 w-4" />
               Reportar enlace roto
-            </Link>
+            </TrackedContactLink>
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2">

@@ -3,7 +3,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import Link from "next/link";
 import {
   HoverCard,
   HoverCardContent,
@@ -12,6 +11,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { BadgeCheck, Check, Info } from "lucide-react";
 import { contactos } from "@/lib/contacto";
+import { TrackedContactLink } from "@/components/analytics/TrackedContactLink";
 
 interface PlanFeatures {
   speed: string;
@@ -159,18 +159,21 @@ function PricingCard({
             ))}
           </div>
 
-          <Link
+          <TrackedContactLink
             title="Contrata Ahora Internet"
             target="_blank"
             rel="noopener noreferrer"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent(planmsg)}`}
+            contactType="whatsapp"
+            contactArea="comercial"
+            contactLabel={`pricing_hogar_${title.toLowerCase().replace(/\s+/g, "_")}`}
             className="group mb-4 rounded-lg px-12 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-300 hover:scale-110"
             style={{ backgroundColor: color }}
           >
             <span className="transition-all duration-500 group-hover:text-white">
               Contrata ahora
             </span>
-          </Link>
+          </TrackedContactLink>
           <span className="mb-4 text-xs text-gray-600">
             * Estos servicios estan sujetos a disponibilidad técnica y
             condiciones de red.

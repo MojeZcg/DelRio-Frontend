@@ -2,15 +2,19 @@
 "use client";
 
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
+
+type ContactType = "whatsapp" | "phone" | "email" | "maps";
 
 type Props = {
   href: string;
   children: ReactNode;
   className?: string;
+  style?: CSSProperties;
+  title?: string;
   target?: string;
   rel?: string;
-  contactType: "whatsapp" | "phone" | "email" | "maps";
+  contactType: ContactType;
   contactArea: string;
   contactLabel: string;
 };
@@ -25,10 +29,24 @@ declare global {
   }
 }
 
+export function trackContactClick(params: {
+  contactType: ContactType;
+  contactArea: string;
+  contactLabel: string;
+}) {
+  window.gtag?.("event", "contact_click", {
+    contact_type: params.contactType,
+    contact_area: params.contactArea,
+    contact_label: params.contactLabel,
+  });
+}
+
 export function TrackedContactLink({
   href,
   children,
   className,
+  style,
+  title,
   target,
   rel,
   contactType,
@@ -36,11 +54,7 @@ export function TrackedContactLink({
   contactLabel,
 }: Props) {
   function handleClick() {
-    window.gtag?.("event", "contact_click", {
-      contact_type: contactType,
-      contact_area: contactArea,
-      contact_label: contactLabel,
-    });
+    trackContactClick({ contactType, contactArea, contactLabel });
   }
 
   return (
@@ -48,7 +62,9 @@ export function TrackedContactLink({
       href={href}
       target={target}
       rel={rel}
+      title={title}
       className={className}
+      style={style}
       onClick={handleClick}
     >
       {children}

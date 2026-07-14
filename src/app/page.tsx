@@ -13,6 +13,7 @@ import {
   Zap,
 } from "lucide-react";
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
+import { TrackedContactLink } from "@/components/analytics/TrackedContactLink";
 
 export const metadata = {
   title: "DelRio Internet | Internet por Fibra Óptica en Mendoza",
@@ -116,16 +117,19 @@ export default function Home() {
               </p>
             </div>
 
-            <Link
+            <TrackedContactLink
               title="Comprobar disponibilidad"
               target="_blank"
               rel="noopener noreferrer"
               href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero consultar sobre la disponibilidad de los servicios en mi zona.")}`}
+              contactType="whatsapp"
+              contactArea="comercial"
+              contactLabel="home_hero_disponibilidad"
               className="mb-10 inline-flex h-12 w-auto max-w-full items-center justify-center rounded-lg bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-6 text-base font-medium ring-2 transition-all duration-500 hover:bg-[#5846e8] hover:shadow-lg hover:shadow-white/30 md:px-16 lg:px-32"
             >
               Comprueba la disponibilidad{" "}
               <span className="hidden pl-1 md:inline"> en tu zona</span>
-            </Link>
+            </TrackedContactLink>
           </div>
 
           {/* Imagen ilustrativa lateral */}
@@ -210,16 +214,19 @@ export default function Home() {
               conexión llegue a cada ambiente, con una estructura prolija,
               estable y lista para escalar cuando lo necesites.
             </p>
-            <Link
+            <TrackedContactLink
               title="Cotizar trazado de red interna"
               target="_blank"
               rel="noopener noreferrer"
               href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero cotizar el servicio de trazado de red interna y conectividad para mi domicilio, local u oficina.")}`}
+              contactType="whatsapp"
+              contactArea="comercial"
+              contactLabel="home_trazado_red"
               className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-7 py-3 text-sm font-semibold text-white transition hover:opacity-95 md:px-9 md:text-base"
             >
               Cotizar trazado y conectividad
               <ArrowRight size={20} />
-            </Link>
+            </TrackedContactLink>
           </div>
 
           <div className="rounded-3xl border border-gray-200 bg-gray-50 p-6 md:p-8">
@@ -422,16 +429,19 @@ export default function Home() {
           </div>
 
           <div className="mt-10 text-center md:mt-12">
-            <Link
+            <TrackedContactLink
               title="Cotizar conectividad para eventos"
               target="_blank"
               rel="noopener noreferrer"
               href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero cotizar internet y conectividad para un evento.")}`}
+              contactType="whatsapp"
+              contactArea="comercial"
+              contactLabel="home_eventos"
               className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-(--delrio-medium) to-(--delrio-dark) px-7 py-3 text-sm font-semibold text-white transition hover:opacity-95 md:px-9 md:text-base"
             >
               Cotizar conectividad para eventos
               <ArrowRight size={20} />
-            </Link>
+            </TrackedContactLink>
           </div>
         </div>
       </section>
@@ -507,15 +517,18 @@ export default function Home() {
             En cada rincón de Mendoza, llevamos más que internet: llevamos
             conexión, confianza.
           </p>
-          <Link
+          <TrackedContactLink
             title="Hablemos de tu conexión"
             target="_blank"
             rel="noopener noreferrer"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaria conocer sobre los planes de internet")}`}
+            contactType="whatsapp"
+            contactArea="comercial"
+            contactLabel="home_cta_final"
             className="inline-block rounded-lg bg-white px-8 py-3 font-medium text-(--delrio-medium) transition hover:bg-blue-100"
           >
             Hablemos de tu conexión
-          </Link>
+          </TrackedContactLink>
         </div>
       </section>
     </main>

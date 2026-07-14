@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { contactos } from "@/lib/contacto";
 import FijoCopy from "../FijoCopy";
+import { TrackedContactLink } from "@/components/analytics/TrackedContactLink";
 
 export default function Footer() {
   return (
@@ -146,16 +147,19 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
+                <TrackedContactLink
                   title="Dar de baja DelRio internet"
                   target="_blank"
                   rel="noopener noreferrer"
                   href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero dar de baja mi servicio")}`}
+                  contactType="whatsapp"
+                  contactArea="comercial"
+                  contactLabel="footer_dar_de_baja"
                   className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
                   Dar de baja
                   <ArrowUpRightIcon className="h-3.5 w-3.5" />
-                </Link>
+                </TrackedContactLink>
               </li>
             </ul>
           </div>

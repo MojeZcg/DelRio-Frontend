@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { trackContactClick } from "@/components/analytics/TrackedContactLink";
 
 export default function ContactForm() {
   const [nombre, setNombre] = useState("");
@@ -25,6 +26,12 @@ export default function ContactForm() {
     e.preventDefault();
 
     setEstado("Redirigiendo a WhatsApp...");
+
+    trackContactClick({
+      contactType: "whatsapp",
+      contactArea: "comercial",
+      contactLabel: "contacto_formulario",
+    });
 
     const link = generarMensajeWhatsApp();
     window.open(link, "_blank");

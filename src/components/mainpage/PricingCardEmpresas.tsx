@@ -7,7 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Link from "next/link";
 import {
   HoverCard,
   HoverCardContent,
@@ -16,6 +15,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { BadgeCheck, Check, Info } from "lucide-react";
 import { contactos } from "@/lib/contacto";
+import { TrackedContactLink } from "@/components/analytics/TrackedContactLink";
 
 interface PlanFeatures {
   speed: string;
@@ -155,18 +155,21 @@ function PricingCardEmpresas({
             </div>
           </div>
 
-          <Link
+          <TrackedContactLink
             title={`Solicitar asesor comercial para ${title}`}
             target="_blank"
             rel="noopener noreferrer"
             href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Quiero solicitar el plan " + title)}`}
+            contactType="whatsapp"
+            contactArea="comercial"
+            contactLabel={`pricing_empresas_${title.toLowerCase().replace(/\s+/g, "_")}`}
             className="group rounded-lg px-10 py-3 font-bold text-white shadow-lg ring ring-transparent transition-all duration-500"
             style={{ backgroundColor: color }}
           >
             <span className="transition-all duration-500 group-hover:text-white">
               Solicitar asesor comercial
             </span>
-          </Link>
+          </TrackedContactLink>
 
           <p className="my-4 text-center text-xs text-gray-500">
             * Servicio sujeto a disponibilidad técnica y condiciones

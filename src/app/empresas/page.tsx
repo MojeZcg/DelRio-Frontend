@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowRight,
   Check,
@@ -17,6 +16,7 @@ import {
 } from "@/components/ui/hover-card";
 import { contactos } from "@/lib/contacto";
 import EmpresasCarousel from "@/components/mainpage/EmpresasCarousel";
+import { TrackedContactLink } from "@/components/analytics/TrackedContactLink";
 
 export const metadata = {
   title: "DelRio Internet | Internet para Empresas en Mendoza",
@@ -129,10 +129,13 @@ export default function EmpresasPage() {
             </p>
 
             <div className="flex flex-col items-center gap-4 sm:flex-row lg:items-start">
-              <Link
+              <TrackedContactLink
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría recibir más información sobre los planes empresariales.")}`}
+                contactType="whatsapp"
+                contactArea="comercial"
+                contactLabel="empresas_hero_cotizacion"
                 className="group inline-flex w-full items-center justify-center gap-3 rounded-xl border-2 bg-linear-to-r from-blue-600 to-blue-700 px-8 py-4 font-bold text-white shadow-2xl shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-600 hover:shadow-blue-400/40 focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto"
                 title="Solicitar Cotización Planes Empresariales DelRio Internet"
               >
@@ -141,17 +144,20 @@ export default function EmpresasPage() {
                   size={22}
                   className="transition-transform group-hover:translate-x-1"
                 />
-              </Link>
+              </TrackedContactLink>
 
-              <Link
+              <TrackedContactLink
                 title="Contactar Asesor Planes Empresariales DelRio Internet"
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría hablar con un asesor comercial.")}`}
+                contactType="whatsapp"
+                contactArea="comercial"
+                contactLabel="empresas_hero_asesor"
                 className="group inline-flex w-full items-center justify-center rounded-xl border-2 border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black focus:outline-none sm:w-auto"
               >
                 Contactar Asesor
-              </Link>
+              </TrackedContactLink>
             </div>
           </div>
 
@@ -310,10 +316,13 @@ export default function EmpresasPage() {
               </div>
 
               {/* CTA Button */}
-              <Link
+              <TrackedContactLink
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría obtener más información sobre el plan Empresarial estándar.")}`}
+                contactType="whatsapp"
+                contactArea="comercial"
+                contactLabel="empresas_plan_estandar"
                 className="group/btn mt-auto flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-blue-700 px-6 py-4 font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-600 hover:shadow-xl hover:shadow-blue-400/40 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent focus:outline-none"
                 title="Solicitar Cotización Plan Empresarial DelRio Internet"
               >
@@ -322,7 +331,7 @@ export default function EmpresasPage() {
                   size={20}
                   className="transition-transform group-hover/btn:translate-x-1"
                 />
-              </Link>
+              </TrackedContactLink>
             </div>
 
             {/* === PLAN BUSINESS FULL === */}
@@ -366,10 +375,13 @@ export default function EmpresasPage() {
               </div>
 
               {/* CTA Button */}
-              <Link
+              <TrackedContactLink
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría obtener más información sobre el plan Empresarial Full.")}`}
+                contactType="whatsapp"
+                contactArea="comercial"
+                contactLabel="empresas_plan_full"
                 className="group/btn flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-blue-800 px-6 py-4 font-bold text-white shadow-lg shadow-blue-500/30 transition-all hover:scale-105 hover:from-blue-500 hover:to-blue-700 hover:shadow-xl hover:shadow-blue-400/40 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent focus:outline-none"
                 title="Solicitar Cotización Plan Empresarial DelRio Internet"
               >
@@ -378,7 +390,7 @@ export default function EmpresasPage() {
                   size={20}
                   className="transition-transform group-hover/btn:translate-x-1"
                 />
-              </Link>
+              </TrackedContactLink>
             </div>
           </div>
 
@@ -386,15 +398,18 @@ export default function EmpresasPage() {
           <div className="mt-12 text-center">
             <p className="text-sm text-gray-400">
               ¿Necesitas una solución personalizada?{" "}
-              <Link
+              <TrackedContactLink
                 title="Contactar con nuestro equipo comercial"
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`${contactos.comercial.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría obtener más información para un plan empresarial personalizado.")}`}
+                contactType="whatsapp"
+                contactArea="comercial"
+                contactLabel="empresas_plan_personalizado"
                 className="font-semibold text-blue-500 underline decoration-blue-400/30 underline-offset-4 transition hover:text-blue-300 hover:decoration-blue-300/50"
               >
                 Contacta con nuestro equipo comercial
-              </Link>
+              </TrackedContactLink>
             </p>
           </div>
         </div>
