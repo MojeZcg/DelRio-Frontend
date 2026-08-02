@@ -19,9 +19,10 @@ export default function Footer() {
               title="DelRio Internet Logo"
               src="/logoTransparentWhite.webp"
               alt="DelRio Internet Logo"
-              width={160}
-              height={80}
-              className="mx-auto mb-4 select-none sm:mx-0"
+              width={825}
+              height={437}
+              sizes="160px"
+              className="mx-auto mb-4 h-auto w-40 select-none sm:mx-0"
             />
             <p className="mx-auto max-w-sm text-sm leading-relaxed text-gray-400 sm:mx-0 sm:max-w-none">
               Conectamos hogares y empresas con internet de alta calidad,

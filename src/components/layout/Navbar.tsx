@@ -34,8 +34,8 @@ export default function Navbar() {
           title="DelRio Internet Logo"
           src="/logoTransparentWhite.webp"
           alt="DelRio Internet Logo"
-          width={125}
-          height={64}
+          width={825}
+          height={437}
           sizes="(min-width: 64rem) 125px, 94px"
           className="h-12 w-auto sm:h-12 lg:h-16"
         />
