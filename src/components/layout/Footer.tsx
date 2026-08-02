@@ -137,9 +137,7 @@ export default function Footer() {
               <li>
                 <Link
                   title="Términos y Condiciones DelRio Internet"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="/terminos-condiciones.pdf"
+                  href="/terminos-condiciones"
                   className="inline-flex items-center gap-1 underline-offset-2 transition-colors hover:text-white hover:underline"
                 >
                   Términos y Condiciones
