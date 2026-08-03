@@ -21,7 +21,8 @@ export default function Navbar() {
     { name: "Internet Empresas", href: "/empresas" },
     { name: "Contacto", href: "/contacto" },
   ];
-  const portalHref = "https://delriointernet.portaldeinternet.me/users/login";
+  const portalHref =
+    "https://www.celeris.ar/portal/login?empresa=delrio-internet";
 
   return (
     <header className="fixed z-50 flex w-full items-center justify-between border-b border-gray-300 bg-black/50 px-4 py-3.5 shadow-md shadow-white/10 select-none sm:px-6 lg:px-12">
