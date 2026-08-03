@@ -312,7 +312,7 @@ export default function Home() {
               href="/empresas"
               className="group rounded-xl bg-white/10 p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/15 md:p-8"
             >
-              <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-900 transition-all duration-300 group-hover:bg-emerald-700 md:mb-4 md:h-16 md:w-16">
+              <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-950 transition-all duration-300 group-hover:bg-blue-800 md:mb-4 md:h-16 md:w-16">
                 <LifeBuoy size={26} className="md:h-7.5 md:w-7.5" />
               </div>
               <h5 className="mb-2 text-lg font-bold md:mb-3 md:text-xl">
