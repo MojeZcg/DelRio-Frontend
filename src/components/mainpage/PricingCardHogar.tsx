@@ -62,7 +62,7 @@ const pricingCards: PricingCardProps[] = [
     },
     recomended: true,
     color: "#323dd8",
-    planmsg: "Hola! Quiero saber mas sobre el Plan Standard",
+    planmsg: "Hola! Quiero saber mas sobre el Plan Estándar",
   },
   {
     title: "Plan Élite",
